@@ -3,6 +3,15 @@
 
 module.exports = function (grunt) {
 
+    // Load the project's grunt tasks from a directory
+    require('grunt-config-dir')(grunt, {
+        configDir: require('path').resolve('tasks')
+    });
+
+    /*
+     * Register group tasks
+     */
+
     //npm install
     grunt.registerTask('npm_install', 'install dependencies', function() {
         var exec = require('child_process').exec;
@@ -22,16 +31,6 @@ module.exports = function (grunt) {
         });
     });
 
-    // Load the project's grunt tasks from a directory
-    require('grunt-config-dir')(grunt, {
-        configDir: require('path').resolve('tasks')
-    });
-
-    // Register group tasks
-    // grunt.registerTask('build', [ 'jshint', 'i18n', 'copyto' ]);
-    // grunt.registerTask('test', [ 'jshint', 'mochacli' ]);
-
-    // Register group tasks
     grunt.registerTask('clean_all', [ 'clean:node_modules', 'clean:coverage', 'npm_install' ]);
     grunt.registerTask('test', ['env:test', 'clean:coverage', 'jshint', 'mocha_istanbul']);
     grunt.registerTask('coverage', ['test', 'open_coverage']);
