@@ -8,6 +8,11 @@ module.exports = function clean(grunt) {
     // Options
     return {
         tmp: 'tmp',
-        build: '.build/templates'
+        build: '.build/templates',
+        options:{
+//               force: true
+        },
+        node_modules:["node_modules/*","!node_modules/grunt*"],
+        coverage:["coverage/*"]
     };
 };
