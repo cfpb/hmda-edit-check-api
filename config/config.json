@@ -1,6 +1,9 @@
 {
 
-    
+    "mongoConfig": {
+        "host": "localhost",
+        "port": 27017
+    },
 
     "middleware": {
 
@@ -16,7 +19,7 @@
             }
         }
 
-        
+
         ,"expressView": {
             "priority": 100,
             "enabled": true,
@@ -24,8 +27,8 @@
                 "name": "engine-munger/lib/expressView"
             }
         }
-        
 
-        
+
+
     }
 }

@@ -13,7 +13,7 @@ module.exports = function mocha_istanbul(grunt) {
                 //quiet: true,
                 excludes: [
                     'lib/database.js',
-                    'lib/spec.js'
+                    'lib/options.js'
                 ],
                 mochaOptions: [
                     '--reporter', 'spec-xunit-file'

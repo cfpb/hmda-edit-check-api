@@ -2,25 +2,28 @@
 
 var express = require('express');
 var kraken = require('kraken-js');
+var env = process.env.NODE_ENV;
 
+var app = module.exports = express();
+var options = require('./lib/options')(app);
 
-var options, app;
+if (env === 'sandbox') {
+    // Configure the response headers so that the API can be used locally
+    app.all('*', function(req, res, next) {
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+        next();
+    });
+}
 
-/*
- * Create and configure application. Also exports application instance for use by tests.
- * See https://github.com/krakenjs/kraken-js#options for additional configuration options.
- */
-options = {
-    onconfig: function (config, next) {
-        /*
-         * Add any additional config setup or overrides here. `config` is an initialized
-         * `confit` (https://github.com/krakenjs/confit/) configuration object.
-         */
-        next(null, config);
-    }
-};
+// Set cache headers so that browsers do not cache the JSON responses (e.g. IE)
+app.all('*', function(req, res, next) {
+    res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
+    res.header('Expires', '-1');
+    res.header('Pragma', 'no-cache');
+    next();
+});
 
-app = module.exports = express();
 app.use(kraken(options));
 app.on('start', function () {
     console.log('Application ready to serve requests.');
