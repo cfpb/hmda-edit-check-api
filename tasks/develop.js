@@ -7,7 +7,7 @@ module.exports = function develop(grunt) {
 
     return {
         server: {
-            file: 'index.js'
+            file: 'server.js'
         }
     };
 
