@@ -13,8 +13,13 @@ var TestData = {
     build: function(done) {
         console.log('Inserting test data...');
         async.series([
-          // insert data
-
+            function(cb) {
+                mongoose.model('CraReporters').create({'activity_year': '2013', 'data':
+                 [ { 'respondent_id': '0000000001', 'agency_code': '1', 'respondent_name': 'foo'} ]
+                 }, function(err, item) {
+                    cb();
+                });
+            }
         ], function() {
               console.log('..done inserting test data');
               done();
