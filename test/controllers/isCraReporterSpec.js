@@ -17,13 +17,4 @@ describe('/isCraReporter', function() {
             });
     });
 
-    it('should return 404 if a request doesn\'t match the route', function(done) {
-        request(mock)
-            .get('/isCraReporter/2013/')
-            .expect(404)
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
 });
