@@ -4,13 +4,13 @@
 
 describe('/isCraReporter', function() {
 
-    it('should return true if a reporter is valid', function(done) {
+    it('should return a result if a request is valid', function(done) {
         request(mock)
             .get('/isCraReporter/2013/0000000001')
             .expect(200)
             .expect('Content-Type', /json/)
 
-                .expect(/"result":true/)
+                .expect(/"result":/)
 
             .end(function (err, res) {
                 done(err);
