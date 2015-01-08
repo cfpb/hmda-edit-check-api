@@ -10,7 +10,8 @@ var panelSchema = mongoose.Schema({
         'respondent_name': String,
         'parent_name': String,
         'parent_city': String,
-        'parent_state': String
+        'parent_state': String,
+        'other_lender_code': String
     }]
 });
 
