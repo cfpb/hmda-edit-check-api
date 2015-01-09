@@ -14,9 +14,20 @@ var TestData = {
         console.log('Inserting test data...');
         async.series([
             function(cb) {
-                mongoose.model('CraReporters').create({'activity_year': '2013',
-                 'respondent_id': '0000000001', 'agency_code': '1', 'respondent_name': 'foo'
-                 }, function(err, item) {
+                mongoose.model('CraReporters').create(
+                    {'activity_year': '2013', 'respondent_id': '0000000001', 'agency_code': '1', 'respondent_name': 'foo' },
+                function(err, item) {
+                    cb();
+                });
+            },
+            function(cb) {
+                mongoose.model('Panel').create([
+                    { 'activity_year': '2013', 'respondent_id': '0000000001', 'other_lender_code': '0', 'parent_name': 'foo'},
+                    { 'activity_year': '2013', 'respondent_id': '0000000002', 'other_lender_code': '0', 'parent_name': ''},
+                    { 'activity_year': '2013', 'respondent_id': '0000000003', 'other_lender_code': '1', 'parent_name': 'foo'},
+                    { 'activity_year': '2013', 'respondent_id': '0000000004', 'other_lender_code': '1', 'parent_name': ''}
+                ],
+                function(err, item) {
                     cb();
                 });
             }
