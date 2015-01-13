@@ -13,7 +13,8 @@ var censusSchema = mongoose.Schema({
     }],
     'county': [{
         'fips_code': String,
-        'name': String
+        'name': String,
+        'small_county': String
     }],
     'tract': [String]
 });

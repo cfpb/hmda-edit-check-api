@@ -31,6 +31,26 @@ var TestData = {
                     cb();
                 });
             }
+            function(cb) {
+			    mongoose.model('Census').create({'activity_year': '2013', 'code': '35100',
+			        'states' : [
+			            { 'fips_code' : '37', 'name' : 'North Carolina' }
+			        ],
+			        'county' : [
+			            { 'fips_code' : '103', 'name' : 'Jones'},
+			            { 'fips_code' : '049', 'name' : 'Craven' },
+			            { 'fips_code' : '137', 'name' : 'Pamlico' }
+			        ],
+			        'tract' : [ '9502.01', '9610.02', '9610.01', '9604.02', '9602.00', '9203.00',
+			            '9607.00', '9501.02', '9613.03', '9604.04', '9604.01', '9612.02',
+			            '9601.01', '9606.00', '9609.00', '9605.00', '9604.03', '9608.00',
+			            '9612.01', '9603.00', '9601.02', '9202.00', '9613.01', '9611.00',
+			            '9613.02', '9201.00', '9502.02', '9501.01'
+			        ]
+			    }, function(err, item) {
+			        cb();
+			    });
+            }
         ], function() {
               console.log('..done inserting test data');
               done();
