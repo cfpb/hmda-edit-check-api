@@ -7,6 +7,7 @@ var censusSchema = mongoose.Schema({
     'activity_year': String,
     'code': String,
     'name': String,
+    'small_county': String,
     'state': [{
         'fips_code': String,
         'name': String
