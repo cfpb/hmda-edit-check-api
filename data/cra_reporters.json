@@ -1,0 +1,791 @@
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebaf" }, "activity_year" : "2013", "respondent_id" : "0000000001", "agency_code" : "1", "respondent_name" : "WELLS FARGO BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb0" }, "activity_year" : "2013", "respondent_id" : "0000000008", "agency_code" : "1", "respondent_name" : "JPMORGAN CHASE BANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb1" }, "activity_year" : "2013", "respondent_id" : "0000000024", "agency_code" : "1", "respondent_name" : "US BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb2" }, "activity_year" : "2013", "respondent_id" : "0000000047", "agency_code" : "1", "respondent_name" : "FIRST FINANCIAL BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb3" }, "activity_year" : "2013", "respondent_id" : "0000000056", "agency_code" : "1", "respondent_name" : "FIRST FINANCIAL BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb4" }, "activity_year" : "2013", "respondent_id" : "0000000209", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK OF OMAHA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb5" }, "activity_year" : "2013", "respondent_id" : "0000000249", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK OF PA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb6" }, "activity_year" : "2013", "respondent_id" : "0000000324", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb7" }, "activity_year" : "2013", "respondent_id" : "0000000325", "agency_code" : "1", "respondent_name" : "FNB BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb8" }, "activity_year" : "2013", "respondent_id" : "0000000336", "agency_code" : "1", "respondent_name" : "FIRST TENNESSEE BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebb9" }, "activity_year" : "2013", "respondent_id" : "0000000446", "agency_code" : "1", "respondent_name" : "THE FIRST N.A" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebba" }, "activity_year" : "2013", "respondent_id" : "0000000661", "agency_code" : "1", "respondent_name" : "DNB FIRST, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebbb" }, "activity_year" : "2013", "respondent_id" : "0000001316", "agency_code" : "1", "respondent_name" : "PNC BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebbc" }, "activity_year" : "2013", "respondent_id" : "0000001354", "agency_code" : "1", "respondent_name" : "NBT BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebbd" }, "activity_year" : "2013", "respondent_id" : "0000001461", "agency_code" : "1", "respondent_name" : "CITIBANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebbe" }, "activity_year" : "2013", "respondent_id" : "0000001467", "agency_code" : "1", "respondent_name" : "LANDMARK BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebbf" }, "activity_year" : "2013", "respondent_id" : "0000001750", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK SANTA FE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc0" }, "activity_year" : "2013", "respondent_id" : "0000001770", "agency_code" : "1", "respondent_name" : "BOONE COUNTY NATIONAL" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc1" }, "activity_year" : "2013", "respondent_id" : "0000001950", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc2" }, "activity_year" : "2013", "respondent_id" : "0000001997", "agency_code" : "1", "respondent_name" : "NATIONAL BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc3" }, "activity_year" : "2013", "respondent_id" : "0000002137", "agency_code" : "1", "respondent_name" : "NATIONAL PENN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc4" }, "activity_year" : "2013", "respondent_id" : "0000002234", "agency_code" : "1", "respondent_name" : "FIRST MERCHANTS BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc5" }, "activity_year" : "2013", "respondent_id" : "0000002311", "agency_code" : "1", "respondent_name" : "CAMDEN NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc6" }, "activity_year" : "2013", "respondent_id" : "0000002360", "agency_code" : "1", "respondent_name" : "LCNB NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc7" }, "activity_year" : "2013", "respondent_id" : "0000002515", "agency_code" : "1", "respondent_name" : "EPHRATA NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc8" }, "activity_year" : "2013", "respondent_id" : "0000002597", "agency_code" : "1", "respondent_name" : "WELLS FARGO BANK NORTHWEST, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebc9" }, "activity_year" : "2013", "respondent_id" : "0000002747", "agency_code" : "1", "respondent_name" : "HORIZON BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebca" }, "activity_year" : "2013", "respondent_id" : "0000002782", "agency_code" : "1", "respondent_name" : "INTRUST BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebcb" }, "activity_year" : "2013", "respondent_id" : "0000002848", "agency_code" : "1", "respondent_name" : "FREMONT NATIONAL BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebcc" }, "activity_year" : "2013", "respondent_id" : "0000002881", "agency_code" : "1", "respondent_name" : "1ST NATL AUDRAIN COUNTY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebcd" }, "activity_year" : "2013", "respondent_id" : "0000002919", "agency_code" : "1", "respondent_name" : "THIRD NATIONAL BANK SEDALIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebce" }, "activity_year" : "2013", "respondent_id" : "0000003393", "agency_code" : "1", "respondent_name" : "THE FIRST NATIONAL BANK IN SIO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebcf" }, "activity_year" : "2013", "respondent_id" : "0000003496", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd0" }, "activity_year" : "2013", "respondent_id" : "0000003654", "agency_code" : "1", "respondent_name" : "FARMERS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd1" }, "activity_year" : "2013", "respondent_id" : "0000003656", "agency_code" : "1", "respondent_name" : "CADENCE BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd2" }, "activity_year" : "2013", "respondent_id" : "0000003817", "agency_code" : "1", "respondent_name" : "CANANDAIGUA NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd3" }, "activity_year" : "2013", "respondent_id" : "0000004166", "agency_code" : "1", "respondent_name" : "FIRST FINANCIAL BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd4" }, "activity_year" : "2013", "respondent_id" : "0000004230", "agency_code" : "1", "respondent_name" : "SUFFOLK COUNTY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd5" }, "activity_year" : "2013", "respondent_id" : "0000004284", "agency_code" : "1", "respondent_name" : "CENTRAL NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd6" }, "activity_year" : "2013", "respondent_id" : "0000004341", "agency_code" : "1", "respondent_name" : "ZIONS FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd7" }, "activity_year" : "2013", "respondent_id" : "0000004596", "agency_code" : "1", "respondent_name" : "OLD SECOND NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd8" }, "activity_year" : "2013", "respondent_id" : "0000004742", "agency_code" : "1", "respondent_name" : "SUNFLOWER BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebd9" }, "activity_year" : "2013", "respondent_id" : "0000005263", "agency_code" : "1", "respondent_name" : "FIRST CITIZENS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebda" }, "activity_year" : "2013", "respondent_id" : "0000005347", "agency_code" : "1", "respondent_name" : "BANK SNB, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebdb" }, "activity_year" : "2013", "respondent_id" : "0000005552", "agency_code" : "1", "respondent_name" : "PEOPLES BANK, NATIONAL ASSOCIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebdc" }, "activity_year" : "2013", "respondent_id" : "0000005581", "agency_code" : "1", "respondent_name" : "AUSTIN BANK TEXAS NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebdd" }, "activity_year" : "2013", "respondent_id" : "0000006207", "agency_code" : "1", "respondent_name" : "QUEENSBOROUGH NB&TC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebde" }, "activity_year" : "2013", "respondent_id" : "0000006301", "agency_code" : "1", "respondent_name" : "BNY MELLON, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebdf" }, "activity_year" : "2013", "respondent_id" : "0000006680", "agency_code" : "1", "respondent_name" : "SIMMONS FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe0" }, "activity_year" : "2013", "respondent_id" : "0000006776", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK OF SHELBY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe1" }, "activity_year" : "2013", "respondent_id" : "0000007003", "agency_code" : "1", "respondent_name" : "SWINEFORD NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe2" }, "activity_year" : "2013", "respondent_id" : "0000007266", "agency_code" : "1", "respondent_name" : "CITIZENS NATIONAL BANK OF MERI" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe3" }, "activity_year" : "2013", "respondent_id" : "0000007699", "agency_code" : "1", "respondent_name" : "GLENS FALLS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe4" }, "activity_year" : "2013", "respondent_id" : "0000007745", "agency_code" : "1", "respondent_name" : "THE HUNTINGTON NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe5" }, "activity_year" : "2013", "respondent_id" : "0000008328", "agency_code" : "1", "respondent_name" : "FIRST NAT'L B&T OF COLUMBUS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe6" }, "activity_year" : "2013", "respondent_id" : "0000008531", "agency_code" : "1", "respondent_name" : "COMMUNITY BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe7" }, "activity_year" : "2013", "respondent_id" : "0000008796", "agency_code" : "1", "respondent_name" : "ARMED FORCES BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe8" }, "activity_year" : "2013", "respondent_id" : "0000008846", "agency_code" : "1", "respondent_name" : "OLD NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebe9" }, "activity_year" : "2013", "respondent_id" : "0000008953", "agency_code" : "1", "respondent_name" : "COMMUNITYONE BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebea" }, "activity_year" : "2013", "respondent_id" : "0000009179", "agency_code" : "1", "respondent_name" : "THE PARK NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebeb" }, "activity_year" : "2013", "respondent_id" : "0000009343", "agency_code" : "1", "respondent_name" : "AMERICAN NATIONAL BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebec" }, "activity_year" : "2013", "respondent_id" : "0000009669", "agency_code" : "1", "respondent_name" : "BRIDGEHAMPTON NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebed" }, "activity_year" : "2013", "respondent_id" : "0000010045", "agency_code" : "1", "respondent_name" : "FIRST MID-ILLINOIS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebee" }, "activity_year" : "2013", "respondent_id" : "0000010360", "agency_code" : "1", "respondent_name" : "FIRST VICTORIA NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebef" }, "activity_year" : "2013", "respondent_id" : "0000010523", "agency_code" : "1", "respondent_name" : "TRUSTMARK NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf0" }, "activity_year" : "2013", "respondent_id" : "0000010536", "agency_code" : "1", "respondent_name" : "THE CONWAY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf1" }, "activity_year" : "2013", "respondent_id" : "0000011573", "agency_code" : "1", "respondent_name" : "THE CITIZENS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf2" }, "activity_year" : "2013", "respondent_id" : "0000011818", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (ST CLOUD)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf3" }, "activity_year" : "2013", "respondent_id" : "0000012072", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK ALASKA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf4" }, "activity_year" : "2013", "respondent_id" : "0000012333", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BK OF ST. LOUIS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf5" }, "activity_year" : "2013", "respondent_id" : "0000012425", "agency_code" : "1", "respondent_name" : "UNION CENTER NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf6" }, "activity_year" : "2013", "respondent_id" : "0000012898", "agency_code" : "1", "respondent_name" : "COMMUNITYBANK OF TEXAS NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf7" }, "activity_year" : "2013", "respondent_id" : "0000013044", "agency_code" : "1", "respondent_name" : "BANK OF AMERICA, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf8" }, "activity_year" : "2013", "respondent_id" : "0000013126", "agency_code" : "1", "respondent_name" : "THE FIRST NATIONAL BANK OF LI" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebf9" }, "activity_year" : "2013", "respondent_id" : "0000013295", "agency_code" : "1", "respondent_name" : "STERLING NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebfa" }, "activity_year" : "2013", "respondent_id" : "0000013443", "agency_code" : "1", "respondent_name" : "CITIZENS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebfb" }, "activity_year" : "2013", "respondent_id" : "0000013679", "agency_code" : "1", "respondent_name" : "BOKF NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebfc" }, "activity_year" : "2013", "respondent_id" : "0000013684", "agency_code" : "1", "respondent_name" : "MB FINANCIAL BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebfd" }, "activity_year" : "2013", "respondent_id" : "0000013688", "agency_code" : "1", "respondent_name" : "CAPITAL ONE, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebfe" }, "activity_year" : "2013", "respondent_id" : "0000013778", "agency_code" : "1", "respondent_name" : "EXTRACO BANKS, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eebff" }, "activity_year" : "2013", "respondent_id" : "0000013790", "agency_code" : "1", "respondent_name" : "ALERUS FINANCIAL NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec00" }, "activity_year" : "2013", "respondent_id" : "0000013879", "agency_code" : "1", "respondent_name" : "NATIONAL EXCHANGE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec01" }, "activity_year" : "2013", "respondent_id" : "0000014124", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec02" }, "activity_year" : "2013", "respondent_id" : "0000014206", "agency_code" : "1", "respondent_name" : "AMARILLO NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec03" }, "activity_year" : "2013", "respondent_id" : "0000014369", "agency_code" : "1", "respondent_name" : "STILLMAN BANCCORP, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec04" }, "activity_year" : "2013", "respondent_id" : "0000014399", "agency_code" : "1", "respondent_name" : "NATIONAL REPUBLIC BANK OF CHIC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec05" }, "activity_year" : "2013", "respondent_id" : "0000014447", "agency_code" : "1", "respondent_name" : "BROADWAY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec06" }, "activity_year" : "2013", "respondent_id" : "0000014488", "agency_code" : "1", "respondent_name" : "MERCHANTS BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec07" }, "activity_year" : "2013", "respondent_id" : "0000014579", "agency_code" : "1", "respondent_name" : "FIRSTMERIT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec08" }, "activity_year" : "2013", "respondent_id" : "0000014583", "agency_code" : "1", "respondent_name" : "BMO HARRIS BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec09" }, "activity_year" : "2013", "respondent_id" : "0000014695", "agency_code" : "1", "respondent_name" : "CITY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0a" }, "activity_year" : "2013", "respondent_id" : "0000014740", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK OF AMERICA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0b" }, "activity_year" : "2013", "respondent_id" : "0000014761", "agency_code" : "1", "respondent_name" : "KEYBANK NATIONAL ASSOCIATION" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0c" }, "activity_year" : "2013", "respondent_id" : "0000014807", "agency_code" : "1", "respondent_name" : "CITY NATIONAL BANK OF WV" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0d" }, "activity_year" : "2013", "respondent_id" : "0000014838", "agency_code" : "1", "respondent_name" : "SEACOAST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0e" }, "activity_year" : "2013", "respondent_id" : "0000015108", "agency_code" : "1", "respondent_name" : "LOS ALAMOS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec0f" }, "activity_year" : "2013", "respondent_id" : "0000015292", "agency_code" : "1", "respondent_name" : "INWOOD NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec10" }, "activity_year" : "2013", "respondent_id" : "0000015359", "agency_code" : "1", "respondent_name" : "HILLTOP NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec11" }, "activity_year" : "2013", "respondent_id" : "0000015435", "agency_code" : "1", "respondent_name" : "AMERICAN NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec12" }, "activity_year" : "2013", "respondent_id" : "0000015576", "agency_code" : "1", "respondent_name" : "STEARNS BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec13" }, "activity_year" : "2013", "respondent_id" : "0000015738", "agency_code" : "1", "respondent_name" : "TRI CITY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec14" }, "activity_year" : "2013", "respondent_id" : "0000015790", "agency_code" : "1", "respondent_name" : "VALLEY NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec15" }, "activity_year" : "2013", "respondent_id" : "0000015820", "agency_code" : "1", "respondent_name" : "AMERICAN BANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec16" }, "activity_year" : "2013", "respondent_id" : "0000015977", "agency_code" : "1", "respondent_name" : "CITY NATIONAL BANK OF FLORIDA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec17" }, "activity_year" : "2013", "respondent_id" : "0000015980", "agency_code" : "1", "respondent_name" : "TOWN NORTH BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec18" }, "activity_year" : "2013", "respondent_id" : "0000016401", "agency_code" : "1", "respondent_name" : "SABADELL UNITED BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec19" }, "activity_year" : "2013", "respondent_id" : "0000016658", "agency_code" : "1", "respondent_name" : "WESTERN NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1a" }, "activity_year" : "2013", "respondent_id" : "0000016804", "agency_code" : "1", "respondent_name" : "MERCANTIL COMMERCEBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1b" }, "activity_year" : "2013", "respondent_id" : "0000016892", "agency_code" : "1", "respondent_name" : "WOODFOREST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1c" }, "activity_year" : "2013", "respondent_id" : "0000017043", "agency_code" : "1", "respondent_name" : "AMERICAN NATIONAL BANK OF TX" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1d" }, "activity_year" : "2013", "respondent_id" : "0000017479", "agency_code" : "1", "respondent_name" : "AMEGY BANK OF TEXAS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1e" }, "activity_year" : "2013", "respondent_id" : "0000017611", "agency_code" : "1", "respondent_name" : "LONE STAR NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec1f" }, "activity_year" : "2013", "respondent_id" : "0000018432", "agency_code" : "1", "respondent_name" : "ASIA BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec20" }, "activity_year" : "2013", "respondent_id" : "0000018480", "agency_code" : "1", "respondent_name" : "INTERN NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec21" }, "activity_year" : "2013", "respondent_id" : "0000018484", "agency_code" : "1", "respondent_name" : "MIDSOUTH BANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec22" }, "activity_year" : "2013", "respondent_id" : "0000018606", "agency_code" : "1", "respondent_name" : "SUN NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec23" }, "activity_year" : "2013", "respondent_id" : "0000018763", "agency_code" : "1", "respondent_name" : "HOME STATE BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec24" }, "activity_year" : "2013", "respondent_id" : "0000020948", "agency_code" : "1", "respondent_name" : "SAFRA NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec25" }, "activity_year" : "2013", "respondent_id" : "0000021017", "agency_code" : "1", "respondent_name" : "METROBANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec26" }, "activity_year" : "2013", "respondent_id" : "0000021099", "agency_code" : "1", "respondent_name" : "WELLS FARGO FIN'L NAT'L BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec27" }, "activity_year" : "2013", "respondent_id" : "0000021179", "agency_code" : "1", "respondent_name" : "ANCHOR BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec28" }, "activity_year" : "2013", "respondent_id" : "0000021383", "agency_code" : "1", "respondent_name" : "NATIONAL BANK OF ARIZONA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec29" }, "activity_year" : "2013", "respondent_id" : "0000021530", "agency_code" : "1", "respondent_name" : "SARATOGA NATIONAL BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2a" }, "activity_year" : "2013", "respondent_id" : "0000021541", "agency_code" : "1", "respondent_name" : "UNION BANK, N.A" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2b" }, "activity_year" : "2013", "respondent_id" : "0000021610", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2c" }, "activity_year" : "2013", "respondent_id" : "0000021699", "agency_code" : "1", "respondent_name" : "COMMUNITY WEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2d" }, "activity_year" : "2013", "respondent_id" : "0000022311", "agency_code" : "1", "respondent_name" : "CENTERSTATE BANK OF FLORIDA NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2e" }, "activity_year" : "2013", "respondent_id" : "0000022381", "agency_code" : "1", "respondent_name" : "FIA CARD SERVICES" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec2f" }, "activity_year" : "2013", "respondent_id" : "0000022611", "agency_code" : "1", "respondent_name" : "TD BANK USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec30" }, "activity_year" : "2013", "respondent_id" : "0000022652", "agency_code" : "1", "respondent_name" : "NATIONAL BANK OF INDIANAPOLIS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec31" }, "activity_year" : "2013", "respondent_id" : "0000022764", "agency_code" : "1", "respondent_name" : "FIRST NAT'L BANK OF S DAKOTA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec32" }, "activity_year" : "2013", "respondent_id" : "0000022859", "agency_code" : "1", "respondent_name" : "WILMINGTON TRUST, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec33" }, "activity_year" : "2013", "respondent_id" : "0000023160", "agency_code" : "1", "respondent_name" : "CHASE BANK USA, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec34" }, "activity_year" : "2013", "respondent_id" : "0000023204", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (FARGO)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec35" }, "activity_year" : "2013", "respondent_id" : "0000023216", "agency_code" : "1", "respondent_name" : "BARRINGTON BANK & TRUST CO.NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec36" }, "activity_year" : "2013", "respondent_id" : "0000023248", "agency_code" : "1", "respondent_name" : "TEXAS CAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec37" }, "activity_year" : "2013", "respondent_id" : "0000023253", "agency_code" : "1", "respondent_name" : "TCF NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec38" }, "activity_year" : "2013", "respondent_id" : "0000023285", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (ALEXANDRIA)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec39" }, "activity_year" : "2013", "respondent_id" : "0000023286", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (BRAINERD)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3a" }, "activity_year" : "2013", "respondent_id" : "0000023289", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (INTL FALLS)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3b" }, "activity_year" : "2013", "respondent_id" : "0000023290", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (TWIN CITIES)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3c" }, "activity_year" : "2013", "respondent_id" : "0000023295", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (GRAND FORKS)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3d" }, "activity_year" : "2013", "respondent_id" : "0000023298", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (WILLMAR)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3e" }, "activity_year" : "2013", "respondent_id" : "0000023300", "agency_code" : "1", "respondent_name" : "BREMER BANK NA (MENOMONIE)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec3f" }, "activity_year" : "2013", "respondent_id" : "0000023416", "agency_code" : "1", "respondent_name" : "RBC BANK (GEORGIA), N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec40" }, "activity_year" : "2013", "respondent_id" : "0000023570", "agency_code" : "1", "respondent_name" : "RICHMOND MUTUAL BANCORPORATION" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec41" }, "activity_year" : "2013", "respondent_id" : "0000023574", "agency_code" : "1", "respondent_name" : "CRYSTAL LAKE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec42" }, "activity_year" : "2013", "respondent_id" : "0000023664", "agency_code" : "1", "respondent_name" : "CONNECTICUT COMMUNITY BANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec43" }, "activity_year" : "2013", "respondent_id" : "0000023695", "agency_code" : "1", "respondent_name" : "ASSOCIATED BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec44" }, "activity_year" : "2013", "respondent_id" : "0000023712", "agency_code" : "1", "respondent_name" : "INTERVEST NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec45" }, "activity_year" : "2013", "respondent_id" : "0000023849", "agency_code" : "1", "respondent_name" : "VECTRA BANK COLORADO NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec46" }, "activity_year" : "2013", "respondent_id" : "0000023880", "agency_code" : "1", "respondent_name" : "ACCESS NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec47" }, "activity_year" : "2013", "respondent_id" : "0000023920", "agency_code" : "1", "respondent_name" : "UMB BANK NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec48" }, "activity_year" : "2013", "respondent_id" : "0000023922", "agency_code" : "1", "respondent_name" : "CBC NATIONAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec49" }, "activity_year" : "2013", "respondent_id" : "0000024096", "agency_code" : "1", "respondent_name" : "TD BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4a" }, "activity_year" : "2013", "respondent_id" : "0000024129", "agency_code" : "1", "respondent_name" : "BRIDGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4b" }, "activity_year" : "2013", "respondent_id" : "0000024150", "agency_code" : "1", "respondent_name" : "SCHAUMBURG BANK AND TRUST NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4c" }, "activity_year" : "2013", "respondent_id" : "0000024320", "agency_code" : "1", "respondent_name" : "MERIDIAN BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4d" }, "activity_year" : "2013", "respondent_id" : "0000024425", "agency_code" : "1", "respondent_name" : "FSGBANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4e" }, "activity_year" : "2013", "respondent_id" : "0000024466", "agency_code" : "1", "respondent_name" : "BEVERLY BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec4f" }, "activity_year" : "2013", "respondent_id" : "0000024469", "agency_code" : "1", "respondent_name" : "WEBSTER BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec50" }, "activity_year" : "2013", "respondent_id" : "0000024522", "agency_code" : "1", "respondent_name" : "HSBC BANK USA, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec51" }, "activity_year" : "2013", "respondent_id" : "0000024571", "agency_code" : "1", "respondent_name" : "RBS CITIZENS, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec52" }, "activity_year" : "2013", "respondent_id" : "0000024583", "agency_code" : "1", "respondent_name" : "RABOBANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec53" }, "activity_year" : "2013", "respondent_id" : "0000024646", "agency_code" : "1", "respondent_name" : "OLD PLANK TRAIL COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec54" }, "activity_year" : "2013", "respondent_id" : "0000024739", "agency_code" : "1", "respondent_name" : "FIRST NATIONAL BANK OF THE GC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec55" }, "activity_year" : "2013", "respondent_id" : "0000024749", "agency_code" : "1", "respondent_name" : "GREEN BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec56" }, "activity_year" : "2013", "respondent_id" : "0000024790", "agency_code" : "1", "respondent_name" : "HUDSON VALLEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec57" }, "activity_year" : "2013", "respondent_id" : "0000024828", "agency_code" : "1", "respondent_name" : "CAPITAL ONE BANK (USA), N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec58" }, "activity_year" : "2013", "respondent_id" : "0000024891", "agency_code" : "1", "respondent_name" : "FULTON BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec59" }, "activity_year" : "2013", "respondent_id" : "0000024908", "agency_code" : "1", "respondent_name" : "MORGAN STANLEY BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5a" }, "activity_year" : "2013", "respondent_id" : "0000024914", "agency_code" : "1", "respondent_name" : "RAYMOND JAMES BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5b" }, "activity_year" : "2013", "respondent_id" : "0000024947", "agency_code" : "1", "respondent_name" : "FLORIDA COMMUNITY BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5c" }, "activity_year" : "2013", "respondent_id" : "0000024968", "agency_code" : "1", "respondent_name" : "FIRST NIAGARA BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5d" }, "activity_year" : "2013", "respondent_id" : "0000024975", "agency_code" : "1", "respondent_name" : "CERTUSBANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5e" }, "activity_year" : "2013", "respondent_id" : "0000024976", "agency_code" : "1", "respondent_name" : "CAPITAL BANK, NA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec5f" }, "activity_year" : "2013", "respondent_id" : "0000024981", "agency_code" : "1", "respondent_name" : "MORGAN STANLEY PRIVATE BANK, N" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec60" }, "activity_year" : "2013", "respondent_id" : "0000024994", "agency_code" : "1", "respondent_name" : "NBH BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec61" }, "activity_year" : "2013", "respondent_id" : "0000025022", "agency_code" : "1", "respondent_name" : "SANTANDER BANK N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec62" }, "activity_year" : "2013", "respondent_id" : "0000025024", "agency_code" : "1", "respondent_name" : "VIEWPOINT BANK, N.A." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec63" }, "activity_year" : "2013", "respondent_id" : "0000025028", "agency_code" : "1", "respondent_name" : "BANKUNITED" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec64" }, "activity_year" : "2013", "respondent_id" : "0000080028", "agency_code" : "1", "respondent_name" : "BANK OF CHINA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec65" }, "activity_year" : "2013", "respondent_id" : "0000700257", "agency_code" : "1", "respondent_name" : "GATE CITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec66" }, "activity_year" : "2013", "respondent_id" : "0000700670", "agency_code" : "1", "respondent_name" : "CAPITOL FEDERAL SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec67" }, "activity_year" : "2013", "respondent_id" : "0000700880", "agency_code" : "1", "respondent_name" : "WASHINGTON FEDERAL" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec68" }, "activity_year" : "2013", "respondent_id" : "0000700887", "agency_code" : "1", "respondent_name" : "HOME FEDERAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec69" }, "activity_year" : "2013", "respondent_id" : "0000700940", "agency_code" : "1", "respondent_name" : "GCF BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6a" }, "activity_year" : "2013", "respondent_id" : "0000701437", "agency_code" : "1", "respondent_name" : "OCEANFIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6b" }, "activity_year" : "2013", "respondent_id" : "0000702130", "agency_code" : "1", "respondent_name" : "NORTH SHORE BANK, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6c" }, "activity_year" : "2013", "respondent_id" : "0000702319", "agency_code" : "1", "respondent_name" : "KEARNY FEDERAL SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6d" }, "activity_year" : "2013", "respondent_id" : "0000702402", "agency_code" : "1", "respondent_name" : "BANKFINANCIAL" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6e" }, "activity_year" : "2013", "respondent_id" : "0000702454", "agency_code" : "1", "respondent_name" : "COLUMBIA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec6f" }, "activity_year" : "2013", "respondent_id" : "0000703536", "agency_code" : "1", "respondent_name" : "FIRST FEDERAL OF LAKEWOOD" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec70" }, "activity_year" : "2013", "respondent_id" : "0000703767", "agency_code" : "1", "respondent_name" : "UNITED COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec71" }, "activity_year" : "2013", "respondent_id" : "0000703879", "agency_code" : "1", "respondent_name" : "HOME FEDERAL BANK OF TENNESSEE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec72" }, "activity_year" : "2013", "respondent_id" : "0000703927", "agency_code" : "1", "respondent_name" : "NORTH AMERICAN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec73" }, "activity_year" : "2013", "respondent_id" : "0000704115", "agency_code" : "1", "respondent_name" : "ASTORIA FEDERAL SAVINGS & LOAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec74" }, "activity_year" : "2013", "respondent_id" : "0000704192", "agency_code" : "1", "respondent_name" : "FIRST FEDERAL BANK OF THE MIDW" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec75" }, "activity_year" : "2013", "respondent_id" : "0000704474", "agency_code" : "1", "respondent_name" : "ANCHORBANK FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec76" }, "activity_year" : "2013", "respondent_id" : "0000704544", "agency_code" : "1", "respondent_name" : "THIRD FEDERAL SAVINGS AND LOAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec77" }, "activity_year" : "2013", "respondent_id" : "0000704612", "agency_code" : "1", "respondent_name" : "ROMA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec78" }, "activity_year" : "2013", "respondent_id" : "0000705106", "agency_code" : "1", "respondent_name" : "PULASKI BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec79" }, "activity_year" : "2013", "respondent_id" : "0000705138", "agency_code" : "1", "respondent_name" : "MASPETH FEDERAL SAVINGS AND LO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7a" }, "activity_year" : "2013", "respondent_id" : "0000705190", "agency_code" : "1", "respondent_name" : "PROVIDENT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7b" }, "activity_year" : "2013", "respondent_id" : "0000705902", "agency_code" : "1", "respondent_name" : "METABANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7c" }, "activity_year" : "2013", "respondent_id" : "0000705991", "agency_code" : "1", "respondent_name" : "TERRITORIAL SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7d" }, "activity_year" : "2013", "respondent_id" : "0000706051", "agency_code" : "1", "respondent_name" : "PROVIDENT SAVINGS BANK, F.S.B." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7e" }, "activity_year" : "2013", "respondent_id" : "0000706081", "agency_code" : "1", "respondent_name" : "FIDELITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec7f" }, "activity_year" : "2013", "respondent_id" : "0000706164", "agency_code" : "1", "respondent_name" : "EL DORADO SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec80" }, "activity_year" : "2013", "respondent_id" : "0000706503", "agency_code" : "1", "respondent_name" : "CITIZENS SVG BK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec81" }, "activity_year" : "2013", "respondent_id" : "0000707635", "agency_code" : "1", "respondent_name" : "TRUSTCO BANK - COMPLIANCE DEPT" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec82" }, "activity_year" : "2013", "respondent_id" : "0000707644", "agency_code" : "1", "respondent_name" : "LAKE SUNAPEE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec83" }, "activity_year" : "2013", "respondent_id" : "0000707938", "agency_code" : "1", "respondent_name" : "WSFS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec84" }, "activity_year" : "2013", "respondent_id" : "0000707960", "agency_code" : "1", "respondent_name" : "LUTHER BURBANK SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec85" }, "activity_year" : "2013", "respondent_id" : "0000707975", "agency_code" : "1", "respondent_name" : "USAA FEDERAL SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec86" }, "activity_year" : "2013", "respondent_id" : "0000708007", "agency_code" : "1", "respondent_name" : "GIBRALTAR PRIVATE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec87" }, "activity_year" : "2013", "respondent_id" : "0000708028", "agency_code" : "1", "respondent_name" : "STERLING BANK & TRUST, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec88" }, "activity_year" : "2013", "respondent_id" : "0000708039", "agency_code" : "1", "respondent_name" : "LIBERTY SAVINGS BANK, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec89" }, "activity_year" : "2013", "respondent_id" : "0000708043", "agency_code" : "1", "respondent_name" : "DOLLAR BANK, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8a" }, "activity_year" : "2013", "respondent_id" : "0000708146", "agency_code" : "1", "respondent_name" : "MUTUAL OF OMAHA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8b" }, "activity_year" : "2013", "respondent_id" : "0000708287", "agency_code" : "1", "respondent_name" : "SOUTHWEST SECURITIES, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8c" }, "activity_year" : "2013", "respondent_id" : "0000708384", "agency_code" : "1", "respondent_name" : "AMERICAN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8d" }, "activity_year" : "2013", "respondent_id" : "0000708412", "agency_code" : "1", "respondent_name" : "FLAGSTAR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8e" }, "activity_year" : "2013", "respondent_id" : "0000708527", "agency_code" : "1", "respondent_name" : "NCB, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec8f" }, "activity_year" : "2013", "respondent_id" : "0000708854", "agency_code" : "1", "respondent_name" : "SOUTHBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec90" }, "activity_year" : "2013", "respondent_id" : "0000708876", "agency_code" : "1", "respondent_name" : "COLORADO FEDERAL SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec91" }, "activity_year" : "2013", "respondent_id" : "0000713558", "agency_code" : "1", "respondent_name" : "HOMETRUST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec92" }, "activity_year" : "2013", "respondent_id" : "0000714191", "agency_code" : "1", "respondent_name" : "MIDFIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec93" }, "activity_year" : "2013", "respondent_id" : "0000714640", "agency_code" : "1", "respondent_name" : "STATE FARM BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec94" }, "activity_year" : "2013", "respondent_id" : "0000714752", "agency_code" : "1", "respondent_name" : "FIRST PLACE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec95" }, "activity_year" : "2013", "respondent_id" : "0000714970", "agency_code" : "1", "respondent_name" : "NATIONWIDE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec96" }, "activity_year" : "2013", "respondent_id" : "0000715044", "agency_code" : "1", "respondent_name" : "GE CAPITAL RETAIL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec97" }, "activity_year" : "2013", "respondent_id" : "0000715115", "agency_code" : "1", "respondent_name" : "EVERBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec98" }, "activity_year" : "2013", "respondent_id" : "0000715648", "agency_code" : "1", "respondent_name" : "AMERICAN EXPRESS, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec99" }, "activity_year" : "2013", "respondent_id" : "0000715685", "agency_code" : "1", "respondent_name" : "JOHN DEERE FINANCIAL, F.S.B." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9a" }, "activity_year" : "2013", "respondent_id" : "0000716456", "agency_code" : "1", "respondent_name" : "BOFI FEDERAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9b" }, "activity_year" : "2013", "respondent_id" : "0000717079", "agency_code" : "1", "respondent_name" : "BANK MUTUAL" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9c" }, "activity_year" : "2013", "respondent_id" : "0000717936", "agency_code" : "1", "respondent_name" : "GUARANTY BANK CRA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9d" }, "activity_year" : "2013", "respondent_id" : "0000717967", "agency_code" : "1", "respondent_name" : "UNITED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9e" }, "activity_year" : "2013", "respondent_id" : "0000717968", "agency_code" : "1", "respondent_name" : "WESTFIELD BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eec9f" }, "activity_year" : "2013", "respondent_id" : "0000717969", "agency_code" : "1", "respondent_name" : "HUDSON CITY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca0" }, "activity_year" : "2013", "respondent_id" : "0000717983", "agency_code" : "1", "respondent_name" : "NAUGATUCK VALLEY SAVINGS& LOAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca1" }, "activity_year" : "2013", "respondent_id" : "0000717995", "agency_code" : "1", "respondent_name" : "OMNIAMERICAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca2" }, "activity_year" : "2013", "respondent_id" : "0000717996", "agency_code" : "1", "respondent_name" : "CONTINENTAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca3" }, "activity_year" : "2013", "respondent_id" : "0000718001", "agency_code" : "1", "respondent_name" : "H&R BLOCK BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca4" }, "activity_year" : "2013", "respondent_id" : "0000718027", "agency_code" : "1", "respondent_name" : "PEOPLES UNITED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca5" }, "activity_year" : "2013", "respondent_id" : "0000718037", "agency_code" : "1", "respondent_name" : "THINK MUTUAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca6" }, "activity_year" : "2013", "respondent_id" : "0000718050", "agency_code" : "1", "respondent_name" : "SCOTTRADE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca7" }, "activity_year" : "2013", "respondent_id" : "0000718058", "agency_code" : "1", "respondent_name" : "FIELDPOINT PRIVATE BANK & TRUS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca8" }, "activity_year" : "2013", "respondent_id" : "0000718063", "agency_code" : "1", "respondent_name" : "NORTHFIELD BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeca9" }, "activity_year" : "2013", "respondent_id" : "0000718077", "agency_code" : "1", "respondent_name" : "CHARLES SCHWAB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecaa" }, "activity_year" : "2013", "respondent_id" : "0000718129", "agency_code" : "1", "respondent_name" : "ONEWEST BANK, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecab" }, "activity_year" : "2013", "respondent_id" : "0000718140", "agency_code" : "1", "respondent_name" : "BAY BANK, FSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecac" }, "activity_year" : "2013", "respondent_id" : "0000009807", "agency_code" : "2", "respondent_name" : "AMBOY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecad" }, "activity_year" : "2013", "respondent_id" : "0000010858", "agency_code" : "2", "respondent_name" : "PLATTE VALLEY STATE B&T CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecae" }, "activity_year" : "2013", "respondent_id" : "0000035301", "agency_code" : "2", "respondent_name" : "STATE STREET BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecaf" }, "activity_year" : "2013", "respondent_id" : "0000056557", "agency_code" : "2", "respondent_name" : "COBIZ BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb0" }, "activity_year" : "2013", "respondent_id" : "0000058243", "agency_code" : "2", "respondent_name" : "JOHNSON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb1" }, "activity_year" : "2013", "respondent_id" : "0000060143", "agency_code" : "2", "respondent_name" : "COMERICA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb2" }, "activity_year" : "2013", "respondent_id" : "0000074140", "agency_code" : "2", "respondent_name" : "ISABELLA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb3" }, "activity_year" : "2013", "respondent_id" : "0000140018", "agency_code" : "2", "respondent_name" : "LAFAYETTE AMBASSADOR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb4" }, "activity_year" : "2013", "respondent_id" : "0000169653", "agency_code" : "2", "respondent_name" : "FIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb5" }, "activity_year" : "2013", "respondent_id" : "0000186717", "agency_code" : "2", "respondent_name" : "FIRST NORTHERN BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb6" }, "activity_year" : "2013", "respondent_id" : "0000197478", "agency_code" : "2", "respondent_name" : "EAST WEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb7" }, "activity_year" : "2013", "respondent_id" : "0000210434", "agency_code" : "2", "respondent_name" : "THE NORTHERN TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb8" }, "activity_year" : "2013", "respondent_id" : "0000214807", "agency_code" : "2", "respondent_name" : "DBTCA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecb9" }, "activity_year" : "2013", "respondent_id" : "0000223322", "agency_code" : "2", "respondent_name" : "FIRST BANK AND TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecba" }, "activity_year" : "2013", "respondent_id" : "0000229913", "agency_code" : "2", "respondent_name" : "MIZUHO BANK (USA)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecbb" }, "activity_year" : "2013", "respondent_id" : "0000233031", "agency_code" : "2", "respondent_name" : "REGIONS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecbc" }, "activity_year" : "2013", "respondent_id" : "0000236706", "agency_code" : "2", "respondent_name" : "PEAPACK-GLADSTONE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecbd" }, "activity_year" : "2013", "respondent_id" : "0000256553", "agency_code" : "2", "respondent_name" : "DACOTAH BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecbe" }, "activity_year" : "2013", "respondent_id" : "0000280044", "agency_code" : "2", "respondent_name" : "BAYLAKE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecbf" }, "activity_year" : "2013", "respondent_id" : "0000288853", "agency_code" : "2", "respondent_name" : "FIRSTBANK-SBSF & CD" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc0" }, "activity_year" : "2013", "respondent_id" : "0000292524", "agency_code" : "2", "respondent_name" : "FOUR OAKS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc1" }, "activity_year" : "2013", "respondent_id" : "0000311845", "agency_code" : "2", "respondent_name" : "ARVEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc2" }, "activity_year" : "2013", "respondent_id" : "0000324340", "agency_code" : "2", "respondent_name" : "CHOICEONE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc3" }, "activity_year" : "2013", "respondent_id" : "0000342410", "agency_code" : "2", "respondent_name" : "ORRSTOWN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc4" }, "activity_year" : "2013", "respondent_id" : "0000354310", "agency_code" : "2", "respondent_name" : "UNIVEST BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc5" }, "activity_year" : "2013", "respondent_id" : "0000365325", "agency_code" : "2", "respondent_name" : "UNITED BANK VA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc6" }, "activity_year" : "2013", "respondent_id" : "0000412135", "agency_code" : "2", "respondent_name" : "COLE TAYLOR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc7" }, "activity_year" : "2013", "respondent_id" : "0000417626", "agency_code" : "2", "respondent_name" : "PUTNAM COUNTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc8" }, "activity_year" : "2013", "respondent_id" : "0000423458", "agency_code" : "2", "respondent_name" : "SOUTHWEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecc9" }, "activity_year" : "2013", "respondent_id" : "0000428547", "agency_code" : "2", "respondent_name" : "ST CHARLES BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecca" }, "activity_year" : "2013", "respondent_id" : "0000436823", "agency_code" : "2", "respondent_name" : "CENTRAL VIRGINIA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeccb" }, "activity_year" : "2013", "respondent_id" : "0000442806", "agency_code" : "2", "respondent_name" : "FIRST IPSWICH BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeccc" }, "activity_year" : "2013", "respondent_id" : "0000456045", "agency_code" : "2", "respondent_name" : "CENTENNIAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeccd" }, "activity_year" : "2013", "respondent_id" : "0000457547", "agency_code" : "2", "respondent_name" : "CENTRUE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecce" }, "activity_year" : "2013", "respondent_id" : "0000468806", "agency_code" : "2", "respondent_name" : "NORTHEAST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeccf" }, "activity_year" : "2013", "respondent_id" : "0000479839", "agency_code" : "2", "respondent_name" : "TENNESSEE STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd0" }, "activity_year" : "2013", "respondent_id" : "0000501105", "agency_code" : "2", "respondent_name" : "M&T BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd1" }, "activity_year" : "2013", "respondent_id" : "0000506922", "agency_code" : "2", "respondent_name" : "SANDY SPRING BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd2" }, "activity_year" : "2013", "respondent_id" : "0000509811", "agency_code" : "2", "respondent_name" : "COMMUNITY TRUST BANK INC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd3" }, "activity_year" : "2013", "respondent_id" : "0000539032", "agency_code" : "2", "respondent_name" : "BANK INDEPENDENT" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd4" }, "activity_year" : "2013", "respondent_id" : "0000541101", "agency_code" : "2", "respondent_name" : "THE BANK OF NEW YORK MELLON" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd5" }, "activity_year" : "2013", "respondent_id" : "0000542649", "agency_code" : "2", "respondent_name" : "CHEMICAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd6" }, "activity_year" : "2013", "respondent_id" : "0000595430", "agency_code" : "2", "respondent_name" : "STATE BANK OF THE LAKES" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd7" }, "activity_year" : "2013", "respondent_id" : "0000601050", "agency_code" : "2", "respondent_name" : "COMMERCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd8" }, "activity_year" : "2013", "respondent_id" : "0000601416", "agency_code" : "2", "respondent_name" : "FIVE STAR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecd9" }, "activity_year" : "2013", "respondent_id" : "0000614313", "agency_code" : "2", "respondent_name" : "THE STATE BANK& TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecda" }, "activity_year" : "2013", "respondent_id" : "0000636771", "agency_code" : "2", "respondent_name" : "INDEPENDENT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecdb" }, "activity_year" : "2013", "respondent_id" : "0000637451", "agency_code" : "2", "respondent_name" : "PLAINSCAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecdc" }, "activity_year" : "2013", "respondent_id" : "0000653648", "agency_code" : "2", "respondent_name" : "FIRST AMERICAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecdd" }, "activity_year" : "2013", "respondent_id" : "0000657365", "agency_code" : "2", "respondent_name" : "HANMI BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecde" }, "activity_year" : "2013", "respondent_id" : "0000657459", "agency_code" : "2", "respondent_name" : "MIDWEST BANKCENTRE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecdf" }, "activity_year" : "2013", "respondent_id" : "0000659855", "agency_code" : "2", "respondent_name" : "FIRST INTERSTATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece0" }, "activity_year" : "2013", "respondent_id" : "0000666657", "agency_code" : "2", "respondent_name" : "GUARANTY BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece1" }, "activity_year" : "2013", "respondent_id" : "0000667757", "agency_code" : "2", "respondent_name" : "COMMUNITY TRUST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece2" }, "activity_year" : "2013", "respondent_id" : "0000675332", "agency_code" : "2", "respondent_name" : "SUNTRUST BANK, INC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece3" }, "activity_year" : "2013", "respondent_id" : "0000679826", "agency_code" : "2", "respondent_name" : "MIDDLEBURG BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece4" }, "activity_year" : "2013", "respondent_id" : "0000682563", "agency_code" : "2", "respondent_name" : "FROST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece5" }, "activity_year" : "2013", "respondent_id" : "0000682611", "agency_code" : "2", "respondent_name" : "SUSQUEHANNA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece6" }, "activity_year" : "2013", "respondent_id" : "0000693224", "agency_code" : "2", "respondent_name" : "UNION FIRST MARKET BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece7" }, "activity_year" : "2013", "respondent_id" : "0000697633", "agency_code" : "2", "respondent_name" : "COMPASS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece8" }, "activity_year" : "2013", "respondent_id" : "0000697763", "agency_code" : "2", "respondent_name" : "WESTAMERICA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eece9" }, "activity_year" : "2013", "respondent_id" : "0000697978", "agency_code" : "2", "respondent_name" : "COMMUNITY BANK THE CHESAPEAKE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecea" }, "activity_year" : "2013", "respondent_id" : "0000701736", "agency_code" : "2", "respondent_name" : "BRANDBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeceb" }, "activity_year" : "2013", "respondent_id" : "0000704559", "agency_code" : "2", "respondent_name" : "METCALF BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecec" }, "activity_year" : "2013", "respondent_id" : "0000709143", "agency_code" : "2", "respondent_name" : "MIDWEST BANK OF WESTERN ILLINO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeced" }, "activity_year" : "2013", "respondent_id" : "0000716833", "agency_code" : "2", "respondent_name" : "MARQUETTE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecee" }, "activity_year" : "2013", "respondent_id" : "0000723112", "agency_code" : "2", "respondent_name" : "FIFTH THIRD BANK, OHIO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecef" }, "activity_year" : "2013", "respondent_id" : "0000738303", "agency_code" : "2", "respondent_name" : "EAST CAMBRIDGE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf0" }, "activity_year" : "2013", "respondent_id" : "0000765019", "agency_code" : "2", "respondent_name" : "THE BRYN MAWR TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf1" }, "activity_year" : "2013", "respondent_id" : "0000772008", "agency_code" : "2", "respondent_name" : "SOUTH SHORE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf2" }, "activity_year" : "2013", "respondent_id" : "0000773247", "agency_code" : "2", "respondent_name" : "MIDLAND STATES BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf3" }, "activity_year" : "2013", "respondent_id" : "0000782306", "agency_code" : "2", "respondent_name" : "BROOKLINE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf4" }, "activity_year" : "2013", "respondent_id" : "0000786742", "agency_code" : "2", "respondent_name" : "FIRST CITIZENS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf5" }, "activity_year" : "2013", "respondent_id" : "0000790721", "agency_code" : "2", "respondent_name" : "EVB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf6" }, "activity_year" : "2013", "respondent_id" : "0000795968", "agency_code" : "2", "respondent_name" : "BANK OF HAWAII - COMPLIANCE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf7" }, "activity_year" : "2013", "respondent_id" : "0000802866", "agency_code" : "2", "respondent_name" : "SILICON VALLEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf8" }, "activity_year" : "2013", "respondent_id" : "0000808176", "agency_code" : "2", "respondent_name" : "IBERIABANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecf9" }, "activity_year" : "2013", "respondent_id" : "0000825146", "agency_code" : "2", "respondent_name" : "MORTON COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecfa" }, "activity_year" : "2013", "respondent_id" : "0000828651", "agency_code" : "2", "respondent_name" : "ANB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecfb" }, "activity_year" : "2013", "respondent_id" : "0000858528", "agency_code" : "2", "respondent_name" : "THE BANK OF MARION" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecfc" }, "activity_year" : "2013", "respondent_id" : "0000859002", "agency_code" : "2", "respondent_name" : "EASTHAMPTON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecfd" }, "activity_year" : "2013", "respondent_id" : "0000871769", "agency_code" : "2", "respondent_name" : "FARMERS & MERCHANTS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecfe" }, "activity_year" : "2013", "respondent_id" : "0000874845", "agency_code" : "2", "respondent_name" : "LAKE CITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eecff" }, "activity_year" : "2013", "respondent_id" : "0000876634", "agency_code" : "2", "respondent_name" : "CAPITAL CITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed00" }, "activity_year" : "2013", "respondent_id" : "0000884303", "agency_code" : "2", "respondent_name" : "CHEMUNG CANAL TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed01" }, "activity_year" : "2013", "respondent_id" : "0000886204", "agency_code" : "2", "respondent_name" : "WATERTOWN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed02" }, "activity_year" : "2013", "respondent_id" : "0000913267", "agency_code" : "2", "respondent_name" : "LEGACY TEXAS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed03" }, "activity_year" : "2013", "respondent_id" : "0000928618", "agency_code" : "2", "respondent_name" : "AMERISERV FINANCIAL" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed04" }, "activity_year" : "2013", "respondent_id" : "0000940311", "agency_code" : "2", "respondent_name" : "BANCO POPULAR DE PUERTO RICO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed05" }, "activity_year" : "2013", "respondent_id" : "0000945053", "agency_code" : "2", "respondent_name" : "RCB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed06" }, "activity_year" : "2013", "respondent_id" : "0000969424", "agency_code" : "2", "respondent_name" : "HIGHLANDS UNION BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed07" }, "activity_year" : "2013", "respondent_id" : "0000976226", "agency_code" : "2", "respondent_name" : "THE FAUQUIER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed08" }, "activity_year" : "2013", "respondent_id" : "0000978118", "agency_code" : "2", "respondent_name" : "FIRST CITIZENS COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed09" }, "activity_year" : "2013", "respondent_id" : "0000991340", "agency_code" : "2", "respondent_name" : "1ST SOURCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0a" }, "activity_year" : "2013", "respondent_id" : "0000991621", "agency_code" : "2", "respondent_name" : "CITIZENS BANK & TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0b" }, "activity_year" : "2013", "respondent_id" : "0000997650", "agency_code" : "2", "respondent_name" : "CITY BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0c" }, "activity_year" : "2013", "respondent_id" : "0001007846", "agency_code" : "2", "respondent_name" : "FIRST MIDWEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0d" }, "activity_year" : "2013", "respondent_id" : "0001009420", "agency_code" : "2", "respondent_name" : "STELLARONE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0e" }, "activity_year" : "2013", "respondent_id" : "0001010930", "agency_code" : "2", "respondent_name" : "UNITED BANK INC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed0f" }, "activity_year" : "2013", "respondent_id" : "0001161029", "agency_code" : "2", "respondent_name" : "THE BANK OF HAMPTON ROADS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed10" }, "activity_year" : "2013", "respondent_id" : "0001187001", "agency_code" : "2", "respondent_name" : "INTERBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed11" }, "activity_year" : "2013", "respondent_id" : "0001190074", "agency_code" : "2", "respondent_name" : "VIRGINIA COMMERCE BANK INC" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed12" }, "activity_year" : "2013", "respondent_id" : "0001445943", "agency_code" : "2", "respondent_name" : "WHITAKER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed13" }, "activity_year" : "2013", "respondent_id" : "0001447639", "agency_code" : "2", "respondent_name" : "WESTSTAR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed14" }, "activity_year" : "2013", "respondent_id" : "0001917301", "agency_code" : "2", "respondent_name" : "LAKE FOREST BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed15" }, "activity_year" : "2013", "respondent_id" : "0002044811", "agency_code" : "2", "respondent_name" : "WHEATON BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed16" }, "activity_year" : "2013", "respondent_id" : "0002119773", "agency_code" : "2", "respondent_name" : "HINSDALE BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed17" }, "activity_year" : "2013", "respondent_id" : "0002182786", "agency_code" : "2", "respondent_name" : "GOLDMAN SACHS BANK USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed18" }, "activity_year" : "2013", "respondent_id" : "0002209553", "agency_code" : "2", "respondent_name" : "HERITAGE BANK OF COMMERCE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed19" }, "activity_year" : "2013", "respondent_id" : "0002239288", "agency_code" : "2", "respondent_name" : "NORTH SHORE COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1a" }, "activity_year" : "2013", "respondent_id" : "0002298995", "agency_code" : "2", "respondent_name" : "VILLAGE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1b" }, "activity_year" : "2013", "respondent_id" : "0002339795", "agency_code" : "2", "respondent_name" : "LIBERTYVILLE BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1c" }, "activity_year" : "2013", "respondent_id" : "0002353595", "agency_code" : "2", "respondent_name" : "FIRST COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1d" }, "activity_year" : "2013", "respondent_id" : "0002354985", "agency_code" : "2", "respondent_name" : "CUSTOMERS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1e" }, "activity_year" : "2013", "respondent_id" : "0002434113", "agency_code" : "2", "respondent_name" : "BANK RHODE ISLAND" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed1f" }, "activity_year" : "2013", "respondent_id" : "0002505787", "agency_code" : "2", "respondent_name" : "SUMMIT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed20" }, "activity_year" : "2013", "respondent_id" : "0002533119", "agency_code" : "2", "respondent_name" : "NORTHSIDE COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed21" }, "activity_year" : "2013", "respondent_id" : "0002580243", "agency_code" : "2", "respondent_name" : "AMERICAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed22" }, "activity_year" : "2013", "respondent_id" : "0002652092", "agency_code" : "2", "respondent_name" : "EAGLEBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed23" }, "activity_year" : "2013", "respondent_id" : "0002693264", "agency_code" : "2", "respondent_name" : "TOWN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed24" }, "activity_year" : "2013", "respondent_id" : "0002717012", "agency_code" : "2", "respondent_name" : "PACIFIC MERCANTILE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed25" }, "activity_year" : "2013", "respondent_id" : "0002736291", "agency_code" : "2", "respondent_name" : "BANCO POPULAR NORTH AMERICA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed26" }, "activity_year" : "2013", "respondent_id" : "0002736451", "agency_code" : "2", "respondent_name" : "NEW PEOPLES BANK, INC." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed27" }, "activity_year" : "2013", "respondent_id" : "0002742153", "agency_code" : "2", "respondent_name" : "FIRST CAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed28" }, "activity_year" : "2013", "respondent_id" : "0002860440", "agency_code" : "2", "respondent_name" : "1ST UNITED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed29" }, "activity_year" : "2013", "respondent_id" : "0002938198", "agency_code" : "2", "respondent_name" : "NORTHBROOK BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2a" }, "activity_year" : "2013", "respondent_id" : "0003374298", "agency_code" : "2", "respondent_name" : "VIRGINIA HERITAGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2b" }, "activity_year" : "2013", "respondent_id" : "0003536407", "agency_code" : "2", "respondent_name" : "USAMERIBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2c" }, "activity_year" : "2013", "respondent_id" : "0000000110", "agency_code" : "3", "respondent_name" : "BANK OF THE OZARKS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2d" }, "activity_year" : "2013", "respondent_id" : "0000000258", "agency_code" : "3", "respondent_name" : "STOCK YARDS BANK & TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2e" }, "activity_year" : "2013", "respondent_id" : "0000000324", "agency_code" : "3", "respondent_name" : "CITIZENS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed2f" }, "activity_year" : "2013", "respondent_id" : "0000000609", "agency_code" : "3", "respondent_name" : "TOMPKINS TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed30" }, "activity_year" : "2013", "respondent_id" : "0000000622", "agency_code" : "3", "respondent_name" : "AMALGAMATED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed31" }, "activity_year" : "2013", "respondent_id" : "0000000803", "agency_code" : "3", "respondent_name" : "WESBANCO BANK INC." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed32" }, "activity_year" : "2013", "respondent_id" : "0000000873", "agency_code" : "3", "respondent_name" : "SYNOVUS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed33" }, "activity_year" : "2013", "respondent_id" : "0000000903", "agency_code" : "3", "respondent_name" : "AMALGAMATED BANK OF CHICAGO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed34" }, "activity_year" : "2013", "respondent_id" : "0000000953", "agency_code" : "3", "respondent_name" : "BANKERS TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed35" }, "activity_year" : "2013", "respondent_id" : "0000001039", "agency_code" : "3", "respondent_name" : "THE BANK OF EDWARDSVILLE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed36" }, "activity_year" : "2013", "respondent_id" : "0000001265", "agency_code" : "3", "respondent_name" : "CASHMERE VALLEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed37" }, "activity_year" : "2013", "respondent_id" : "0000001281", "agency_code" : "3", "respondent_name" : "WASHINGTON TRUST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed38" }, "activity_year" : "2013", "respondent_id" : "0000001331", "agency_code" : "3", "respondent_name" : "FARMERS & MERCHANTS BANK OF CE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed39" }, "activity_year" : "2013", "respondent_id" : "0000001399", "agency_code" : "3", "respondent_name" : "FRANDSEN BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3a" }, "activity_year" : "2013", "respondent_id" : "0000001414", "agency_code" : "3", "respondent_name" : "KLEINBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3b" }, "activity_year" : "2013", "respondent_id" : "0000001479", "agency_code" : "3", "respondent_name" : "FIRST STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3c" }, "activity_year" : "2013", "respondent_id" : "0000001536", "agency_code" : "3", "respondent_name" : "BANK OF STOCKTON" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3d" }, "activity_year" : "2013", "respondent_id" : "0000001711", "agency_code" : "3", "respondent_name" : "CITIZENS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3e" }, "activity_year" : "2013", "respondent_id" : "0000001768", "agency_code" : "3", "respondent_name" : "MECHANICS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed3f" }, "activity_year" : "2013", "respondent_id" : "0000001874", "agency_code" : "3", "respondent_name" : "BANK OF LABOR" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed40" }, "activity_year" : "2013", "respondent_id" : "0000003076", "agency_code" : "3", "respondent_name" : "INDEPENDENT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed41" }, "activity_year" : "2013", "respondent_id" : "0000003258", "agency_code" : "3", "respondent_name" : "PATRIOT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed42" }, "activity_year" : "2013", "respondent_id" : "0000003440", "agency_code" : "3", "respondent_name" : "FIRST NORTHERN BANK OF DIXON" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed43" }, "activity_year" : "2013", "respondent_id" : "0000003514", "agency_code" : "3", "respondent_name" : "BANK OF THE WEST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed44" }, "activity_year" : "2013", "respondent_id" : "0000003657", "agency_code" : "3", "respondent_name" : "FIRST AMERICAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed45" }, "activity_year" : "2013", "respondent_id" : "0000004048", "agency_code" : "3", "respondent_name" : "SPIRITBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed46" }, "activity_year" : "2013", "respondent_id" : "0000004239", "agency_code" : "3", "respondent_name" : "FIRST UNITED BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed47" }, "activity_year" : "2013", "respondent_id" : "0000004533", "agency_code" : "3", "respondent_name" : "CITIZENS BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed48" }, "activity_year" : "2013", "respondent_id" : "0000004789", "agency_code" : "3", "respondent_name" : "EMPRISE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed49" }, "activity_year" : "2013", "respondent_id" : "0000004857", "agency_code" : "3", "respondent_name" : "FIRST UNITED BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4a" }, "activity_year" : "2013", "respondent_id" : "0000005598", "agency_code" : "3", "respondent_name" : "TROY BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4b" }, "activity_year" : "2013", "respondent_id" : "0000005602", "agency_code" : "3", "respondent_name" : "UNION STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4c" }, "activity_year" : "2013", "respondent_id" : "0000005633", "agency_code" : "3", "respondent_name" : "FIRST SECURITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4d" }, "activity_year" : "2013", "respondent_id" : "0000005649", "agency_code" : "3", "respondent_name" : "DISCOVER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4e" }, "activity_year" : "2013", "respondent_id" : "0000005766", "agency_code" : "3", "respondent_name" : "MAINSOURCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed4f" }, "activity_year" : "2013", "respondent_id" : "0000005874", "agency_code" : "3", "respondent_name" : "CALVIN B. TAYLOR BANKING CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed50" }, "activity_year" : "2013", "respondent_id" : "0000005903", "agency_code" : "3", "respondent_name" : "BANKPLUS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed51" }, "activity_year" : "2013", "respondent_id" : "0000005956", "agency_code" : "3", "respondent_name" : "PEOPLES BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed52" }, "activity_year" : "2013", "respondent_id" : "0000005969", "agency_code" : "3", "respondent_name" : "THE F&M STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed53" }, "activity_year" : "2013", "respondent_id" : "0000006158", "agency_code" : "3", "respondent_name" : "PEOPLES BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed54" }, "activity_year" : "2013", "respondent_id" : "0000006161", "agency_code" : "3", "respondent_name" : "KITSAP BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed55" }, "activity_year" : "2013", "respondent_id" : "0000006268", "agency_code" : "3", "respondent_name" : "MERCHANTS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed56" }, "activity_year" : "2013", "respondent_id" : "0000007153", "agency_code" : "3", "respondent_name" : "MAHOPAC  BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed57" }, "activity_year" : "2013", "respondent_id" : "0000007404", "agency_code" : "3", "respondent_name" : "FIRST KEYSTONE COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed58" }, "activity_year" : "2013", "respondent_id" : "0000007468", "agency_code" : "3", "respondent_name" : "FIRST COMMONWEALTH BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed59" }, "activity_year" : "2013", "respondent_id" : "0000007506", "agency_code" : "3", "respondent_name" : "ACNB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5a" }, "activity_year" : "2013", "respondent_id" : "0000007514", "agency_code" : "3", "respondent_name" : "PEOPLES SECURITY BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5b" }, "activity_year" : "2013", "respondent_id" : "0000007614", "agency_code" : "3", "respondent_name" : "THE JUNIATA VALLEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5c" }, "activity_year" : "2013", "respondent_id" : "0000007714", "agency_code" : "3", "respondent_name" : "QNB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5d" }, "activity_year" : "2013", "respondent_id" : "0000007748", "agency_code" : "3", "respondent_name" : "VIST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5e" }, "activity_year" : "2013", "respondent_id" : "0000007799", "agency_code" : "3", "respondent_name" : "CITIZENS & NORTHERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed5f" }, "activity_year" : "2013", "respondent_id" : "0000008152", "agency_code" : "3", "respondent_name" : "CAMBRIDGE TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed60" }, "activity_year" : "2013", "respondent_id" : "0000008405", "agency_code" : "3", "respondent_name" : "FARMERS & MERCHANTS TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed61" }, "activity_year" : "2013", "respondent_id" : "0000008426", "agency_code" : "3", "respondent_name" : "1ST SUMMIT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed62" }, "activity_year" : "2013", "respondent_id" : "0000008468", "agency_code" : "3", "respondent_name" : "EXCHANGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed63" }, "activity_year" : "2013", "respondent_id" : "0000008660", "agency_code" : "3", "respondent_name" : "COMMERCIAL BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed64" }, "activity_year" : "2013", "respondent_id" : "0000008663", "agency_code" : "3", "respondent_name" : "FIRSTBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed65" }, "activity_year" : "2013", "respondent_id" : "0000008811", "agency_code" : "3", "respondent_name" : "HEBRON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed66" }, "activity_year" : "2013", "respondent_id" : "0000008878", "agency_code" : "3", "respondent_name" : "STATE BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed67" }, "activity_year" : "2013", "respondent_id" : "0000008997", "agency_code" : "3", "respondent_name" : "THE PALMETTO BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed68" }, "activity_year" : "2013", "respondent_id" : "0000009712", "agency_code" : "3", "respondent_name" : "ROCKLAND TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed69" }, "activity_year" : "2013", "respondent_id" : "0000009719", "agency_code" : "3", "respondent_name" : "OXFORD BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6a" }, "activity_year" : "2013", "respondent_id" : "0000009846", "agency_code" : "3", "respondent_name" : "BRANCH BANKING AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6b" }, "activity_year" : "2013", "respondent_id" : "0000009889", "agency_code" : "3", "respondent_name" : "MID PENN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6c" }, "activity_year" : "2013", "respondent_id" : "0000010359", "agency_code" : "3", "respondent_name" : "HAPPY STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6d" }, "activity_year" : "2013", "respondent_id" : "0000010363", "agency_code" : "3", "respondent_name" : "CITIZENS & FARMERS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6e" }, "activity_year" : "2013", "respondent_id" : "0000010619", "agency_code" : "3", "respondent_name" : "HAWTHORN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed6f" }, "activity_year" : "2013", "respondent_id" : "0000010634", "agency_code" : "3", "respondent_name" : "PINNACLE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed70" }, "activity_year" : "2013", "respondent_id" : "0000010678", "agency_code" : "3", "respondent_name" : "THE MUNCY BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed71" }, "activity_year" : "2013", "respondent_id" : "0000010887", "agency_code" : "3", "respondent_name" : "FIRST COUNTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed72" }, "activity_year" : "2013", "respondent_id" : "0000011000", "agency_code" : "3", "respondent_name" : "CENTRAL BANK LAKE OZARKS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed73" }, "activity_year" : "2013", "respondent_id" : "0000011063", "agency_code" : "3", "respondent_name" : "FIRST-CITIZENS BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed74" }, "activity_year" : "2013", "respondent_id" : "0000011112", "agency_code" : "3", "respondent_name" : "SOMERSET TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed75" }, "activity_year" : "2013", "respondent_id" : "0000011113", "agency_code" : "3", "respondent_name" : "HAMLIN BANK AND TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed76" }, "activity_year" : "2013", "respondent_id" : "0000011116", "agency_code" : "3", "respondent_name" : "CLEARFIELD BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed77" }, "activity_year" : "2013", "respondent_id" : "0000011124", "agency_code" : "3", "respondent_name" : "S&T BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed78" }, "activity_year" : "2013", "respondent_id" : "0000011151", "agency_code" : "3", "respondent_name" : "FIRST STATE BANK CENTRAL TEXAS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed79" }, "activity_year" : "2013", "respondent_id" : "0000011507", "agency_code" : "3", "respondent_name" : "THE FIDELITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7a" }, "activity_year" : "2013", "respondent_id" : "0000011569", "agency_code" : "3", "respondent_name" : "ALLIANCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7b" }, "activity_year" : "2013", "respondent_id" : "0000011578", "agency_code" : "3", "respondent_name" : "BURKE & HERBERT BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7c" }, "activity_year" : "2013", "respondent_id" : "0000011580", "agency_code" : "3", "respondent_name" : "THE BANK OF SOUTHSIDE VIRGINIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7d" }, "activity_year" : "2013", "respondent_id" : "0000011813", "agency_code" : "3", "respondent_name" : "BANCORPSOUTH" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7e" }, "activity_year" : "2013", "respondent_id" : "0000011868", "agency_code" : "3", "respondent_name" : "THE FIDELITY DEPOSIT & DISCOUN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed7f" }, "activity_year" : "2013", "respondent_id" : "0000011971", "agency_code" : "3", "respondent_name" : "BAR HARBOR BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed80" }, "activity_year" : "2013", "respondent_id" : "0000012010", "agency_code" : "3", "respondent_name" : "THE PROVIDENT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed81" }, "activity_year" : "2013", "respondent_id" : "0000012013", "agency_code" : "3", "respondent_name" : "UNION COUNTY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed82" }, "activity_year" : "2013", "respondent_id" : "0000012017", "agency_code" : "3", "respondent_name" : "RSI BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed83" }, "activity_year" : "2013", "respondent_id" : "0000012054", "agency_code" : "3", "respondent_name" : "EMIGRANT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed84" }, "activity_year" : "2013", "respondent_id" : "0000012113", "agency_code" : "3", "respondent_name" : "GERMANTOWN TRUST & SAVINGS BAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed85" }, "activity_year" : "2013", "respondent_id" : "0000012181", "agency_code" : "3", "respondent_name" : "MONROE BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed86" }, "activity_year" : "2013", "respondent_id" : "0000012383", "agency_code" : "3", "respondent_name" : "CARROLLTON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed87" }, "activity_year" : "2013", "respondent_id" : "0000012406", "agency_code" : "3", "respondent_name" : "GLENVIEW STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed88" }, "activity_year" : "2013", "respondent_id" : "0000012437", "agency_code" : "3", "respondent_name" : "RENASANT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed89" }, "activity_year" : "2013", "respondent_id" : "0000012441", "agency_code" : "3", "respondent_name" : "HANCOCK BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8a" }, "activity_year" : "2013", "respondent_id" : "0000012517", "agency_code" : "3", "respondent_name" : "FIRST BANK FINANCIAL CENTRE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8b" }, "activity_year" : "2013", "respondent_id" : "0000012633", "agency_code" : "3", "respondent_name" : "CENTRAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8c" }, "activity_year" : "2013", "respondent_id" : "0000012769", "agency_code" : "3", "respondent_name" : "FIRST UNITED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8d" }, "activity_year" : "2013", "respondent_id" : "0000012854", "agency_code" : "3", "respondent_name" : "CENTIER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8e" }, "activity_year" : "2013", "respondent_id" : "0000012936", "agency_code" : "3", "respondent_name" : "STEUBEN TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed8f" }, "activity_year" : "2013", "respondent_id" : "0000013063", "agency_code" : "3", "respondent_name" : "KENNEBUNK SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed90" }, "activity_year" : "2013", "respondent_id" : "0000013177", "agency_code" : "3", "respondent_name" : "UNITED BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed91" }, "activity_year" : "2013", "respondent_id" : "0000013292", "agency_code" : "3", "respondent_name" : "BANK OF CASTILE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed92" }, "activity_year" : "2013", "respondent_id" : "0000013397", "agency_code" : "3", "respondent_name" : "BANK OF UTICA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed93" }, "activity_year" : "2013", "respondent_id" : "0000013421", "agency_code" : "3", "respondent_name" : "UNION BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed94" }, "activity_year" : "2013", "respondent_id" : "0000013425", "agency_code" : "3", "respondent_name" : "SCBT" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed95" }, "activity_year" : "2013", "respondent_id" : "0000013876", "agency_code" : "3", "respondent_name" : "CNB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed96" }, "activity_year" : "2013", "respondent_id" : "0000014028", "agency_code" : "3", "respondent_name" : "FIRST GUARANTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed97" }, "activity_year" : "2013", "respondent_id" : "0000014134", "agency_code" : "3", "respondent_name" : "PASSUMPSIC SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed98" }, "activity_year" : "2013", "respondent_id" : "0000014140", "agency_code" : "3", "respondent_name" : "NORTHFIELD SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed99" }, "activity_year" : "2013", "respondent_id" : "0000014333", "agency_code" : "3", "respondent_name" : "COMMERCIAL BANK & TRUST OF PA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9a" }, "activity_year" : "2013", "respondent_id" : "0000014507", "agency_code" : "3", "respondent_name" : "CNB BANK INC." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9b" }, "activity_year" : "2013", "respondent_id" : "0000014650", "agency_code" : "3", "respondent_name" : "HILLS BANK AND TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9c" }, "activity_year" : "2013", "respondent_id" : "0000014679", "agency_code" : "3", "respondent_name" : "INDUSTRIAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9d" }, "activity_year" : "2013", "respondent_id" : "0000014816", "agency_code" : "3", "respondent_name" : "MBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9e" }, "activity_year" : "2013", "respondent_id" : "0000014843", "agency_code" : "3", "respondent_name" : "MIDWESTONE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eed9f" }, "activity_year" : "2013", "respondent_id" : "0000014851", "agency_code" : "3", "respondent_name" : "CITIZENS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda0" }, "activity_year" : "2013", "respondent_id" : "0000015019", "agency_code" : "3", "respondent_name" : "FIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda1" }, "activity_year" : "2013", "respondent_id" : "0000015219", "agency_code" : "3", "respondent_name" : "DUBUQUE BANK & TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda2" }, "activity_year" : "2013", "respondent_id" : "0000015289", "agency_code" : "3", "respondent_name" : "GREAT WESTERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda3" }, "activity_year" : "2013", "respondent_id" : "0000015310", "agency_code" : "3", "respondent_name" : "CB&SBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda4" }, "activity_year" : "2013", "respondent_id" : "0000015359", "agency_code" : "3", "respondent_name" : "SOUTHERN BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda5" }, "activity_year" : "2013", "respondent_id" : "0000015504", "agency_code" : "3", "respondent_name" : "FIRST CITIZENS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda6" }, "activity_year" : "2013", "respondent_id" : "0000015614", "agency_code" : "3", "respondent_name" : "WEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda7" }, "activity_year" : "2013", "respondent_id" : "0000015697", "agency_code" : "3", "respondent_name" : "BENEFICIAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda8" }, "activity_year" : "2013", "respondent_id" : "0000015815", "agency_code" : "3", "respondent_name" : "CENTRAL BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeda9" }, "activity_year" : "2013", "respondent_id" : "0000015912", "agency_code" : "3", "respondent_name" : "SAVINGS BANK OF DANBURY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedaa" }, "activity_year" : "2013", "respondent_id" : "0000015966", "agency_code" : "3", "respondent_name" : "FULTON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedab" }, "activity_year" : "2013", "respondent_id" : "0000015977", "agency_code" : "3", "respondent_name" : "PATHFINDER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedac" }, "activity_year" : "2013", "respondent_id" : "0000015990", "agency_code" : "3", "respondent_name" : "WATERTOWN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedad" }, "activity_year" : "2013", "respondent_id" : "0000015995", "agency_code" : "3", "respondent_name" : "PUTNAM COUNTY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedae" }, "activity_year" : "2013", "respondent_id" : "0000016012", "agency_code" : "3", "respondent_name" : "DIME SAVINGS BANK OF WILLIAMSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedaf" }, "activity_year" : "2013", "respondent_id" : "0000016022", "agency_code" : "3", "respondent_name" : "NEW YORK COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb0" }, "activity_year" : "2013", "respondent_id" : "0000016026", "agency_code" : "3", "respondent_name" : "RIDGEWOOD SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb1" }, "activity_year" : "2013", "respondent_id" : "0000016032", "agency_code" : "3", "respondent_name" : "RHINEBECK BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb2" }, "activity_year" : "2013", "respondent_id" : "0000016068", "agency_code" : "3", "respondent_name" : "APPLE BANK FOR SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb3" }, "activity_year" : "2013", "respondent_id" : "0000016175", "agency_code" : "3", "respondent_name" : "WEST ALABAMA BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb4" }, "activity_year" : "2013", "respondent_id" : "0000016191", "agency_code" : "3", "respondent_name" : "STOCKMAN BANK OF MONTANA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb5" }, "activity_year" : "2013", "respondent_id" : "0000016450", "agency_code" : "3", "respondent_name" : "BUSEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb6" }, "activity_year" : "2013", "respondent_id" : "0000016470", "agency_code" : "3", "respondent_name" : "JEFFERSON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb7" }, "activity_year" : "2013", "respondent_id" : "0000016606", "agency_code" : "3", "respondent_name" : "STANDARD BANK AND TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb8" }, "activity_year" : "2013", "respondent_id" : "0000016799", "agency_code" : "3", "respondent_name" : "NEWBRIDGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedb9" }, "activity_year" : "2013", "respondent_id" : "0000016820", "agency_code" : "3", "respondent_name" : "THE BANK OF GLEN BURNIE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedba" }, "activity_year" : "2013", "respondent_id" : "0000016835", "agency_code" : "3", "respondent_name" : "PROSPERITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedbb" }, "activity_year" : "2013", "respondent_id" : "0000016889", "agency_code" : "3", "respondent_name" : "UNITED COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedbc" }, "activity_year" : "2013", "respondent_id" : "0000016924", "agency_code" : "3", "respondent_name" : "OZARK MOUNTAIN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedbd" }, "activity_year" : "2013", "respondent_id" : "0000016940", "agency_code" : "3", "respondent_name" : "THE DELAWARE COUNTY BANK AND T" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedbe" }, "activity_year" : "2013", "respondent_id" : "0000016980", "agency_code" : "3", "respondent_name" : "BANK OF COLORADO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedbf" }, "activity_year" : "2013", "respondent_id" : "0000017077", "agency_code" : "3", "respondent_name" : "FIRST UNITED SECURITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc0" }, "activity_year" : "2013", "respondent_id" : "0000017105", "agency_code" : "3", "respondent_name" : "DOUGLAS COUNTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc1" }, "activity_year" : "2013", "respondent_id" : "0000017115", "agency_code" : "3", "respondent_name" : "SANFORD INSTITUTION FOR SAVING" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc2" }, "activity_year" : "2013", "respondent_id" : "0000017123", "agency_code" : "3", "respondent_name" : "ARTISANS'  BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc3" }, "activity_year" : "2013", "respondent_id" : "0000017266", "agency_code" : "3", "respondent_name" : "UMPQUA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc4" }, "activity_year" : "2013", "respondent_id" : "0000017308", "agency_code" : "3", "respondent_name" : "CENTRAL PACIFIC BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc5" }, "activity_year" : "2013", "respondent_id" : "0000017323", "agency_code" : "3", "respondent_name" : "FIRST STATE COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc6" }, "activity_year" : "2013", "respondent_id" : "0000017393", "agency_code" : "3", "respondent_name" : "GERMAN AMERICAN BANKCORP" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc7" }, "activity_year" : "2013", "respondent_id" : "0000017470", "agency_code" : "3", "respondent_name" : "FIRST BANK OF HIGHLAND PARK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc8" }, "activity_year" : "2013", "respondent_id" : "0000017484", "agency_code" : "3", "respondent_name" : "COMMERCE BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedc9" }, "activity_year" : "2013", "respondent_id" : "0000017514", "agency_code" : "3", "respondent_name" : "BANTERRA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedca" }, "activity_year" : "2013", "respondent_id" : "0000017633", "agency_code" : "3", "respondent_name" : "EMPIRE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedcb" }, "activity_year" : "2013", "respondent_id" : "0000017658", "agency_code" : "3", "respondent_name" : "NORWAY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedcc" }, "activity_year" : "2013", "respondent_id" : "0000017748", "agency_code" : "3", "respondent_name" : "GORHAM SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedcd" }, "activity_year" : "2013", "respondent_id" : "0000017842", "agency_code" : "3", "respondent_name" : "TEXAS BANK AND TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedce" }, "activity_year" : "2013", "respondent_id" : "0000017870", "agency_code" : "3", "respondent_name" : "CAMBRIDGE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedcf" }, "activity_year" : "2013", "respondent_id" : "0000017897", "agency_code" : "3", "respondent_name" : "KENNEBEC SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd0" }, "activity_year" : "2013", "respondent_id" : "0000017943", "agency_code" : "3", "respondent_name" : "LIBERTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd1" }, "activity_year" : "2013", "respondent_id" : "0000017985", "agency_code" : "3", "respondent_name" : "FIRST HAWAIIAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd2" }, "activity_year" : "2013", "respondent_id" : "0000018012", "agency_code" : "3", "respondent_name" : "BANK OF NEW HAMPSHIRE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd3" }, "activity_year" : "2013", "respondent_id" : "0000018059", "agency_code" : "3", "respondent_name" : "THE BANK OF COMMERCE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd4" }, "activity_year" : "2013", "respondent_id" : "0000018100", "agency_code" : "3", "respondent_name" : "COREFIRST BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd5" }, "activity_year" : "2013", "respondent_id" : "0000018113", "agency_code" : "3", "respondent_name" : "NEVADA STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd6" }, "activity_year" : "2013", "respondent_id" : "0000018129", "agency_code" : "3", "respondent_name" : "BANKNEWPORT" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd7" }, "activity_year" : "2013", "respondent_id" : "0000018190", "agency_code" : "3", "respondent_name" : "UNION SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd8" }, "activity_year" : "2013", "respondent_id" : "0000018198", "agency_code" : "3", "respondent_name" : "ION BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedd9" }, "activity_year" : "2013", "respondent_id" : "0000018200", "agency_code" : "3", "respondent_name" : "DIME BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedda" }, "activity_year" : "2013", "respondent_id" : "0000018203", "agency_code" : "3", "respondent_name" : "ROCKVILLE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeddb" }, "activity_year" : "2013", "respondent_id" : "0000018204", "agency_code" : "3", "respondent_name" : "FIRST COUNTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeddc" }, "activity_year" : "2013", "respondent_id" : "0000018208", "agency_code" : "3", "respondent_name" : "FARMINGTON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeddd" }, "activity_year" : "2013", "respondent_id" : "0000018213", "agency_code" : "3", "respondent_name" : "FAIRFIELD COUNTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedde" }, "activity_year" : "2013", "respondent_id" : "0000018229", "agency_code" : "3", "respondent_name" : "NORTHWEST COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeddf" }, "activity_year" : "2013", "respondent_id" : "0000018238", "agency_code" : "3", "respondent_name" : "CHELSEA GROTON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede0" }, "activity_year" : "2013", "respondent_id" : "0000018258", "agency_code" : "3", "respondent_name" : "THOMASTON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede1" }, "activity_year" : "2013", "respondent_id" : "0000018266", "agency_code" : "3", "respondent_name" : "NORTHERN BANK & TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede2" }, "activity_year" : "2013", "respondent_id" : "0000018297", "agency_code" : "3", "respondent_name" : "SOUTHSIDE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede3" }, "activity_year" : "2013", "respondent_id" : "0000018355", "agency_code" : "3", "respondent_name" : "NORTH DALLAS BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede4" }, "activity_year" : "2013", "respondent_id" : "0000018408", "agency_code" : "3", "respondent_name" : "BANGOR SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede5" }, "activity_year" : "2013", "respondent_id" : "0000018412", "agency_code" : "3", "respondent_name" : "WHIDBEY ISLAND BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede6" }, "activity_year" : "2013", "respondent_id" : "0000018467", "agency_code" : "3", "respondent_name" : "SALISBURY BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede7" }, "activity_year" : "2013", "respondent_id" : "0000018503", "agency_code" : "3", "respondent_name" : "CATHAY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede8" }, "activity_year" : "2013", "respondent_id" : "0000018509", "agency_code" : "3", "respondent_name" : "WEST SUBURBAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eede9" }, "activity_year" : "2013", "respondent_id" : "0000018618", "agency_code" : "3", "respondent_name" : "MANUFACTURERS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedea" }, "activity_year" : "2013", "respondent_id" : "0000018923", "agency_code" : "3", "respondent_name" : "CITIBANK (BANAMEX USA)" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedeb" }, "activity_year" : "2013", "respondent_id" : "0000018962", "agency_code" : "3", "respondent_name" : "ROYAL BANK AMERICA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedec" }, "activity_year" : "2013", "respondent_id" : "0000018983", "agency_code" : "3", "respondent_name" : "RIVER CITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeded" }, "activity_year" : "2013", "respondent_id" : "0000019006", "agency_code" : "3", "respondent_name" : "SIUSLAW BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedee" }, "activity_year" : "2013", "respondent_id" : "0000019008", "agency_code" : "3", "respondent_name" : "PARKWAY BANK & TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedef" }, "activity_year" : "2013", "respondent_id" : "0000019222", "agency_code" : "3", "respondent_name" : "FREMONT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf0" }, "activity_year" : "2013", "respondent_id" : "0000019333", "agency_code" : "3", "respondent_name" : "REPUBLIC BANK OF CHICAGO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf1" }, "activity_year" : "2013", "respondent_id" : "0000019416", "agency_code" : "3", "respondent_name" : "CTBC BANK USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf2" }, "activity_year" : "2013", "respondent_id" : "0000019459", "agency_code" : "3", "respondent_name" : "UNITED COMMUNITY BANCORP" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf3" }, "activity_year" : "2013", "respondent_id" : "0000019531", "agency_code" : "3", "respondent_name" : "MACHIAS SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf4" }, "activity_year" : "2013", "respondent_id" : "0000019581", "agency_code" : "3", "respondent_name" : "BELL STATE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf5" }, "activity_year" : "2013", "respondent_id" : "0000019629", "agency_code" : "3", "respondent_name" : "INTERNATIONAL BANK OF COMMERCE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf6" }, "activity_year" : "2013", "respondent_id" : "0000019762", "agency_code" : "3", "respondent_name" : "JEFFERSON BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf7" }, "activity_year" : "2013", "respondent_id" : "0000019772", "agency_code" : "3", "respondent_name" : "RIVER VALLEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf8" }, "activity_year" : "2013", "respondent_id" : "0000019842", "agency_code" : "3", "respondent_name" : "BANK LEUMI USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedf9" }, "activity_year" : "2013", "respondent_id" : "0000019858", "agency_code" : "3", "respondent_name" : "CITYWIDE BANKS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedfa" }, "activity_year" : "2013", "respondent_id" : "0000019861", "agency_code" : "3", "respondent_name" : "YADKIN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedfb" }, "activity_year" : "2013", "respondent_id" : "0000019899", "agency_code" : "3", "respondent_name" : "KANSAS STATE BANK OF MANHATTAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedfc" }, "activity_year" : "2013", "respondent_id" : "0000019943", "agency_code" : "3", "respondent_name" : "CENTURY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedfd" }, "activity_year" : "2013", "respondent_id" : "0000019953", "agency_code" : "3", "respondent_name" : "LAKELAND BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedfe" }, "activity_year" : "2013", "respondent_id" : "0000019977", "agency_code" : "3", "respondent_name" : "ISRAEL DISCOUNT BANK OF NY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eedff" }, "activity_year" : "2013", "respondent_id" : "0000020369", "agency_code" : "3", "respondent_name" : "HEARTLAND BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee00" }, "activity_year" : "2013", "respondent_id" : "0000020473", "agency_code" : "3", "respondent_name" : "AMERICAN BANK OF TEXAS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee01" }, "activity_year" : "2013", "respondent_id" : "0000020504", "agency_code" : "3", "respondent_name" : "AMERIS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee02" }, "activity_year" : "2013", "respondent_id" : "0000020741", "agency_code" : "3", "respondent_name" : "PIONEER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee03" }, "activity_year" : "2013", "respondent_id" : "0000020774", "agency_code" : "3", "respondent_name" : "PACIFIC CONTINENTAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee04" }, "activity_year" : "2013", "respondent_id" : "0000020828", "agency_code" : "3", "respondent_name" : "BANCO SANTANDER DE PUERTO RICO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee05" }, "activity_year" : "2013", "respondent_id" : "0000020852", "agency_code" : "3", "respondent_name" : "CALIFORNIA BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee06" }, "activity_year" : "2013", "respondent_id" : "0000021122", "agency_code" : "3", "respondent_name" : "BRIDGEVIEW BANK GROUP" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee07" }, "activity_year" : "2013", "respondent_id" : "0000021265", "agency_code" : "3", "respondent_name" : "BAC FLORIDA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee08" }, "activity_year" : "2013", "respondent_id" : "0000021440", "agency_code" : "3", "respondent_name" : "FIDELITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee09" }, "activity_year" : "2013", "respondent_id" : "0000021468", "agency_code" : "3", "respondent_name" : "TOTALBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0a" }, "activity_year" : "2013", "respondent_id" : "0000021573", "agency_code" : "3", "respondent_name" : "BANK OF TENNESSEE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0b" }, "activity_year" : "2013", "respondent_id" : "0000021716", "agency_code" : "3", "respondent_name" : "CITIZENS BUSINESS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0c" }, "activity_year" : "2013", "respondent_id" : "0000021943", "agency_code" : "3", "respondent_name" : "TRI COUNTIES BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0d" }, "activity_year" : "2013", "respondent_id" : "0000021952", "agency_code" : "3", "respondent_name" : "STATE BANK OF COUNTRYSIDE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0e" }, "activity_year" : "2013", "respondent_id" : "0000022257", "agency_code" : "3", "respondent_name" : "COLONY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee0f" }, "activity_year" : "2013", "respondent_id" : "0000022327", "agency_code" : "3", "respondent_name" : "SPIRIT OF TEXAS BANK SSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee10" }, "activity_year" : "2013", "respondent_id" : "0000022407", "agency_code" : "3", "respondent_name" : "BANK OF THE CASCADES" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee11" }, "activity_year" : "2013", "respondent_id" : "0000022441", "agency_code" : "3", "respondent_name" : "AMERICANWEST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee12" }, "activity_year" : "2013", "respondent_id" : "0000022444", "agency_code" : "3", "respondent_name" : "INLAND BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee13" }, "activity_year" : "2013", "respondent_id" : "0000022597", "agency_code" : "3", "respondent_name" : "BANK OF THE SIERRA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee14" }, "activity_year" : "2013", "respondent_id" : "0000022946", "agency_code" : "3", "respondent_name" : "SCOTIABANK DE PUERTO RICO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee15" }, "activity_year" : "2013", "respondent_id" : "0000023030", "agency_code" : "3", "respondent_name" : "CENTRAL VALLEY COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee16" }, "activity_year" : "2013", "respondent_id" : "0000023091", "agency_code" : "3", "respondent_name" : "ALPINE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee17" }, "activity_year" : "2013", "respondent_id" : "0000023287", "agency_code" : "3", "respondent_name" : "CAPE COD FIVE CENTS SAVINGS BA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee18" }, "activity_year" : "2013", "respondent_id" : "0000023293", "agency_code" : "3", "respondent_name" : "FLORENCE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee19" }, "activity_year" : "2013", "respondent_id" : "0000023296", "agency_code" : "3", "respondent_name" : "SALEM FIVE CENTS SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1a" }, "activity_year" : "2013", "respondent_id" : "0000023301", "agency_code" : "3", "respondent_name" : "WILSHIRE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1b" }, "activity_year" : "2013", "respondent_id" : "0000023621", "agency_code" : "3", "respondent_name" : "BERKSHIRE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1c" }, "activity_year" : "2013", "respondent_id" : "0000023622", "agency_code" : "3", "respondent_name" : "BRISTOL COUNTY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1d" }, "activity_year" : "2013", "respondent_id" : "0000023623", "agency_code" : "3", "respondent_name" : "WASHINGTON TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1e" }, "activity_year" : "2013", "respondent_id" : "0000023627", "agency_code" : "3", "respondent_name" : "REPUBLIC BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee1f" }, "activity_year" : "2013", "respondent_id" : "0000023901", "agency_code" : "3", "respondent_name" : "BELMONT SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee20" }, "activity_year" : "2013", "respondent_id" : "0000023992", "agency_code" : "3", "respondent_name" : "COUNTRY BANK FOR SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee21" }, "activity_year" : "2013", "respondent_id" : "0000024045", "agency_code" : "3", "respondent_name" : "PACIFIC WESTERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee22" }, "activity_year" : "2013", "respondent_id" : "0000024156", "agency_code" : "3", "respondent_name" : "OCEAN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee23" }, "activity_year" : "2013", "respondent_id" : "0000024315", "agency_code" : "3", "respondent_name" : "COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee24" }, "activity_year" : "2013", "respondent_id" : "0000024516", "agency_code" : "3", "respondent_name" : "INTERAUDI BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee25" }, "activity_year" : "2013", "respondent_id" : "0000024655", "agency_code" : "3", "respondent_name" : "AMERICAN RIVER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee26" }, "activity_year" : "2013", "respondent_id" : "0000024811", "agency_code" : "3", "respondent_name" : "BOSTON PRIVATE BANK & TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee27" }, "activity_year" : "2013", "respondent_id" : "0000024920", "agency_code" : "3", "respondent_name" : "WOORI AMERICA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee28" }, "activity_year" : "2013", "respondent_id" : "0000025103", "agency_code" : "3", "respondent_name" : "CITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee29" }, "activity_year" : "2013", "respondent_id" : "0000025268", "agency_code" : "3", "respondent_name" : "FIRST CENTRAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2a" }, "activity_year" : "2013", "respondent_id" : "0000025330", "agency_code" : "3", "respondent_name" : "UNITED CENTRAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2b" }, "activity_year" : "2013", "respondent_id" : "0000025795", "agency_code" : "3", "respondent_name" : "PEOPLES BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2c" }, "activity_year" : "2013", "respondent_id" : "0000026218", "agency_code" : "3", "respondent_name" : "PARK BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2d" }, "activity_year" : "2013", "respondent_id" : "0000026255", "agency_code" : "3", "respondent_name" : "METRO BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2e" }, "activity_year" : "2013", "respondent_id" : "0000026390", "agency_code" : "3", "respondent_name" : "ATLANTIC STEWARDSHIP BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee2f" }, "activity_year" : "2013", "respondent_id" : "0000026395", "agency_code" : "3", "respondent_name" : "MUTUALONEBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee30" }, "activity_year" : "2013", "respondent_id" : "0000026451", "agency_code" : "3", "respondent_name" : "FIDELITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee31" }, "activity_year" : "2013", "respondent_id" : "0000026517", "agency_code" : "3", "respondent_name" : "CAPE COD COOPERATIVE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee32" }, "activity_year" : "2013", "respondent_id" : "0000026610", "agency_code" : "3", "respondent_name" : "BBCN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee33" }, "activity_year" : "2013", "respondent_id" : "0000026647", "agency_code" : "3", "respondent_name" : "FIRSTRUST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee34" }, "activity_year" : "2013", "respondent_id" : "0000026962", "agency_code" : "3", "respondent_name" : "WILSON BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee35" }, "activity_year" : "2013", "respondent_id" : "0000027006", "agency_code" : "3", "respondent_name" : "AMERICAN CHARTERED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee36" }, "activity_year" : "2013", "respondent_id" : "0000027235", "agency_code" : "3", "respondent_name" : "STAR FINANCIAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee37" }, "activity_year" : "2013", "respondent_id" : "0000027237", "agency_code" : "3", "respondent_name" : "ENTERPRISE BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee38" }, "activity_year" : "2013", "respondent_id" : "0000027244", "agency_code" : "3", "respondent_name" : "THE COLUMBIA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee39" }, "activity_year" : "2013", "respondent_id" : "0000027332", "agency_code" : "3", "respondent_name" : "REPUBLIC BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3a" }, "activity_year" : "2013", "respondent_id" : "0000027408", "agency_code" : "3", "respondent_name" : "ENTERPRISE BANK AND TRUST CO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3b" }, "activity_year" : "2013", "respondent_id" : "0000027471", "agency_code" : "3", "respondent_name" : "AMERICAN EXPRESS CENTURION BK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3c" }, "activity_year" : "2013", "respondent_id" : "0000027476", "agency_code" : "3", "respondent_name" : "BANCFIRST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3d" }, "activity_year" : "2013", "respondent_id" : "0000027499", "agency_code" : "3", "respondent_name" : "COMENITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3e" }, "activity_year" : "2013", "respondent_id" : "0000027507", "agency_code" : "3", "respondent_name" : "COMMUNITY BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee3f" }, "activity_year" : "2013", "respondent_id" : "0000027574", "agency_code" : "3", "respondent_name" : "GEORGIA BK & TR CO OF AUGUSTA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee40" }, "activity_year" : "2013", "respondent_id" : "0000027614", "agency_code" : "3", "respondent_name" : "FULTON BANK OF NEW JERSEY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee41" }, "activity_year" : "2013", "respondent_id" : "0000027708", "agency_code" : "3", "respondent_name" : "ESB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee42" }, "activity_year" : "2013", "respondent_id" : "0000027744", "agency_code" : "3", "respondent_name" : "MUTUALBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee43" }, "activity_year" : "2013", "respondent_id" : "0000028114", "agency_code" : "3", "respondent_name" : "THE HOME SAVINGS AND LOAN COMP" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee44" }, "activity_year" : "2013", "respondent_id" : "0000028116", "agency_code" : "3", "respondent_name" : "YAKIMA FEDERAL SAVINGS & LOAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee45" }, "activity_year" : "2013", "respondent_id" : "0000028178", "agency_code" : "3", "respondent_name" : "NORTHWEST SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee46" }, "activity_year" : "2013", "respondent_id" : "0000028258", "agency_code" : "3", "respondent_name" : "HOME FEDERAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee47" }, "activity_year" : "2013", "respondent_id" : "0000028395", "agency_code" : "3", "respondent_name" : "CAPE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee48" }, "activity_year" : "2013", "respondent_id" : "0000028489", "agency_code" : "3", "respondent_name" : "BANNER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee49" }, "activity_year" : "2013", "respondent_id" : "0000028513", "agency_code" : "3", "respondent_name" : "WATERSTONE BANK SSB" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4a" }, "activity_year" : "2013", "respondent_id" : "0000028567", "agency_code" : "3", "respondent_name" : "ROSELLE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4b" }, "activity_year" : "2013", "respondent_id" : "0000028788", "agency_code" : "3", "respondent_name" : "STURDY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4c" }, "activity_year" : "2013", "respondent_id" : "0000028866", "agency_code" : "3", "respondent_name" : "ORITANI BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4d" }, "activity_year" : "2013", "respondent_id" : "0000028892", "agency_code" : "3", "respondent_name" : "INVESTORS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4e" }, "activity_year" : "2013", "respondent_id" : "0000029012", "agency_code" : "3", "respondent_name" : "HERITAGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee4f" }, "activity_year" : "2013", "respondent_id" : "0000029058", "agency_code" : "3", "respondent_name" : "FIRST SAVINGS BANK NORTHWEST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee50" }, "activity_year" : "2013", "respondent_id" : "0000029546", "agency_code" : "3", "respondent_name" : "GREAT SOUTHERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee51" }, "activity_year" : "2013", "respondent_id" : "0000029663", "agency_code" : "3", "respondent_name" : "ASHEVILLE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee52" }, "activity_year" : "2013", "respondent_id" : "0000029809", "agency_code" : "3", "respondent_name" : "FIRST SAVINGS BK OF HEGEWISCH" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee53" }, "activity_year" : "2013", "respondent_id" : "0000029864", "agency_code" : "3", "respondent_name" : "ADVANTAGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee54" }, "activity_year" : "2013", "respondent_id" : "0000029875", "agency_code" : "3", "respondent_name" : "NVE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee55" }, "activity_year" : "2013", "respondent_id" : "0000029882", "agency_code" : "3", "respondent_name" : "ALLIANCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee56" }, "activity_year" : "2013", "respondent_id" : "0000030039", "agency_code" : "3", "respondent_name" : "HAVEN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee57" }, "activity_year" : "2013", "respondent_id" : "0000030052", "agency_code" : "3", "respondent_name" : "BOLING SPRINGS SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee58" }, "activity_year" : "2013", "respondent_id" : "0000030076", "agency_code" : "3", "respondent_name" : "SPENCER SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee59" }, "activity_year" : "2013", "respondent_id" : "0000030387", "agency_code" : "3", "respondent_name" : "FIRSTBANK PUERTO RICO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5a" }, "activity_year" : "2013", "respondent_id" : "0000030428", "agency_code" : "3", "respondent_name" : "CENTURY SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5b" }, "activity_year" : "2013", "respondent_id" : "0000030470", "agency_code" : "3", "respondent_name" : "MANASQUAN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5c" }, "activity_year" : "2013", "respondent_id" : "0000030544", "agency_code" : "3", "respondent_name" : "MARQUETTE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5d" }, "activity_year" : "2013", "respondent_id" : "0000030696", "agency_code" : "3", "respondent_name" : "ORANGE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5e" }, "activity_year" : "2013", "respondent_id" : "0000030704", "agency_code" : "3", "respondent_name" : "MAGYAR BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee5f" }, "activity_year" : "2013", "respondent_id" : "0000030788", "agency_code" : "3", "respondent_name" : "GLACIER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee60" }, "activity_year" : "2013", "respondent_id" : "0000031286", "agency_code" : "3", "respondent_name" : "1ST MARINER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee61" }, "activity_year" : "2013", "respondent_id" : "0000031461", "agency_code" : "3", "respondent_name" : "HARLEYSVILLE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee62" }, "activity_year" : "2013", "respondent_id" : "0000031469", "agency_code" : "3", "respondent_name" : "ORIENTAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee63" }, "activity_year" : "2013", "respondent_id" : "0000032102", "agency_code" : "3", "respondent_name" : "DORAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee64" }, "activity_year" : "2013", "respondent_id" : "0000032158", "agency_code" : "3", "respondent_name" : "STERLING BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee65" }, "activity_year" : "2013", "respondent_id" : "0000032296", "agency_code" : "3", "respondent_name" : "UNION SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee66" }, "activity_year" : "2013", "respondent_id" : "0000032489", "agency_code" : "3", "respondent_name" : "HOMESTREET BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee67" }, "activity_year" : "2013", "respondent_id" : "0000032574", "agency_code" : "3", "respondent_name" : "BEAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee68" }, "activity_year" : "2013", "respondent_id" : "0000032749", "agency_code" : "3", "respondent_name" : "NEW YORK COMMERCIAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee69" }, "activity_year" : "2013", "respondent_id" : "0000032773", "agency_code" : "3", "respondent_name" : "EASTERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6a" }, "activity_year" : "2013", "respondent_id" : "0000032779", "agency_code" : "3", "respondent_name" : "BANK OF MARIN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6b" }, "activity_year" : "2013", "respondent_id" : "0000033005", "agency_code" : "3", "respondent_name" : "FIRST COLLINSVILLE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6c" }, "activity_year" : "2013", "respondent_id" : "0000033022", "agency_code" : "3", "respondent_name" : "THE BANK OF KENTUCKY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6d" }, "activity_year" : "2013", "respondent_id" : "0000033029", "agency_code" : "3", "respondent_name" : "WHITNEY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6e" }, "activity_year" : "2013", "respondent_id" : "0000033216", "agency_code" : "3", "respondent_name" : "NORTHRIM BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee6f" }, "activity_year" : "2013", "respondent_id" : "0000033306", "agency_code" : "3", "respondent_name" : "THE PRIVATEBANK AND TRUST CO." }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee70" }, "activity_year" : "2013", "respondent_id" : "0000033440", "agency_code" : "3", "respondent_name" : "CITIZENS FIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee71" }, "activity_year" : "2013", "respondent_id" : "0000033503", "agency_code" : "3", "respondent_name" : "UNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee72" }, "activity_year" : "2013", "respondent_id" : "0000033510", "agency_code" : "3", "respondent_name" : "EAST BOSTON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee73" }, "activity_year" : "2013", "respondent_id" : "0000033527", "agency_code" : "3", "respondent_name" : "BANK OF NORTH CAROLINA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee74" }, "activity_year" : "2013", "respondent_id" : "0000033539", "agency_code" : "3", "respondent_name" : "PREFERRED BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee75" }, "activity_year" : "2013", "respondent_id" : "0000033648", "agency_code" : "3", "respondent_name" : "BANK OF INDIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee76" }, "activity_year" : "2013", "respondent_id" : "0000033664", "agency_code" : "3", "respondent_name" : "STATE BANK OF INDIA, CHICAGO" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee77" }, "activity_year" : "2013", "respondent_id" : "0000033682", "agency_code" : "3", "respondent_name" : "STATE BANK OF INDIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee78" }, "activity_year" : "2013", "respondent_id" : "0000033686", "agency_code" : "3", "respondent_name" : "BANK HAPOALIM BM" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee79" }, "activity_year" : "2013", "respondent_id" : "0000033778", "agency_code" : "3", "respondent_name" : "GE CAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7a" }, "activity_year" : "2013", "respondent_id" : "0000033806", "agency_code" : "3", "respondent_name" : "OPUS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7b" }, "activity_year" : "2013", "respondent_id" : "0000033826", "agency_code" : "3", "respondent_name" : "COLUMBIA STATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7c" }, "activity_year" : "2013", "respondent_id" : "0000034102", "agency_code" : "3", "respondent_name" : "SUMMIT COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7d" }, "activity_year" : "2013", "respondent_id" : "0000034120", "agency_code" : "3", "respondent_name" : "BANK OF ANN ARBOR" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7e" }, "activity_year" : "2013", "respondent_id" : "0000034351", "agency_code" : "3", "respondent_name" : "USAA SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee7f" }, "activity_year" : "2013", "respondent_id" : "0000034427", "agency_code" : "3", "respondent_name" : "CNLBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee80" }, "activity_year" : "2013", "respondent_id" : "0000034519", "agency_code" : "3", "respondent_name" : "MERRICK BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee81" }, "activity_year" : "2013", "respondent_id" : "0000034598", "agency_code" : "3", "respondent_name" : "MERCANTILE BANK OF MICHIGAN" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee82" }, "activity_year" : "2013", "respondent_id" : "0000034618", "agency_code" : "3", "respondent_name" : "MACATAWA BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee83" }, "activity_year" : "2013", "respondent_id" : "0000034697", "agency_code" : "3", "respondent_name" : "WEX BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee84" }, "activity_year" : "2013", "respondent_id" : "0000034733", "agency_code" : "3", "respondent_name" : "CARDINAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee85" }, "activity_year" : "2013", "respondent_id" : "0000034788", "agency_code" : "3", "respondent_name" : "AMERICAN BUSINESS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee86" }, "activity_year" : "2013", "respondent_id" : "0000034888", "agency_code" : "3", "respondent_name" : "PARKE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee87" }, "activity_year" : "2013", "respondent_id" : "0000034942", "agency_code" : "3", "respondent_name" : "HVC BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee88" }, "activity_year" : "2013", "respondent_id" : "0000034980", "agency_code" : "3", "respondent_name" : "RED RIVER BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee89" }, "activity_year" : "2013", "respondent_id" : "0000035077", "agency_code" : "3", "respondent_name" : "STONEBRIDGE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8a" }, "activity_year" : "2013", "respondent_id" : "0000035095", "agency_code" : "3", "respondent_name" : "TOWNEBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8b" }, "activity_year" : "2013", "respondent_id" : "0000035141", "agency_code" : "3", "respondent_name" : "BMW BANK OF NORTH AMERICA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8c" }, "activity_year" : "2013", "respondent_id" : "0000035230", "agency_code" : "3", "respondent_name" : "EVERGREEN BANK GROUP" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8d" }, "activity_year" : "2013", "respondent_id" : "0000035348", "agency_code" : "3", "respondent_name" : "ONB BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8e" }, "activity_year" : "2013", "respondent_id" : "0000035426", "agency_code" : "3", "respondent_name" : "TWO RIVER COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee8f" }, "activity_year" : "2013", "respondent_id" : "0000035444", "agency_code" : "3", "respondent_name" : "THE BANCORP BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee90" }, "activity_year" : "2013", "respondent_id" : "0000035456", "agency_code" : "3", "respondent_name" : "1ST COLONIAL COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee91" }, "activity_year" : "2013", "respondent_id" : "0000035541", "agency_code" : "3", "respondent_name" : "BCB COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee92" }, "activity_year" : "2013", "respondent_id" : "0000035575", "agency_code" : "3", "respondent_name" : "CIT BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee93" }, "activity_year" : "2013", "respondent_id" : "0000035583", "agency_code" : "3", "respondent_name" : "PINNACLE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee94" }, "activity_year" : "2013", "respondent_id" : "0000057053", "agency_code" : "3", "respondent_name" : "SIGNATURE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee95" }, "activity_year" : "2013", "respondent_id" : "0000057203", "agency_code" : "3", "respondent_name" : "BARCLAYS BANK DELAWARE" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee96" }, "activity_year" : "2013", "respondent_id" : "0000057228", "agency_code" : "3", "respondent_name" : "EMBASSY BANK FOR THE LEHIGH VA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee97" }, "activity_year" : "2013", "respondent_id" : "0000057282", "agency_code" : "3", "respondent_name" : "CITIZENS BANK OF PENNSYLVANIA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee98" }, "activity_year" : "2013", "respondent_id" : "0000057311", "agency_code" : "3", "respondent_name" : "STIFEL BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee99" }, "activity_year" : "2013", "respondent_id" : "0000057368", "agency_code" : "3", "respondent_name" : "BANKWELL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9a" }, "activity_year" : "2013", "respondent_id" : "0000057369", "agency_code" : "3", "respondent_name" : "US CENTURY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9b" }, "activity_year" : "2013", "respondent_id" : "0000057408", "agency_code" : "3", "respondent_name" : "OPTUM BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9c" }, "activity_year" : "2013", "respondent_id" : "0000057512", "agency_code" : "3", "respondent_name" : "WESTERN ALLIANCE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9d" }, "activity_year" : "2013", "respondent_id" : "0000057565", "agency_code" : "3", "respondent_name" : "UBS BANK USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9e" }, "activity_year" : "2013", "respondent_id" : "0000057776", "agency_code" : "3", "respondent_name" : "HOWARD BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eee9f" }, "activity_year" : "2013", "respondent_id" : "0000057803", "agency_code" : "3", "respondent_name" : "ALLY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea0" }, "activity_year" : "2013", "respondent_id" : "0000057833", "agency_code" : "3", "respondent_name" : "BEAL BANK USA" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea1" }, "activity_year" : "2013", "respondent_id" : "0000057844", "agency_code" : "3", "respondent_name" : "PENN LIBERTY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea2" }, "activity_year" : "2013", "respondent_id" : "0000057870", "agency_code" : "3", "respondent_name" : "STATE BANK AND  TRUST COMPANY" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea3" }, "activity_year" : "2013", "respondent_id" : "0000057919", "agency_code" : "3", "respondent_name" : "CONNECTONE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea4" }, "activity_year" : "2013", "respondent_id" : "0000057934", "agency_code" : "3", "respondent_name" : "STONEGATE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea5" }, "activity_year" : "2013", "respondent_id" : "0000057993", "agency_code" : "3", "respondent_name" : "SERVISFIRST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea6" }, "activity_year" : "2013", "respondent_id" : "0000058021", "agency_code" : "3", "respondent_name" : "SQUARE 1 BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea7" }, "activity_year" : "2013", "respondent_id" : "0000058132", "agency_code" : "3", "respondent_name" : "TALMER BANK AND TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea8" }, "activity_year" : "2013", "respondent_id" : "0000058137", "agency_code" : "3", "respondent_name" : "PACIFIC RIM BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeea9" }, "activity_year" : "2013", "respondent_id" : "0000058177", "agency_code" : "3", "respondent_name" : "SALLIE MAE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeaa" }, "activity_year" : "2013", "respondent_id" : "0000058270", "agency_code" : "3", "respondent_name" : "BANK OF CAPE COD" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeab" }, "activity_year" : "2013", "respondent_id" : "0000058302", "agency_code" : "3", "respondent_name" : "FIRST NBC BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeac" }, "activity_year" : "2013", "respondent_id" : "0000058457", "agency_code" : "3", "respondent_name" : "TRISTATE CAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeead" }, "activity_year" : "2013", "respondent_id" : "0000058471", "agency_code" : "3", "respondent_name" : "FIRST CHOICE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeae" }, "activity_year" : "2013", "respondent_id" : "0000058492", "agency_code" : "3", "respondent_name" : "ATLANTIC CAPITAL BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeaf" }, "activity_year" : "2013", "respondent_id" : "0000058541", "agency_code" : "3", "respondent_name" : "USNY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb0" }, "activity_year" : "2013", "respondent_id" : "0000058564", "agency_code" : "3", "respondent_name" : "FLUSHING BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb1" }, "activity_year" : "2013", "respondent_id" : "0000058596", "agency_code" : "3", "respondent_name" : "CARTER BANK & TRUST" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb2" }, "activity_year" : "2013", "respondent_id" : "0000058647", "agency_code" : "3", "respondent_name" : "FIRST FOUNDATION BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb3" }, "activity_year" : "2013", "respondent_id" : "0000058664", "agency_code" : "3", "respondent_name" : "NEW JERSEY COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb4" }, "activity_year" : "2013", "respondent_id" : "0000058878", "agency_code" : "3", "respondent_name" : "CAPITALSOURCEBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb5" }, "activity_year" : "2013", "respondent_id" : "0000058937", "agency_code" : "3", "respondent_name" : "COASTWAY COMMUNITY BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb6" }, "activity_year" : "2013", "respondent_id" : "0000059010", "agency_code" : "3", "respondent_name" : "COMMUNITY & SOUTHERN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb7" }, "activity_year" : "2013", "respondent_id" : "0000059017", "agency_code" : "3", "respondent_name" : "FIRST REPUBLIC BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb8" }, "activity_year" : "2013", "respondent_id" : "0000090183", "agency_code" : "3", "respondent_name" : "MIDDLESEX SVG BK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeb9" }, "activity_year" : "2013", "respondent_id" : "0000090191", "agency_code" : "3", "respondent_name" : "EAGLE BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeeba" }, "activity_year" : "2013", "respondent_id" : "0000090196", "agency_code" : "3", "respondent_name" : "BAYCOAST BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeebb" }, "activity_year" : "2013", "respondent_id" : "0000090203", "agency_code" : "3", "respondent_name" : "CAPE ANN SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeebc" }, "activity_year" : "2013", "respondent_id" : "0000090206", "agency_code" : "3", "respondent_name" : "GREENFIELD SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeebd" }, "activity_year" : "2013", "respondent_id" : "0000090211", "agency_code" : "3", "respondent_name" : "HINGHAM INSTITUTION FOR SAVING" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeebe" }, "activity_year" : "2013", "respondent_id" : "0000090213", "agency_code" : "3", "respondent_name" : "PEOPLESBANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeebf" }, "activity_year" : "2013", "respondent_id" : "0000090227", "agency_code" : "3", "respondent_name" : "THE LOWELL FIVE CENT SAVINGS B" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec0" }, "activity_year" : "2013", "respondent_id" : "0000090250", "agency_code" : "3", "respondent_name" : "INSTITUTION FOR SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec1" }, "activity_year" : "2013", "respondent_id" : "0000090259", "agency_code" : "3", "respondent_name" : "NORTH EASTON SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec2" }, "activity_year" : "2013", "respondent_id" : "0000090283", "agency_code" : "3", "respondent_name" : "HAMPDEN BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec3" }, "activity_year" : "2013", "respondent_id" : "0000090290", "agency_code" : "3", "respondent_name" : "UNIBANK FOR SAVINGS" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec4" }, "activity_year" : "2013", "respondent_id" : "0000090291", "agency_code" : "3", "respondent_name" : "THE SAVINGS BANK" }
+{ "_id" : { "$oid" : "54ad6da6596270205a4eeec5" }, "activity_year" : "2013", "respondent_id" : "0000090297", "agency_code" : "3", "respondent_name" : "WEBSTER FIVE CENTS SAVINGS BAN" }
