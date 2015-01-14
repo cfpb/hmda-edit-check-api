@@ -20,10 +20,10 @@ describe('CensusService', function() {
         });
 
         it('should return a result of false if the msa exists in a different activity year', function(done) {
-		    CensusService.isValidMSA('2012', '35100', function(err, result) {
-		        expect(result.result).to.be.false();
-		        done();
-		    });
+            CensusService.isValidMSA('2012', '35100', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
         });
 
     });

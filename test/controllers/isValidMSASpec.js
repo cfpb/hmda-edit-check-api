@@ -18,16 +18,15 @@ describe('/isValidMSA', function() {
     });
 
     it('should return false if a msa is invalid', function(done) {
-	        request(mock)
-	            .get('/isValidMSA/2013/35200')
-	            .expect(200)
-	            .expect('Content-Type', /json/)
+        request(mock)
+            .get('/isValidMSA/2013/35200')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
 
-	                .expect(/"result":false/)
-
-	            .end(function (err, res) {
-	                done(err);
-	            });
+            .end(function (err, res) {
+                done(err);
+            });
     });
 
 });
