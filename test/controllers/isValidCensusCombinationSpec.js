@@ -17,22 +17,9 @@ describe('/isValidCensusCombination', function() {
             });
     });
 
-    it('should return false if county doesnt exist', function(done) {
+    it('should return false for a regular county with a tract that doesnt exist', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/37/102/9502.02')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-            .expect(/"reason":"county was not found"/)
-
-            .end(function (err, res) {
-                done(err);
-             });
-    });
-
-    it('should return false if state,county,tract combo doesnt exist small county = 0', function(done) {
-        request(mock)
-            .get('/isValidCensusCombination/2013/01/039/9502.02')
+            .get('/isValidCensusCombination/2013/37/049/9552.02')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -43,9 +30,9 @@ describe('/isValidCensusCombination', function() {
             });
     });
 
-    it('should return false if state,county combo doesnt exist, small county = 1', function(done) {
+    it('should return false if state,county combo doesnt exist for a small county', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/01/035/9502.02')
+            .get('/isValidCensusCombination/2013/37/103/9502.02')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -54,6 +41,19 @@ describe('/isValidCensusCombination', function() {
             .end(function (err, res) {
                 done(err);
             });
+    });
+
+    it('should return false if state doesnt exist', function(done) {
+	        request(mock)
+	            .get('/isValidCensusCombination/2013/437/103/9502.02')
+	            .expect(200)
+	            .expect('Content-Type', /json/)
+	            .expect(/"result":false/)
+	            .expect(/"reason":"state or msa doesnt exist"/)
+
+	            .end(function (err, res) {
+	                done(err);
+	            });
     });
 
 
