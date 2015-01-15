@@ -1,0 +1,8 @@
+version: 0.0
+os: linux
+files:
+  - source: dist/hmda-edit-check-api.zip
+    destination: /usr/local/nodefiles
+hooks:
+  AfterInstall:
+    - location: scripts/nodedeploy.bash

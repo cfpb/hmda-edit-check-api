@@ -28,6 +28,23 @@ module.exports = function compress(grunt) {
                     ]
                 }
             ]
+        },
+        'codedeploy': {
+          options: {
+            archive: './dist/hmda-edit-check-api-codedeploy.zip',
+            mode: 'zip',  //zip | gzip | deflate | tgz
+            pretty: true
+          },
+          files: [
+            {
+              expand: true,
+              dot: true,
+              cwd: './',
+
+              //zip dist directory
+              src: ['dist/hmda-edit-check-api.zip', 'scripts/*', 'appspec.yml']
+            }
+          ]
         }
     };
 
