@@ -8,7 +8,6 @@ install:
 - grunt dist
 - grunt codedeploy
 deploy:
-  matrix:
   - provider: s3
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
