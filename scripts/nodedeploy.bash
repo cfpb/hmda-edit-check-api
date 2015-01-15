@@ -42,24 +42,17 @@ su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
 echo "Running 'npm install'"
 su - node -c "cd $TMPDIR && npm install"
 
-echo "Running 'grunt dist'"
-su - node -c "cd $TMPDIR && grunt dist"
-
-ZIPFILEPATH="${TMPDIR}/dist/${ZIPFILE}"
-
 if [ -d "${BASEDIR}" ]; then
     echo "Removing old application at ${BASEDIR}"
     /bin/rm -rf ${BASEDIR}
 fi
 
-echo "Extracting new application to ${BASEDIR}"
-/usr/bin/unzip -q ${ZIPFILEPATH} -d ${BASEDIR}
+echo "Moving new application to ${BASEDIR}"
+/bin/cp -r ${TMPDIR} ${BASEDIR}
 
 /bin/mkdir ${BASEDIR}/logs
-/bin/chown node:node ${BASEDIR}/logs
 
-echo "Removing zipfiles"
-/bin/rm "${ZIPFILEPATH}"
+echo "Removing zipfile"
 /bin/rm "${NODEDIR}/${ZIPFILE}"
 
 echo "Fix permissions"
