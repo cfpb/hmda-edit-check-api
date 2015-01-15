@@ -17,7 +17,7 @@ deploy:
     local_dir: dist
     upload-dir: develop
     on:
-      branch: milestone3
+      all_branches: true
   - provider: codedeploy
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
@@ -25,9 +25,9 @@ deploy:
     bucket: hmda-edit-check-api
     key: develop/hmda-edit-check-api.zip
     application: hmda-edit-check-api
-    deployment_group: hmda-pilot-dev
+    deployment_group: hmda-edit-check-api-dev
     on:
-      branch: milestone3
+      all_branches: true
   - provider: s3
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
@@ -45,6 +45,6 @@ deploy:
     bucket: hmda-edit-check-api
     key: master/hmda-edit-check-api-codedeploy.zip
     application: hmda-edit-check-api
-    deployment_group: hmda-pilot-prod
+    deployment_group: hmda-edit-check-api-dev
     on:
       branch: master
