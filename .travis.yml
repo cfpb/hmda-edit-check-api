@@ -17,7 +17,7 @@ deploy:
     local_dir: dist
     upload-dir: develop
     on:
-      all_branches: true
+      branch: **
   - provider: codedeploy
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
@@ -27,7 +27,7 @@ deploy:
     application: hmda-edit-check-api
     deployment_group: hmda-pilot-dev
     on:
-      all_branches: true
+      branch: **
   - provider: s3
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
