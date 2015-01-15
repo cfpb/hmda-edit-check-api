@@ -13,6 +13,8 @@ LOG="/tmp/${TMPNAME}.log"
 exec > >(tee $LOG)
 exec 2>&1
 
+npm install -g npm@next
+npm install -g grunt-cli
 TMPDIR="/tmp/${TMPNAME}"
 ZIPFILE=hmda-edit-check-api.zip
 
