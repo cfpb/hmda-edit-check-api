@@ -8,7 +8,6 @@ install:
 - grunt dist
 - grunt codedeploy
 deploy:
-  matrix:
   - provider: s3
     access_key_id: AKIAIMTOX4BXGVFOB56Q
     secret_access_key:
@@ -49,5 +48,3 @@ deploy:
     deployment_group: hmda-edit-check-api-dev
     on:
       branch: master
-  secret_access_key:
-    secure: Ptqremgo84uZl2BB4vkTf1t8tezdMeWUyUXrkliPQU2SWfubbBqyU99zxG2E4kEOmMMOnisj3Po9emEfOnx1U66kFaJ5SFTSvobY7tHLIKCaRnssZV9swzQNJJQFgPIU7bm+YGHbdNn0GpBnkqU09dC3SAgEpuycadqrhoEqkUw=
