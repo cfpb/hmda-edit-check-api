@@ -47,5 +47,4 @@ module.exports = function compress(grunt) {
           ]
         }
     };
-
 };

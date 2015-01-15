@@ -51,8 +51,9 @@ echo "Extracting new application to ${BASEDIR}"
 /bin/mkdir ${BASEDIR}/logs
 /bin/chown node:node ${BASEDIR}/logs
 
-echo "Removing zipfile"
-/bin/rm ${ZIPFILEPATH}
+echo "Removing zipfiles"
+/bin/rm "${ZIPFILEPATH}"
+/bin/rm "${NODEDIR}/${ZIPFILE}"
 
 echo "Fix permissions"
 /bin/chown -R node:node ${BASEDIR}
