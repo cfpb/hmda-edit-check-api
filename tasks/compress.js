@@ -21,10 +21,7 @@ module.exports = function compress(grunt) {
                     src: [ '**',
                         '!coverage/**',
                         '!test/**',
-                        '!node_modules/grunt*/**',
-                        '!node_modules/istanbul/**',
-                        '!node_modules/mocha/**',
-                        '!node_modules/supertest/**'
+                        '!node_modules/**'
                     ]
                 }
             ]
