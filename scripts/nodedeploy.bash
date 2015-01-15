@@ -26,6 +26,19 @@ fi
 
 BASEDIR=/usr/local/APPS/node/${BASENAME}
 INITSCRIPT=/etc/init.d/${BASENAME}
+TMPDIRNAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
+TMPDIR="/tmp/${TMPDIRNAME}"
+
+echo "Extacting new application to ${TMPDIR}"
+su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
+
+echo "Running 'npm install'"
+su - node -c "cd $TMPDIR && npm install"
+
+echo "Running 'grunt dist'"
+su - node -c "cd $TMPDIR && grunt dist"
+
+ZIPFILEPATH="${TMPDIR}/dist/${ZIPFILE}"
 
 if [ -d "${BASEDIR}" ]; then
     echo "Removing old application at ${BASEDIR}"
