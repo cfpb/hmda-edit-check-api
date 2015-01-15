@@ -7,6 +7,13 @@
 #       directory will be cleaned at the end of the script.
 #
 
+TMPNAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
+LOG="/tmp/${TMPNAME}.log"
+
+exec > >(tee $LOG)
+exec 2>&1
+
+TMPDIR="/tmp/${TMPNAME}"
 ZIPFILE=hmda-edit-check-api.zip
 
 if ! [[ $ZIPFILE =~ \.zip$ ]]; then
@@ -26,8 +33,6 @@ fi
 
 BASEDIR=/usr/local/APPS/node/${BASENAME}
 INITSCRIPT=/etc/init.d/${BASENAME}
-TMPDIRNAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
-TMPDIR="/tmp/${TMPDIRNAME}"
 
 echo "Extacting new application to ${TMPDIR}"
 su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
