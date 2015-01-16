@@ -48,3 +48,5 @@ deploy:
     deployment_group: hmda-edit-check-api-dev
     on:
       branch: master
+notifications:
+  hipchat: 45e993644c60fb1addec6c943d38dd@871568
