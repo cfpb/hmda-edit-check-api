@@ -36,4 +36,5 @@ module.exports = function (grunt) {
     grunt.registerTask('coverage', ['test', 'open_coverage']);
     grunt.registerTask('dist', ['compress:hmda-edit-check-api']);
     grunt.registerTask('serve', ['env:sandbox', 'jshint','develop','watch']);
+    grunt.registerTask('codedeploy', ['compress:codedeploy']);
 };
