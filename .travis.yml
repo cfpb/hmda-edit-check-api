@@ -8,45 +8,47 @@ install:
 - grunt dist
 - grunt codedeploy
 deploy:
-  - provider: s3
-    access_key_id: AKIAIMTOX4BXGVFOB56Q
-    secret_access_key:
-      secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
-    skip_cleanup: true
-    bucket: hmda-edit-check-api
-    local_dir: dist
-    upload-dir: develop
-    on:
-      all_branches: true
-  - provider: codedeploy
-    access_key_id: AKIAIMTOX4BXGVFOB56Q
-    secret_access_key:
-      secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
-    bucket: hmda-edit-check-api
-    key: develop/hmda-edit-check-api-codedeploy.zip
-    application: hmda-edit-check-api
-    deployment_group: hmda-edit-check-api-dev
-    on:
-      all_branches: true
-  - provider: s3
-    access_key_id: AKIAIMTOX4BXGVFOB56Q
-    secret_access_key:
-      secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
-    skip_cleanup: true
-    bucket: hmda-edit-check-api
-    local_dir: dist
-    upload-dir: master
-    on:
-      branch: master
-  - provider: codedeploy
-    access_key_id: AKIAIMTOX4BXGVFOB56Q
-    secret_access_key:
-      secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
-    bucket: hmda-edit-check-api
-    key: master/hmda-edit-check-api-codedeploy.zip
-    application: hmda-edit-check-api
-    deployment_group: hmda-edit-check-api-dev
-    on:
-      branch: master
+- provider: s3
+  access_key_id: AKIAIMTOX4BXGVFOB56Q
+  secret_access_key:
+    secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
+  skip_cleanup: true
+  bucket: hmda-edit-check-api
+  local_dir: dist
+  upload-dir: develop
+  on:
+    all_branches: true
+- provider: codedeploy
+  access_key_id: AKIAIMTOX4BXGVFOB56Q
+  secret_access_key:
+    secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
+  bucket: hmda-edit-check-api
+  key: develop/hmda-edit-check-api-codedeploy.zip
+  application: hmda-edit-check-api
+  deployment_group: hmda-edit-check-api-dev
+  on:
+    all_branches: true
+- provider: s3
+  access_key_id: AKIAIMTOX4BXGVFOB56Q
+  secret_access_key:
+    secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
+  skip_cleanup: true
+  bucket: hmda-edit-check-api
+  local_dir: dist
+  upload-dir: master
+  on:
+    branch: master
+- provider: codedeploy
+  access_key_id: AKIAIMTOX4BXGVFOB56Q
+  secret_access_key:
+    secure: NxMG05K8yLXd8XH4U+u2B5kF4Tr0HoIox3qUKWi4BqLK5Ze2dMaCHQZCBz2hCrdPY+Jj5AiktyTF9PeRn2gz/jOsT5XVh/I1XG7xk7s6w6ml13vdwNbp2ZVo0ENXjmQ1OT44a8QebhbqJwjiaQ2sERGNRM6nqbKpwOFdbL50VoQ=
+  bucket: hmda-edit-check-api
+  key: master/hmda-edit-check-api-codedeploy.zip
+  application: hmda-edit-check-api
+  deployment_group: hmda-edit-check-api-dev
+  on:
+    branch: master
 notifications:
-  hipchat: 45e993644c60fb1addec6c943d38dd@871568
+  hipchat:
+    rooms:
+      secure: FkfhXmbIG/0ysT8l0mTh8IZ4hj/PmqR0dTba8u2U4stZLxPJn4Ac0yeTAB7XIll4o3TGNR6vYFfamYGX0ulOlv5RQps97JDETFztuy6r7nafcQftizSjipFqF4P5NZNObtSdlGCOw1slOEpuqigpowNA6KRbwpUlVSUK3J4MA5s=
