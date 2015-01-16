@@ -4,7 +4,7 @@ node_js:
 before_install: npm install -g grunt-cli
 install:
 - npm install
-- grunt test
+before_deploy:
 - grunt dist
 - grunt codedeploy
 deploy:
@@ -51,4 +51,4 @@ deploy:
 notifications:
   hipchat:
     rooms:
-      secure: FkfhXmbIG/0ysT8l0mTh8IZ4hj/PmqR0dTba8u2U4stZLxPJn4Ac0yeTAB7XIll4o3TGNR6vYFfamYGX0ulOlv5RQps97JDETFztuy6r7nafcQftizSjipFqF4P5NZNObtSdlGCOw1slOEpuqigpowNA6KRbwpUlVSUK3J4MA5s=
+      secure: T0cvwtL8w6ZaRbYl80IN4I1a5AtKauhwuSPTWEoPNZhcWnG1DYLH0Txjg5x9iTbncctx0QoeQad5EYrfoCCqkSarGJR/j9u29Lnla647BCjTSnpbMjVe3vqw+brNF0Vw68W6eTwBhiCUagwZWJxCLpMnTx9MVD/JuR6VWHqLSQI=
