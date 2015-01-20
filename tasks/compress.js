@@ -19,16 +19,30 @@ module.exports = function compress(grunt) {
 
                     //zip all files except coverage, test dirs and the grunt/test modules
                     src: [ '**',
+                        '!data/**',
                         '!coverage/**',
                         '!test/**',
-                        '!node_modules/grunt*/**',
-                        '!node_modules/istanbul/**',
-                        '!node_modules/mocha/**',
-                        '!node_modules/supertest/**'
+                        '!node_modules/**'
                     ]
                 }
             ]
+        },
+        'codedeploy': {
+          options: {
+            archive: './dist/hmda-edit-check-api-codedeploy.zip',
+            mode: 'zip',  //zip | gzip | deflate | tgz
+            pretty: true
+          },
+          files: [
+            {
+              expand: true,
+              dot: true,
+              cwd: './',
+
+              //zip dist directory
+              src: ['dist/hmda-edit-check-api.zip', 'scripts/*', 'appspec.yml']
+            }
+          ]
         }
     };
-
 };
