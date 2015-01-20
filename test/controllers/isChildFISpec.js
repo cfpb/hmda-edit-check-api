@@ -12,9 +12,7 @@ describe('/isCraReporter', function() {
             .get('/isChildFI/2013/0000000001')
             .expect(200)
             .expect('Content-Type', /json/)
-
-                .expect(/"result":/)
-
+            .expect(/"result":/)
             .end(function (err, res) {
                 done(err);
             });
