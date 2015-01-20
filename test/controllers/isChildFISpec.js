@@ -2,17 +2,32 @@
 
 'use strict';
 
-describe('/isCraReporter', function() {
+var mongoose = require('mongoose');
+var mockgoose = require('mockgoose');
+
+describe('/isChildFI', function() {
 
     it('should return a result if the request is valid', function(done) {
         request(mock)
-            .get('/isCraReporter/2013/0000000001')
+            .get('/isChildFI/2013/0000000001')
             .expect(200)
             .expect('Content-Type', /json/)
-
-                .expect(/"result":/)
-
+            .expect(/"result":/)
             .end(function (err, res) {
+                done(err);
+            });
+    });
+
+    it('should return a 500 if there is a problem', function(done) {
+        mockgoose.setMockReadyState(mongoose.connection, 0);
+
+        request(mock)
+            .get('/isChildFI/2013/0000000001')
+            .expect(500)
+            .expect('Content-Type', /json/)
+            .expect(/"code":/)
+            .end(function (err, res) {
+                mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });
     });
