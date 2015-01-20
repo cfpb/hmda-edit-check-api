@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 var mockgoose = require('mockgoose');
 
-describe('/isCraReporter', function() {
+describe('/isChildFI', function() {
 
     it('should return a result if the request is valid', function(done) {
         request(mock)
