@@ -2,6 +2,9 @@
 
 'use strict';
 
+var mongoose = require('mongoose');
+var mockgoose = require('mockgoose');
+
 describe('/isValidMSA', function() {
 
     it('should return true if a msa is valid', function(done) {
@@ -9,9 +12,7 @@ describe('/isValidMSA', function() {
             .get('/isValidMSA/2013/35100')
             .expect(200)
             .expect('Content-Type', /json/)
-
-                .expect(/"result":true/)
-
+            .expect(/"result":true/)
             .end(function (err, res) {
                 done(err);
             });
@@ -25,6 +26,20 @@ describe('/isValidMSA', function() {
             .expect(/"result":false/)
 
             .end(function (err, res) {
+                done(err);
+            });
+    });
+
+    it('should return a 500 if there is a problem', function(done) {
+        mockgoose.setMockReadyState(mongoose.connection, 0);
+
+        request(mock)
+            .get('/isValidMSA/2013/35100')
+            .expect(500)
+            .expect('Content-Type', /json/)
+            .expect(/"code":/)
+            .end(function (err, res) {
+                mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });
     });
