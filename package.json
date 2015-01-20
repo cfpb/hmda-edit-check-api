@@ -43,6 +43,7 @@
     "mocha": "^2.0.1",
     "mockgoose": "LinuxBozo/mockgoose#force_errors",
     "must": "^0.12.0",
+    "rewire": "^2.1.4",
     "spec-xunit-file": "0.0.1-3",
     "supertest": "^0.9.0"
   },

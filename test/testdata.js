@@ -22,10 +22,10 @@ var TestData = {
             },
             function(cb) {
                 mongoose.model('Panel').create([
-                    { 'activity_year': '2013', 'respondent_id': '0000000001', 'other_lender_code': '0', 'parent_name': 'foo'},
-                    { 'activity_year': '2013', 'respondent_id': '0000000002', 'other_lender_code': '0', 'parent_name': ''},
-                    { 'activity_year': '2013', 'respondent_id': '0000000003', 'other_lender_code': '1', 'parent_name': 'foo'},
-                    { 'activity_year': '2013', 'respondent_id': '0000000004', 'other_lender_code': '1', 'parent_name': ''}
+                    { 'activity_year': '2013', 'respondent_id': '0000000001', 'other_lender_code': '0', 'parent_name': 'foo', 'agency_code': '1' },
+                    { 'activity_year': '2013', 'respondent_id': '0000000002', 'other_lender_code': '0', 'parent_name': '', 'agency_code': '1' },
+                    { 'activity_year': '2013', 'respondent_id': '0000000003', 'other_lender_code': '1', 'parent_name': 'foo', 'agency_code': '2' },
+                    { 'activity_year': '2013', 'respondent_id': '0000000004', 'other_lender_code': '1', 'parent_name': '', 'agency_code': '2' }
                 ],
                 function(err, item) {
                     cb();
@@ -64,7 +64,7 @@ var TestData = {
                     {'activity_year': '2013', 'type':'county','code': '37103', 'small_county':'1'},
                     {'activity_year': '2013', 'type':'county','code': '37049', 'small_county':'0'},
                     {'activity_year': '2013', 'type':'county','code': '01039', 'small_county':'0'}
-                ], 
+                ],
                 function(err, item) {
                   cb();
                 });
