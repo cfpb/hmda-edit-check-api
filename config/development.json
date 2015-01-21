@@ -1,8 +1,9 @@
 {
 
     "mongoConfig": {
-        "host": "localhost",
-        "port": 27017
+        "host": "172.31.52.254",
+        "port": 27017,
+        "database": "hmda"
     },
 
     "middleware": {
