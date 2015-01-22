@@ -11,7 +11,7 @@ module.exports = function(router) {
      router.get('/:activityYear/:msa', function(req, res) {
          CensusService.isValidMSA(req.params.activityYear, req.params.msa, function(err, result) {
              if (err) {
-                 res.json(500, err);
+                 res.status(500).json(err);
              } else {
                  res.json(result);
              }

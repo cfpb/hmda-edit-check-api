@@ -18,7 +18,7 @@ module.exports = function(router) {
 			 CensusService.isValidCensusCombination(req.params.activityYear,
 	                         censusparams, function(err, result) {
 				 if (err) {
-	                 res.json(500, err);
+                     res.status(500).json(err);
 	             } else {
 					 res.json(result);
 			     }

@@ -11,7 +11,7 @@ module.exports = function(router) {
      router.get('/:activityYear/:respondentId', function(req, res) {
          PanelService.isChildFI(req.params.activityYear, req.params.respondentId, function(err, result) {
              if (err) {
-                 res.json(500, err);
+                 res.status(500).json(err);
              } else {
                  res.json(result);
              }
