@@ -9,18 +9,17 @@ module.exports = function(router) {
      * @return {json}
      */
     router.get('/:activityYear/:state/:county/:tract', function(req, res) {
-		var censusparams = {};
-		censusparams.state = req.params.state;
-		censusparams.county = req.params.county;
+        var censusparams = {};
+        censusparams.state = req.params.state;
+        censusparams.county = req.params.county;
         censusparams.tract = req.params.tract;
 
-		CensusService.isValidCensusCombination(req.params.activityYear,
-                        censusparams, function(err, result) {
-			if (err) {
+        CensusService.isValidCensusCombination(req.params.activityYear, censusparams, function(err, result) {
+            if (err) {
                 res.status(500).json(err);
             } else {
-				res.json(result);
-		    }
-		});
+                res.json(result);
+            }
+        });
     });
 };
