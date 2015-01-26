@@ -1,6 +1,19 @@
+/*jshint maxparams: 6 */
 'use strict';
 
 var Census = require('../models/census');
+
+var count = require('../lib/queryUtil').count;
+
+var isValidCensusTractForCounty = function(activityYear, countyCode, tract, callback) {
+    var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'tract': tract };
+    count('census', query, callback);
+};
+
+var isSmallCounty = function(activityYear, countyCode, callback) {
+    var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'small_county': '1' };
+    count('census', query, callback);
+};
 
 module.exports = {
     isValidMSA: function(activityYear, msa, callback) {
@@ -30,7 +43,7 @@ module.exports = {
             projection = {state: {$elemMatch: { fips_code: censusparams.state}},
                           county: {$elemMatch: { fips_code: censusparams.county}},
                           tract: {$elemMatch: { '$eq': censusparams.tract}}};
-        }                
+        }
 
         // check that state, county exist
         Census.findOne(query,projection,
@@ -54,9 +67,23 @@ module.exports = {
                     } else {
                         result.reason = 'state,county,tract combination not found';
                     }
-                } 
+                }
                 return callback(null,result);
             }
         );
+    },
+
+    isValidCensusTractCombo: function(activityYear, state, county, metroArea, tract, callback) {
+        if (metroArea === 'NA') {
+            if (tract === 'NA') {
+                return callback(null, {result: true});
+            }
+            isValidCensusTractForCounty(activityYear, state + county, tract, callback);
+        } else if (tract === 'NA') {
+            isSmallCounty(activityYear, state + county, callback);
+        } else {
+            var query = { 'activity_year': activityYear, 'type': 'msa', 'code': metroArea, 'state.fips_code': state, 'county.fips_code': county, 'tract': tract };
+            count('census', query, callback);
+        }
     }
 };

@@ -60,7 +60,9 @@ var TestData = {
                                   '9613.02', '9201.00', '9502.02', '9501.01'
                       ]
                     },
-                    {'activity_year': '2013', 'type':'county','code': '01035', 'small_county':'1'},
+                    {'activity_year': '2013', 'type':'county','code': '01035', 'small_county':'1',
+                        'tract' : [ '9603.00', '9604.00', '9602.00', '9606.00', '9605.00' ]
+                    },
                     {'activity_year': '2013', 'type':'county','code': '37103', 'small_county':'1'},
                     {'activity_year': '2013', 'type':'county','code': '37049', 'small_county':'0'},
                     {'activity_year': '2013', 'type':'county','code': '01039', 'small_county':'0'}
