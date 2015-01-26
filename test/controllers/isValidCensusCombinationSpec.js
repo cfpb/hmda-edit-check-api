@@ -26,7 +26,7 @@ describe('/isValidCensusCombination', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state,county,tract combination not found"/)
+            .expect(/"reason":"state, county, tract combination not found"/)
 
             .end(function (err, res) {
                 done(err);
@@ -47,16 +47,16 @@ describe('/isValidCensusCombination', function() {
     });
 
     it('should return false if state doesnt exist', function(done) {
-	        request(mock)
-	            .get('/isValidCensusCombination/2013/437/103/9502.02')
-	            .expect(200)
-	            .expect('Content-Type', /json/)
-	            .expect(/"result":false/)
-	            .expect(/"reason":"state or msa doesnt exist"/)
+        request(mock)
+            .get('/isValidCensusCombination/2013/437/103/9502.02')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+            .expect(/"reason":"state or msa doesnt exist"/)
 
-	            .end(function (err, res) {
-	                done(err);
-	            });
+            .end(function (err, res) {
+                done(err);
+            });
     });
 
 
