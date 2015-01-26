@@ -7,6 +7,6 @@ var count = require('../lib/queryUtil').count;
 module.exports = {
     isCraReporter: function(activityYear, respondentId, callback) {
         var query = { 'activity_year': activityYear, 'respondent_id': respondentId };
-        count('craReporters', query, callback);
+        count('CraReporters', query, callback);
     }
 };

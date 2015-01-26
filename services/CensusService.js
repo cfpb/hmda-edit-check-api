@@ -7,12 +7,12 @@ var count = require('../lib/queryUtil').count;
 
 var isValidCensusTractForCounty = function(activityYear, countyCode, tract, callback) {
     var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'tract': tract };
-    count('census', query, callback);
+    count('Census', query, callback);
 };
 
 var isSmallCounty = function(activityYear, countyCode, callback) {
     var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'small_county': '1' };
-    count('census', query, callback);
+    count('Census', query, callback);
 };
 
 module.exports = {
@@ -83,7 +83,7 @@ module.exports = {
             isSmallCounty(activityYear, state + county, callback);
         } else {
             var query = { 'activity_year': activityYear, 'type': 'msa', 'code': metroArea, 'state.fips_code': state, 'county.fips_code': county, 'tract': tract };
-            count('census', query, callback);
+            count('Census', query, callback);
         }
     }
 };

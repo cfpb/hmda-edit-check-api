@@ -11,7 +11,7 @@ describe('queryUtil', function() {
         it('should return err when there is a mongo error', function(done) {
             mockgoose.setMockReadyState(mongoose.connection, 0);
 
-            queryUtil.count('panel', {}, function(err, result) {
+            queryUtil.count('Panel', {}, function(err, result) {
                 expect(err).to.have.property('name');
                 expect(err.name).to.be('MongoError');
                 expect(result).to.be.null();
