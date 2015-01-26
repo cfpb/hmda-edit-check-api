@@ -2,17 +2,11 @@
 
 var CraReporters = require('../models/craReporters');
 
+var count = require('../lib/queryUtil').count;
+
 module.exports = {
     isCraReporter: function(activityYear, respondentId, callback) {
-        CraReporters.count({ 'activity_year': activityYear, 'respondent_id': respondentId }, function(err, count) {
-            if (err) {
-                return callback(err, null);
-            }
-            var result = { result: false };
-            if (count) {
-                result.result = true;
-            }
-            return callback(null, result);
-        });
+        var query = { 'activity_year': activityYear, 'respondent_id': respondentId };
+        count('craReporters', query, callback);
     }
 };
