@@ -36,8 +36,21 @@ fi
 BASEDIR=/usr/local/APPS/node/${BASENAME}
 INITSCRIPT=/etc/init.d/${BASENAME}
 
+echo "Stopping ${BASENAME}"
+${INITSCRIPT} stop
+
 echo "Extacting new application to ${TMPDIR}"
 su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
+
+echo "Checking if database needs an update..."
+diff -q ${BASEDIR}/data ${TMPDIR}/data
+
+if [ "$?" -ne "0" ]; then
+    echo "${BASEDIR}/data ${TMPDIR}/data and differ... Re-populating the ${NODE_ENV} database."
+    su - node -c "cd ${TMPDIR} && node data/reload_mongo.js"
+else
+    echo "No database updates."
+fi
 
 echo "Running 'npm install'"
 su - node -c "cd $TMPDIR && npm install"
@@ -59,6 +72,6 @@ echo "Fix permissions"
 /bin/chown -R node:node ${BASEDIR}
 
 echo "Restarting Node"
-${INITSCRIPT} restart
+${INITSCRIPT} start
 
 echo "Done!"
