@@ -14,9 +14,7 @@
   "homepage": "https://github.com/cfpb/hmda-edit-check-api",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test",
-    "dist": "grunt dist",
-    "codedeploy": "grunt codedeploy"
+    "test": "grunt test"
   },
   "dependencies": {
     "async": "^0.9.0",
