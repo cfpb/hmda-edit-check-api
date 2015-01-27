@@ -3,7 +3,8 @@ node_js:
 - '0.10'
 before_install: npm install -g grunt-cli
 install: npm install
-before_deploy:
+script:
+- npm test
 - grunt dist
 - grunt codedeploy
 deploy:
