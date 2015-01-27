@@ -40,6 +40,28 @@ module.exports = {
         });
     },
 
+    isValidStateCounty: function(activityYear, state, county, callback) {
+        var result = {result: false};
+        var query = {'activity_year': activityYear, 'type': 'state', 'code': state};
+        var projection = {county: {$elemMatch: {fips_code: county}}};
+
+        Census.findOne(query, projection, function(err, data) {
+            if (err) {
+                return callback(err, null);
+            }
+            if (data === null) {
+                result.reason = 'state does not exist';
+                return callback(null, result);
+            }
+            if (data.county.length === 1) {
+                result.result = true;
+            } else {
+                result.reason = 'county does not exist';
+            }
+            return callback(null, result);
+        });
+    },
+
     isValidCensusCombination: function(activityYear, censusparams, callback) {
         var result = {result: false};
         var resultFunc = handleMSAStateCountyTract;
