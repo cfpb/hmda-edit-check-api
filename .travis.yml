@@ -4,8 +4,8 @@ node_js:
 before_install: npm install -g grunt-cli
 install: npm install
 after_script:
-- "grunt dist"
-- "grunt codedeploy"
+- grunt dist
+- grunt codedeploy
 deploy:
 - provider: s3
   access_key_id: AKIAIMTOX4BXGVFOB56Q
