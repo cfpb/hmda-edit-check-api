@@ -9,7 +9,6 @@
 
 TMPNAME=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1)
 LOG="/tmp/${TMPNAME}.log"
-MONGODB_NAME=hmda
 
 exec > >(tee $LOG)
 exec 2>&1
