@@ -47,7 +47,7 @@ diff -q ${BASEDIR}/data ${TMPDIR}/data
 
 if [ "$?" -ne "0" ]; then
     echo "${BASEDIR}/data ${TMPDIR}/data and differ... Re-populating the ${NODE_ENV} database."
-    su - node -c "cd ${TMPDIR}/data && node reload_mongo.js"
+    su - node -c "cd ${TMPDIR} && node data/reload_mongo.js"
 else
     echo "No database updates."
 fi
