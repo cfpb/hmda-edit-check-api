@@ -19,7 +19,7 @@ module.exports = function compress(grunt) {
 
                     //zip all files except coverage, test dirs and the grunt/test modules
                     src: [ '**',
-                        '!data/**',
+//                        '!data/**',
                         '!coverage/**',
                         '!test/**',
                         '!node_modules/**'
