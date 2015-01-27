@@ -73,6 +73,6 @@ echo "Fix permissions"
 /bin/chown -R node:node ${BASEDIR}
 
 echo "Restarting Node"
-${INITSCRIPT} restart
+${INITSCRIPT} start
 
 echo "Done!"
