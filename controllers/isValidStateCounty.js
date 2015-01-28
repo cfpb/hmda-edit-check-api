@@ -5,7 +5,7 @@ var CensusService = require('../services/CensusService');
 module.exports = function(router) {
 
     /**
-     * @param {String} activityYear, {String} msa, {String} state, {String} county, {String} tract
+     * @param {String} activityYear, {String} state, {String} county
      * @return {json}
      */
     router.get('/:activityYear/:state/:county', function(req, res) {
