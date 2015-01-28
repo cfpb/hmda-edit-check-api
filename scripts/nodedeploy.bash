@@ -39,7 +39,7 @@ INITSCRIPT=/etc/init.d/${BASENAME}
 echo "Stopping ${BASENAME}"
 ${INITSCRIPT} stop
 
-echo "Extacting new application to ${TMPDIR}"
+echo "Extracting new application to ${TMPDIR}"
 su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
 
 echo "Running 'npm install'"
