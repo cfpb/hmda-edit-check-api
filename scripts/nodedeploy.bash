@@ -42,6 +42,9 @@ ${INITSCRIPT} stop
 echo "Extacting new application to ${TMPDIR}"
 su - node -c "/usr/bin/unzip -q ${ZIPFILEPATH} -d ${TMPDIR}"
 
+echo "Running 'npm install'"
+su - node -c "cd $TMPDIR && npm install"
+
 echo "Checking if database needs an update..."
 diff -q ${BASEDIR}/data ${TMPDIR}/data
 
@@ -51,9 +54,6 @@ if [ "$?" -ne "0" ]; then
 else
     echo "No database updates."
 fi
-
-echo "Running 'npm install'"
-su - node -c "cd $TMPDIR && npm install"
 
 if [ -d "${BASEDIR}" ]; then
     echo "Removing old application at ${BASEDIR}"
