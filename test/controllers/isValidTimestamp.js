@@ -18,6 +18,18 @@ describe('/isValidTimestamp', function() {
             });
     });
 
+    it('should return false for a timestamp it cant find', function(done) {
+        request(mock)
+            .get('/isValidTimestamp/2014/002323423001/201401100000')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+
+            .end(function (err, res) {
+                done(err);
+            });
+    });
+
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 

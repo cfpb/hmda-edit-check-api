@@ -9,18 +9,20 @@ module.exports = {
                 return callback(err, null);
             }
             var result = { result: false };
-            var year = timestamp.substring(0,4),
-                month = timestamp.substring(4,6),
-                day = timestamp.substring(6,8),
-                hour = timestamp.substring(8,10),
-                minute = timestamp.substring(10,12);
-           
 
-            var timestampDate = new Date(year,month-1,day-1,hour,minute);
+            if (data!==null) {
+                var year = timestamp.substring(0,4),
+                    month = timestamp.substring(4,6),
+                    day = timestamp.substring(6,8),
+                    hour = timestamp.substring(8,10),
+                    minute = timestamp.substring(10,12);
+           
+                var timestampDate = new Date(year,month-1,day-1,hour,minute);
           
-            if (timestampDate > data.timestamp) {
-                result.result = true;
-            }
+                if (timestampDate > data.timestamp) {
+                    result.result = true;
+                }
+            } 
             
             return callback(null, result);
         });
