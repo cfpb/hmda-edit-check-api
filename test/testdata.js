@@ -15,7 +15,7 @@ var TestData = {
         async.series([
             function(cb) {
                 mongoose.model('CraReporters').create(
-                    {'activity_year': '2013', 'respondent_id': '0000000324', 'agency_code': '1', 'respondent_name': 'foo' },
+                    {'activity_year': '2013', 'respondent_id': '0000000001', 'agency_code': '1', 'respondent_name': 'foo' },
                 function(err, item) {
                     cb();
                 });
