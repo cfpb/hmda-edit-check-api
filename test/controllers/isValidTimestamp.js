@@ -18,26 +18,16 @@ describe('/isValidTimestamp', function() {
             });
     });
 
-    it('should return false for an timestamp less than one day after January 1, 2014', function(done) {
+    it('should return a 500 if there is a problem', function(done) {
+        mockgoose.setMockReadyState(mongoose.connection, 0);
+
         request(mock)
-            .get('/isValidTimestamp/2014/0000000001/201401011800')
-            .expect(200)
+            .get('/isValidTimestamp/2014/0000000001/201401100000')
+            .expect(500)
             .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
+            .expect(/"code":/)
             .end(function (err, res) {
-                done(err);
-            });
-    });
-
-    it('should return false for an timestamp before January 1, 2014', function(done) {
-        request(mock)
-            .get('/isValidTimestamp/2014/0000000001/201311011800')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
+                mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });
     });
