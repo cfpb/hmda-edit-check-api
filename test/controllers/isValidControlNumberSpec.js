@@ -5,26 +5,14 @@
 var mongoose = require('mongoose');
 var mockgoose = require('mockgoose');
 
-describe('/isValidMSA', function() {
+describe('/isValidControlNumber', function() {
 
-    it('should return true if a msa is valid', function(done) {
+    it('should return a result if the request is valid', function(done) {
         request(mock)
-            .get('/isValidMSA/2013/35100')
+            .get('/isValidControlNumber/2013/1/0000000001')
             .expect(200)
             .expect('Content-Type', /json/)
-            .expect(/"result":true/)
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
-    it('should return false if a msa is invalid', function(done) {
-        request(mock)
-            .get('/isValidMSA/2013/35200')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
+            .expect(/"result":/)
             .end(function (err, res) {
                 done(err);
             });
@@ -34,7 +22,7 @@ describe('/isValidMSA', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidMSA/2013/35100')
+            .get('/isValidControlNumber/2013/1/0000000001')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

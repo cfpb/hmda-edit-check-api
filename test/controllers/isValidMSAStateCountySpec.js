@@ -5,25 +5,39 @@
 var mongoose = require('mongoose');
 var mockgoose = require('mockgoose');
 
-describe('/isValidMSA', function() {
-
-    it('should return true if a msa is valid', function(done) {
+describe('/isValidMSAStateCounty', function() {
+    it('should return true for a valid msa/md, state, and county combination', function(done) {
         request(mock)
-            .get('/isValidMSA/2013/35100')
+            .get('/isValidMSAStateCounty/2013/35100/37/103')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
+
             .end(function (err, res) {
                 done(err);
             });
     });
 
-    it('should return false if a msa is invalid', function(done) {
+    it('should return false for an invalid county', function(done) {
         request(mock)
-            .get('/isValidMSA/2013/35200')
+            .get('/isValidMSAStateCounty/2013/35100/37/100')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
+            .expect(new RegExp('\"reason\":\"msa/md, state, county combination not found\"'))
+
+            .end(function (err, res) {
+                done(err);
+            });
+    });
+
+    it('should return false for an invalid msa/md', function(done) {
+        request(mock)
+            .get('/isValidMSAStateCounty/2013/35200/37/103')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+            .expect(/"reason":"state or msa doesnt exist"/)
 
             .end(function (err, res) {
                 done(err);
@@ -34,7 +48,7 @@ describe('/isValidMSA', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidMSA/2013/35100')
+            .get('/isValidMSAStateCounty/2013/35100/37/103')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
@@ -43,5 +57,4 @@ describe('/isValidMSA', function() {
                 done(err);
             });
     });
-
 });

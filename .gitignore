@@ -23,6 +23,10 @@ coverage
 build/Release
 .build
 
+# windows garbage
+Thumbs.db
+desktop.ini
+
 # Compressed distribution directory
 dist
 

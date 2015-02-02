@@ -77,4 +77,20 @@ describe('PanelService', function() {
             });
         });
     });
+
+    describe('isValidControlNumber', function() {
+        it('should return a result of true if the agency code and respondent id are a valid combination', function(done) {
+            PanelService.isValidControlNumber('2013', '1', '0000000001', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return a result of false if the agency code and respondent id are not a valid combination', function(done) {
+            PanelService.isValidControlNumber('2013', '2', '0000000001', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
 });
