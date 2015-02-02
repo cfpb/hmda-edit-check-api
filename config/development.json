@@ -1,7 +1,7 @@
 {
 
     "mongoConfig": {
-        "host": "172.31.52.254",
+        "host": "hmda-pilotdb-dev.ec2-int.devis.com",
         "port": 27017,
         "database": "hmda"
     },
