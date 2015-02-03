@@ -24,7 +24,7 @@ module.exports = {
             if (isNaN(diff)) {
                 return callback(null, {'result': true});
             }
-            if (diff >= -0.2 && diff <= 0.2) {
+            if (diff > -0.2 && diff < 0.2) {
                 return callback(null, {'result': true});
             }
             return callback(null, {'result': false});
