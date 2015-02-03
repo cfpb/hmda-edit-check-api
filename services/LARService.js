@@ -4,28 +4,30 @@
 var LAR = require('../models/lar');
 
 module.exports = {
-    isValidNumHomePurchaseLoans: function(activityYear, loanCounts, respondentID, callback) {
-        var query = {'activity_year': activityYear, 'respondent_id': respondentID};
-        var queryPurchase = {
+    isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
+        activityYear = String(+activityYear - 1);
+        var query = {
             'activity_year': activityYear, 
             'respondent_id': respondentID,
             'loan_purpose': '1',
             'action_type': {$in: ['1', '6']},
-            'property_type': {$in: ['1', '2']}
+            'property_type': {$in: ['1', '2']},
+            'purchaser_type': {$ne: '0'}
         };
 
-        var oldLoanCounts = {};
         LAR.count(query, function(err, result) {
-            oldLoanCounts.numLoans = result;
-        }).count(queryPurchase, function(err, result) {
-            oldLoanCounts.numPurchaseLoans = result;
-            var oldPercent = oldLoanCounts.numPurchaseLoans / oldLoanCounts.numLoans,
-                newPercent = loanCounts.numPurchaseLoans / loanCounts.numLoans;
-
-            if ((newPercent - oldPercent) > 0.2 || (newPercent - oldPercent < -0.2)) {
-                return callback(null, {'result': false});
+            if (err) {
+                return callback(err, null);
             }
-            return callback(null, {'result': true});
+
+            var diff = (newLoans - result) / result;
+            if (isNaN(diff)) {
+                return callback(null, {'result': true});
+            }
+            if (diff >= -0.2 && diff <= 0.2) {
+                return callback(null, {'result': true});
+            }
+            return callback(null, {'result': false});
         });
     }
 };
