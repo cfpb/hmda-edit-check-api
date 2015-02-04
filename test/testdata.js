@@ -78,6 +78,134 @@ var TestData = {
                 function(err, item) {
                   cb();
                 });
+            },
+            function(cb) {
+              mongoose.model('Lar').create([
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '5',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '4',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '7',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '0',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '9',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '1',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                }
+              ], 
+              function(err, item) {
+                cb();
+              });
             }
         ], function() {
               console.log('..done inserting test data');
