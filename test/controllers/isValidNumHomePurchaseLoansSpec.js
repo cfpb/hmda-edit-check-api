@@ -8,7 +8,7 @@ var mockgoose = require('mockgoose');
 describe('/isValidNumHomePurchaseLoans', function() {
     it('should return true for a valid number of home purchase loans', function(done) {
         request(mock)
-            .get('/isValidNumHomePurchaseLoans/2013/5/0002590037')
+            .get('/isValidNumHomePurchaseLoans/2013/9/0002590037')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -16,7 +16,7 @@ describe('/isValidNumHomePurchaseLoans', function() {
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumHomePurchaseLoans/2013/7/0002590037')
+            .get('/isValidNumHomePurchaseLoans/2013/11/0002590037')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -36,7 +36,7 @@ describe('/isValidNumHomePurchaseLoans', function() {
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumHomePurchaseLoans/2013/9/0002590037')
+            .get('/isValidNumHomePurchaseLoans/2013/17/0002590037')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -52,6 +52,26 @@ describe('/isValidNumHomePurchaseLoans', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
+
+            .end(function (err, res) {
+                done(err);
+            });
+    });
+
+    it('should return false when the percent is exactly +/- 20%', function(done) {
+        request(mock)
+            .get('/isValidNumHomePurchaseLoans/2013/8/0002590058')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+
+            .end(function (err, res) {});
+
+        request(mock)
+            .get('/isValidNumHomePurchaseLoans/2013/12/0002590058')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
 
             .end(function (err, res) {
                 done(err);

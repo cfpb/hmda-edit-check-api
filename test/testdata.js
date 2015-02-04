@@ -157,6 +157,50 @@ var TestData = {
                   'action_type': '1',
                   'purchaser_type': '2',
                   'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '1',
+                  'purchaser_type': '2',
+                  'property_type': '2'
                 }
               ], 
               function(err, item) {

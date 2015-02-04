@@ -6,10 +6,10 @@ var LARService = require('../../services/LARService');
 describe('LARService', function() {
     describe('isValidNumHomePurchaseLoans', function() {
         it('should return true for a valid number of home purchase loans', function(done) {
-            LARService.isValidNumHomePurchaseLoans('2013', 5, '0002590037', function(err, result) {
+            LARService.isValidNumHomePurchaseLoans('2013', 9, '0002590037', function(err, result) {
                 expect(result.result).to.be.true();
             });
-            LARService.isValidNumHomePurchaseLoans('2013', 7, '0002590037', function(err, result) {
+            LARService.isValidNumHomePurchaseLoans('2013', 11, '0002590037', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
@@ -19,7 +19,17 @@ describe('LARService', function() {
             LARService.isValidNumHomePurchaseLoans('2013', 3, '0002590037', function(err, result) {
                 expect(result.result).to.be.false();
             });
-            LARService.isValidNumHomePurchaseLoans('2013', 9, '0002590037', function(err, result) {
+            LARService.isValidNumHomePurchaseLoans('2013', 17, '0002590037', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false when the percentage is exactly +/- 20%', function(done) {
+            LARService.isValidNumHomePurchaseLoans('2013', 8, '0002590037', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumHomePurchaseLoans('2013', 12, '0002590037', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
