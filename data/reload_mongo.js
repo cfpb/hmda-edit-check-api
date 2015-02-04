@@ -63,6 +63,11 @@ mongoose.connection.once('open', function(callback) {
                         if (line) {
                             var data = JSON.parse(line);
                             delete data['_id'];
+                            for (var prop in data) {
+                                if (typeof data[prop] === 'object' && data[prop]['$date']!==undefined) {
+                                    data[prop] = data[prop]['$date'];
+                                }
+                            }
                             return data;
                         } else {
                             return {};
