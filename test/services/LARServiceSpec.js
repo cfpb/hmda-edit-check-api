@@ -49,4 +49,50 @@ describe('LARService', function() {
             });
         });
     });
+
+    describe('isValidNumLoans', function() {
+        it('should return true for a valid total number of loans', function(done) {
+            LARService.isValidNumLoans('2013', 921, '0201590731', function(err, result) {
+                expect(result.result).to.be.true();
+            });
+            LARService.isValidNumLoans('2013', 1147, '0201590731', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false for an invalid total number of loans', function(done) {
+            LARService.isValidNumLoans('2013', 751, '0201590731', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumLoans('2013', 1532, '0201590731', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return true when neither year has 500 loans', function(done) {
+            LARService.isValidNumLoans('2013', 359, '1201547730', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return true for a valid percent when only one year has > 500 loans', function(done) {
+           LARService.isValidNumLoans('2013', 501, '1201547730', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            }); 
+        });
+
+        it('should return false when the percentage is exactly +/- 20%', function(done) {
+            LARService.isValidNumLoans('2013', 800, '0201590731', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumLoans('2013', 1200, '0201590731', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
 });
