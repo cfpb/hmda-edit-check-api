@@ -18,25 +18,16 @@ var isSmallCounty = function(activityYear, countyCode, callback) {
 var handleMSAStateCounty = function(censusparams, result, err, data) {
     if (data.state.length === 1 && data.county.length === 1) {
         result.result = true;
-    } else {
-        result.reason = 'msa/md, state, county combination not found';
-    }
+    } 
 };
 
 var handleMSAStateCountyTract = function(censusparams, result, err, data) {
-    if (data.county.length === 1 && data.county[0].small_county === '1') {
-        if (censusparams.tract !== 'NA') {
-            result.reason = 'tract should equal \'NA\'';
-        } else {
-            result.result = true;
-        }
-    } else {
-        if (data.tract.length === 1) {
-            result.result = true;
-        } else {
-            result.reason = 'state, county, tract combination not found';
-        }
+    result.result = true;
+    if (censusparams.msa !== undefined) {
+        result.result = (data.state.length===1);
     }
+    result.result = result.result && data.county.length === 1 && 
+        (censusparams.tract==='NA' || data.tract.length === 1);
 };
 
 module.exports = {

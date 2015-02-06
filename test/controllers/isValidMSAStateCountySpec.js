@@ -24,7 +24,6 @@ describe('/isValidMSAStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(new RegExp('\"reason\":\"msa/md, state, county combination not found\"'))
 
             .end(function (err, res) {
                 done(err);
