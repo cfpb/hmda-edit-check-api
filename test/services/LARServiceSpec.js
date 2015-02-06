@@ -95,4 +95,50 @@ describe('LARService', function() {
             });
         });
     });
+
+    describe('isValidNumRefinanceLoans', function() {
+        it('should return true when there are a valid number of refinance loans', function(done) {
+            LARService.isValidNumRefinanceLoans('2013', 9, '1035818356', function(err, result) {
+                expect(result.result).to.be.true();
+            });
+            LARService.isValidNumRefinanceLoans('2013', 11, '1035818356', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false when there are an invalid number of refinance loans', function(done) {
+            LARService.isValidNumRefinanceLoans('2013', 7, '1035818356', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumRefinanceLoans('2013', 13, '1035818356', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false when the percentage is exactly +/- 20%', function(done) {
+            LARService.isValidNumRefinanceLoans('2013', 8, '1035818356', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumRefinanceLoans('2013', 12, '1035818356', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return true when there are no home purchase loans for either year', function(done) {
+            LARService.isValidNumRefinanceLoans('2013', 0, '000000000005', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false when the percentage increase is infinite (n / 0)', function(done) {
+            LARService.isValidNumRefinanceLoans('2013', 8, '000000000005', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
 });
