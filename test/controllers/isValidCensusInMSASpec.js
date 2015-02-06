@@ -7,26 +7,12 @@ var mockgoose = require('mockgoose');
 
 describe('/isValidCensusInMSA', function() {
 
-    it('should return false if smallcounty=1 and doesnt have tract==NA', function(done) {
-        request(mock)
-            .get('/isValidCensusInMSA/2013/35100/37/103/9502.02')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-            .expect(/"reason":"tract should equal \'NA\'"/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
     it('should return false for a regular county with a tract that doesnt exist', function(done) {
         request(mock)
             .get('/isValidCensusInMSA/2013/35100/37/049/9552.02')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state, county, tract combination not found"/)
 
             .end(function (err, res) {
                 done(err);
@@ -39,7 +25,6 @@ describe('/isValidCensusInMSA', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"tract should equal \'NA\'"/)
 
             .end(function (err, res) {
                 done(err);
