@@ -233,6 +233,16 @@ var TestData = {
                 lars.push(sampleLar);
               }
 
+              mongoose.model('Lar').create(lars, function(err, item) {});
+
+              sampleLar.respondent_id = '1035818356';
+              sampleLar.loan_purpose = '3';
+              lars = [];
+
+              for (var k = 0; k < 10; k++) {
+                lars.push(sampleLar);
+              }
+
               mongoose.model('Lar').create(lars, function(err, item) {
                 cb();
               });
