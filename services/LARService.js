@@ -14,6 +14,17 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
     return {'result': false};
 };
 
+var comparePercentages = function (newPercentage, oldPercentage, threshold) {
+    var diff = Math.abs(newPercentage - oldPercentage);
+    if (isNaN(diff)) {
+        return false;
+    }
+    if (diff < threshold) {
+        return true;
+    }
+    return false;
+};
+
 module.exports = {
     isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
         activityYear -= 1;
