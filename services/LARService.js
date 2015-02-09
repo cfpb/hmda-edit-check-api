@@ -84,5 +84,25 @@ module.exports = {
             var result = compareYearTotals(newLoans, oldLoans, 0.2);
             return callback(null, result);
         });
+    },
+    isValidNumFannieLoans: function(activityYear, newLoans, newFannieLoans, respondentID, callback) {
+        activityYear -= 1;
+        var query = {
+            'activity_year': activityYear,
+            'respondent_id': respondentID,
+        };
+
+        LAR.count(query, function(err, oldLoans) {
+            if (err) {
+                return callback(err, null);
+            }
+            
+            // check that the percentage is 20% of last years
+            if (oldLoans < 500 && newLoans < 500) {
+                return callback(null, {'result': true});
+            }
+            var result = compareYearTotals(newLoans, oldLoans, 0.2);
+            return callback(null, result);
+        });
     }
 };
