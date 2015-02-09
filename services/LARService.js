@@ -3,6 +3,17 @@
 
 var LAR = require('../models/lar');
 
+var compareYearTotals = function(newLoans, oldLoans, percentage) {
+    var diff = (newLoans - oldLoans) / oldLoans;
+    if (isNaN(diff)) {
+        return {'result': true};
+    }
+    if (diff > -percentage && diff < percentage) {
+        return {'result': true};
+    }
+    return {'result': false};
+};
+
 module.exports = {
     isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
         activityYear -= 1;
@@ -19,15 +30,8 @@ module.exports = {
             if (err) {
                 return callback(err, null);
             }
-
-            var diff = (newLoans - oldLoans) / oldLoans;
-            if (isNaN(diff)) {
-                return callback(null, {'result': true});
-            }
-            if (diff > -0.2 && diff < 0.2) {
-                return callback(null, {'result': true});
-            }
-            return callback(null, {'result': false});
+            var result = compareYearTotals(newLoans, oldLoans, 0.2);
+            return callback(null, result);
         });
     },
     isValidNumLoans: function(activityYear, newLoans, respondentID, callback) {
@@ -46,15 +50,8 @@ module.exports = {
             if (oldLoans < 500 && newLoans < 500) {
                 return callback(null, {'result': true});
             }
-
-            var diff = (newLoans - oldLoans) / oldLoans;
-            if (isNaN(diff)) {
-                return callback(null, {'result': true});
-            }
-            if (diff > -0.2 && diff < 0.2) {
-                return callback(null, {'result': true});
-            }
-            return callback(null, {'result': false});
+            var result = compareYearTotals(newLoans, oldLoans, 0.2);
+            return callback(null, result);
         });
     },
     isValidNumRefinanceLoans: function(activityYear, newLoans, respondentID, callback) {
@@ -73,14 +70,8 @@ module.exports = {
                 return callback(err, null);
             }
 
-            var diff = (newLoans - oldLoans) / oldLoans;
-            if (isNaN(diff)) {
-                return callback(null, {'result': true});
-            }
-            if (diff > -0.2 && diff < 0.2) {
-                return callback(null, {'result': true});
-            }
-            return callback(null, {'result': false});
+            var result = compareYearTotals(newLoans, oldLoans, 0.2);
+            return callback(null, result);
         });
     }
 };
