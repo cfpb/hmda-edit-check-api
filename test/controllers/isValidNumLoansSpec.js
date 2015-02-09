@@ -8,7 +8,7 @@ var mockgoose = require('mockgoose');
 describe('/isValidNumLoans', function() {
     it('should return true for a valid total number of loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/879')
+            .get('/isValidNumLoans/total/2013/0201590731/879')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -16,7 +16,7 @@ describe('/isValidNumLoans', function() {
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/1091')
+            .get('/isValidNumLoans/total/2013/0201590731/1091')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -28,7 +28,7 @@ describe('/isValidNumLoans', function() {
 
     it('should return false for an invalid total number of loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/134')
+            .get('/isValidNumLoans/total/2013/0201590731/134')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -36,7 +36,7 @@ describe('/isValidNumLoans', function() {
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/1341')
+            .get('/isValidNumLoans/total/2013/0201590731/1341')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -48,7 +48,7 @@ describe('/isValidNumLoans', function() {
 
     it('should return true when neither year has more than 500 loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/2013/1201547730/273')
+            .get('/isValidNumLoans/total/2013/1201547730/273')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -60,7 +60,7 @@ describe('/isValidNumLoans', function() {
 
     it('should return true for a valid percent when only one year has > 500 loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/2013/1201547730/510')
+            .get('/isValidNumLoans/total/2013/1201547730/510')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -72,7 +72,7 @@ describe('/isValidNumLoans', function() {
 
     it('should return false when the percentage is exactly +/- 20%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/800')
+            .get('/isValidNumLoans/total/2013/0201590731/800')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -80,7 +80,7 @@ describe('/isValidNumLoans', function() {
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/1200')
+            .get('/isValidNumLoans/total/2013/0201590731/1200')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -94,7 +94,7 @@ describe('/isValidNumLoans', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/2013/0201590731/1091')
+            .get('/isValidNumLoans/total/2013/0201590731/1091')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
