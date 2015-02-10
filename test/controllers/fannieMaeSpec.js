@@ -18,7 +18,7 @@ describe('/isValidNumFannieLoans', function() {
             });
     });
 
-    it('should return true for a large number of current Fannie Loans with high percentage(>20) within 10 percent of last year', function(done) {
+    it('should return true for a large number of current Fannie Loans with high percentage(>20) within -10% of last year', function(done) {
         request(mock)
             .get('/isValidNumLoans/fannieMae/2013/0000413208/10000/2100')
             .expect(200)
@@ -30,9 +30,9 @@ describe('/isValidNumFannieLoans', function() {
             });
     });
 
-    it('should return false for a large number of current Fannie Loans with high percentage(>20) not within 10 percent of last year', function(done) {
+    it('should return false for a large number of current Fannie Loans within -10% of last year but with current percentage < 20%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/10003/3800')
+            .get('/isValidNumLoans/fannieMae/2013/0000413208/10000/167')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -42,29 +42,9 @@ describe('/isValidNumFannieLoans', function() {
             });
     });
 
-    it('should return false for current Fannie Loans with percentage not within 10 percent', function(done) {
+    it('should return false for current Fannie Loans with percentage not within -10%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/6/3')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
-    it('should return false if respondent id or activity_year dont exist', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/fannieMae/2011/0000413208/6/3')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {});
-
-        request(mock)
-            .get('/isValidNumLoans/fannieMae/2011/0000213208/6/3')
+            .get('/isValidNumLoans/fannieMae/2013/0000413208/100/3')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -89,8 +69,6 @@ describe('/isValidNumFannieLoans', function() {
                 done(err);
             });
     });
-
-
 
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);

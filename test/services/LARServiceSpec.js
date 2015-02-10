@@ -157,15 +157,19 @@ describe('LARService', function() {
             });
         });
 
-        it('should return false when there is a difference of over 10 percent', function(done) {
+        it('should return false when there is a difference of more than -10%', function(done) {
             LARService.isValidNumFannieLoans('2013','0000413208','100','3', function(err, result) {
                 expect(result.result).to.be.false();
-            });
-            LARService.isValidNumFannieLoans('2013','0000413208','100','36', function(err, result) {
-                expect(result.result).to.be.false();
                 done();
-            });   
-        });        
+            }); 
+        });
+
+        it('should return true when there is a difference of more than 10%', function(done) {
+            LARService.isValidNumFannieLoans('2013','0000413208','100','28', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            }); 
+        });
 
         it('should return false when there are high number of eligible loans with low percent of fannie mae', function(done) {
             LARService.isValidNumFannieLoans('2013','0000413208','10000','1500', function(err, result) {
@@ -176,6 +180,50 @@ describe('LARService', function() {
 
         it('should return false when there are zero current eligible loans', function(done) {
             LARService.isValidNumFannieLoans('2013','0000413208','0','0', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
+
+    describe('isValidNumGinnieMaeFHALoans', function() {
+        it('should return true when percentage Ginnie Mae FHA loans is within 10 percent', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013', '0050413703', '4','1', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return true when there are high number of eligible loans with high percent of Ginnie Mae FHA', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013','0050413703','2500','834', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false when there is a difference of more than -10%', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013','0050413703','100','3', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return true when there is a difference of more than 10%', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013','0050413703','100','36', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            }); 
+        });
+
+        it('should return false when there are high number of eligible loans with low percent of Ginnie Mae FHA', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013','0050413703','2500','416', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false when there are zero current eligible loans', function(done) {
+            LARService.isValidNumGinnieMaeFHALoans('2013','0050413703','0','0', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });

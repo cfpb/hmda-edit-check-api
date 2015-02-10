@@ -249,32 +249,45 @@ var TestData = {
             },
             function (cb) {
               var sampleLar = {
-                    'activity_year': '2012',
-                    'respondent_id': '0000413208',
-                    'agency_code': '9',
-                    'loan_type': '1',
-                    'loan_purpose': '3',
-                    'loan_amount': '00110',
-                    'action_type': '1',
-                    'purchaser_type': '2',
-                    'property_type': '2'
-                  };
+                'activity_year': '2012',
+                'respondent_id': '0000413208',
+                'agency_code': '9',
+                'loan_type': '1',
+                'loan_purpose': '3',
+                'loan_amount': '00110',
+                'action_type': '1',
+                'purchaser_type': '2',
+                'property_type': '2'
+              };
               var sampleLar2 = {
-                    'activity_year': '2012',
-                    'respondent_id': '0000413208',
-                    'agency_code': '9',
-                    'loan_type': '1',
-                    'loan_purpose': '3',
-                    'loan_amount': '00110',
-                    'action_type': '1',
-                    'purchaser_type': '3',
-                    'property_type': '2'
-                  };
+                'activity_year': '2012',
+                'respondent_id': '0000413208',
+                'agency_code': '9',
+                'loan_type': '1',
+                'loan_purpose': '3',
+                'loan_amount': '00110',
+                'action_type': '1',
+                'purchaser_type': '3',
+                'property_type': '2'
+              };
               var lars = [];
               for (var i = 0; i < 5; i++) {
-                  lars.push(sampleLar);  
+                lars.push(sampleLar);  
               }
               lars.push(sampleLar2);
+
+              mongoose.model('Lar').create(lars, function(err, item) {});
+
+              sampleLar.respondent_id = '0050413703';
+              sampleLar.loan_type = '2';
+              sampleLar2.respondent_id = '0050413703';
+              sampleLar2.loan_type = '2';
+              lars = [];
+
+              for (var j = 0; j < 3; j++) {
+                lars.push(sampleLar2);
+              }
+              lars.push(sampleLar);
 
               mongoose.model('Lar').create(lars, function(err, item) {
                 cb();
