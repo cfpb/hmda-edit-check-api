@@ -141,4 +141,44 @@ describe('LARService', function() {
             });
         });
     });
+
+    describe('isValidNumFannieLoans', function() {
+        it('should return true when percentage Fannie loans is within 10 percent', function(done) {
+            LARService.isValidNumFannieLoans('2013', '0000413208', '6','1',function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return true when there are high number of eligible loans with good percent of fannie mae', function(done) {
+            LARService.isValidNumFannieLoans('2013','0000413208','10000','2500', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false when there is a difference of over 10 percent', function(done) {
+            LARService.isValidNumFannieLoans('2013','0000413208','100','3', function(err, result) {
+                expect(result.result).to.be.false();
+            });
+            LARService.isValidNumFannieLoans('2013','0000413208','100','36', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });        
+
+        it('should return false when there are high number of eligible loans with low percent of fannie mae', function(done) {
+            LARService.isValidNumFannieLoans('2013','0000413208','10000','1500', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false when there are zero current eligible loans', function(done) {
+            LARService.isValidNumFannieLoans('2013','0000413208','0','0', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
 });
