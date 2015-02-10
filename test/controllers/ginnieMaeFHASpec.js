@@ -5,10 +5,10 @@
 var mongoose = require('mongoose');
 var mockgoose = require('mockgoose');
 
-describe('/isValidNum/fannieMae', function() {
-    it('should return true for a small number of current Fannie Loans with percentage within -10% of last year', function(done) {
+describe('/isValidNum/ginnieMaeFHA', function() {
+    it('should return true for a small number of current Ginnie Loans with percentage within -10% of last year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/6/1')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/4/1')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -18,9 +18,9 @@ describe('/isValidNum/fannieMae', function() {
             });
     });
 
-    it('should return true for a large number of current Fannie Loans with high percentage(>20) within -10% of last year', function(done) {
+    it('should return true for a large number of current Ginnie Loans with high percentage(>30) within -10% of last year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/10000/2100')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/2500/834')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -30,9 +30,9 @@ describe('/isValidNum/fannieMae', function() {
             });
     });
 
-    it('should return false for a large number of current Fannie Loans within -10% of last year but with current percentage < 20%', function(done) {
+    it('should return false for a large number of current Ginnie Loans within -10% of last year but with current percentage < 30%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/10000/167')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/2500/416')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -42,9 +42,9 @@ describe('/isValidNum/fannieMae', function() {
             });
     });
 
-    it('should return false for current Fannie Loans with percentage not within -10%', function(done) {
+    it('should return false for current Ginnie Loans with percentage not within -10%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/100/3')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/100/3')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -56,13 +56,13 @@ describe('/isValidNum/fannieMae', function() {
 
     it('should return 404 for an invalid number of current year loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/3')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/3')
             .expect(404)
 
             .end(function (err, res) {});
 
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013')
             .expect(404)
 
             .end(function (err, res) {
@@ -74,7 +74,7 @@ describe('/isValidNum/fannieMae', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/1000/750')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/1000/750')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
