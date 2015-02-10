@@ -164,7 +164,7 @@ describe('LARService', function() {
             LARService.isValidNumFannieLoans('2013','0000413208','100','36', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
-            });
+            });   
         });        
 
         it('should return false when there are high number of eligible loans with low percent of fannie mae', function(done) {
