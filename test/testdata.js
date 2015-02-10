@@ -201,67 +201,6 @@ var TestData = {
                   'action_type': '1',
                   'purchaser_type': '2',
                   'property_type': '2'
-                },
-                { 'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00087', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '3', 
-                  'property_type' : '1' 
-                },
-                {
-                  'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00112', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '3', 
-                  'property_type' : '1' 
-                },
-                { 'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00087', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '3', 
-                  'property_type' : '1' 
-                },
-                { 'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00087', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '1', 
-                  'property_type' : '3' 
-                },
-                { 'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00087', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '1', 
-                  'property_type' : '3' 
-                },
-                { 'activity_year' : '2012', 
-                  'respondent_id' : '0000413208', 
-                  'agency_code' : '9', 
-                  'loan_type' : '1', 
-                  'loan_purpose' : '1', 
-                  'loan_amount' : '00087', 
-                  'action_type' : '1', 
-                  'purchaser_type' : '1', 
-                  'property_type' : '1' 
                 }
               ], 
               function(err, item) {
@@ -303,6 +242,39 @@ var TestData = {
               for (var k = 0; k < 10; k++) {
                 lars.push(sampleLar);
               }
+
+              mongoose.model('Lar').create(lars, function(err, item) {
+                cb();
+              });
+            },
+            function (cb) {
+              var sampleLar = {
+                    'activity_year': '2012',
+                    'respondent_id': '0000413208',
+                    'agency_code': '9',
+                    'loan_type': '1',
+                    'loan_purpose': '3',
+                    'loan_amount': '00110',
+                    'action_type': '1',
+                    'purchaser_type': '2',
+                    'property_type': '2'
+                  };
+              var sampleLar2 = {
+                    'activity_year': '2012',
+                    'respondent_id': '0000413208',
+                    'agency_code': '9',
+                    'loan_type': '1',
+                    'loan_purpose': '3',
+                    'loan_amount': '00110',
+                    'action_type': '1',
+                    'purchaser_type': '3',
+                    'property_type': '2'
+                  };
+              var lars = [];
+              for (var i = 0; i < 5; i++) {
+                  lars.push(sampleLar);  
+              }
+              lars.push(sampleLar2);
 
               mongoose.model('Lar').create(lars, function(err, item) {
                 cb();

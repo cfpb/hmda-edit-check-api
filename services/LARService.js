@@ -90,11 +90,10 @@ module.exports = {
             'respondent_id': respondentID,
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
-            'property_type': {$in: ['1', '2']},
-            'purchaser_type': {$in: ['1', '3']}
+            'property_type': {$in: ['1', '2']}
         };
         var fannieQuery = _.clone(totalQuery);
-        fannieQuery.purchaser_type = {$in: ['1']};
+        fannieQuery.purchaser_type = {$in: ['1', '3']};
 
         var previousYearLoans,
             previousYearFannieLoans;
