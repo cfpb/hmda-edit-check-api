@@ -1,12 +1,10 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidCensusTractCombo', function() {
-
     it('should return a result if a request is valid', function(done) {
         request(mock)
             .get('/isValidCensusTractCombo/2013/01/001/00001/0000.01')
@@ -31,5 +29,4 @@ describe('/isValidCensusTractCombo', function() {
                 done(err);
             });
     });
-
 });

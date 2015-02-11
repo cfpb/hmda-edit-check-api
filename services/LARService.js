@@ -16,11 +16,11 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
 };
 
 var comparePercentages = function (newPercentage, oldPercentage, threshold) {
-    var diff = Math.abs(newPercentage - oldPercentage);
+    var diff = newPercentage - oldPercentage;
     if (diff < threshold) {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 };
 
 module.exports = {
@@ -88,6 +88,7 @@ module.exports = {
         var totalQuery = {
             'activity_year': activityYear, 
             'respondent_id': respondentID,
+            'loan_type': '1',
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']}
@@ -120,17 +121,66 @@ module.exports = {
                 'result': false
             };
 
-            // diff year to year can't be more than 10 percent, if over 10,000, 
-            // then currentPercentage should be greater than 20 percent
-            if (comparePercentages(previousYearPercent, currentPercent, 0.1) && 
-                ((currentLoans>=10000 && currentPercent> 0.2) || currentLoans<10000)) {
+            // diff year to year can't be more than -10%, if over 10,000, 
+            // then currentPercentage should be greater than 20%
+            if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
+                ((currentLoans >= 10000 && currentPercent > 0.2) || currentLoans < 10000)) {
                 result.result = true;
             } 
             return callback(null, result);
-                
         })
         .then(null, function (err) {
             return callback(err, null);
         });
+    },
+    isValidNumGinnieMaeFHALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
+        activityYear -= 1;
+        var totalQuery = {
+            'activity_year': activityYear, 
+            'respondent_id': respondentID,
+            'loan_type': '2',   
+            'loan_purpose': {$in: ['1', '3']},
+            'action_type': {$in: ['1', '6']},
+            'property_type': {$in: ['1', '2']}
+        };
+        var ginnieQuery = _.clone(totalQuery);
+        ginnieQuery.purchaser_type = '2';
+
+        var previousYearLoans,
+            previousYearGinnieLoans;
+
+        LAR.count(totalQuery).exec()
+        .then(function (data) {
+            previousYearLoans = data;
+            return LAR.count(ginnieQuery).exec();
+        })
+        .then(function (data) {
+            previousYearGinnieLoans = data;
+            var previousYearPercent = previousYearGinnieLoans/previousYearLoans,
+                currentPercent = currentGinnieLoans/currentLoans;
+
+            if (isNaN(previousYearPercent)) {
+                previousYearPercent = 0;
+            }
+            if (isNaN(currentPercent)) {
+                currentPercent = 0;
+            }
+            var result = {
+                'previousYearLoans': previousYearLoans,
+                'previousYearGinnieLoans': previousYearGinnieLoans,
+                'result': false
+            };
+
+            // diff year to year can't be more than -10%, if over 2,500, 
+            // then currentPercentage should be greater than 30%
+            if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
+                ((currentLoans >= 2500 && currentPercent > 0.3) || currentLoans < 2500)) {
+                result.result = true;
+            } 
+            return callback(null, result);
+        })
+        .then(null, function (err) {
+            return callback(err, null);
+        });  
     }
 };

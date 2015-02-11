@@ -1,12 +1,10 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidMSA', function() {
-
     it('should return true if a msa is valid', function(done) {
         request(mock)
             .get('/isValidMSA/2013/35100')
@@ -43,5 +41,4 @@ describe('/isValidMSA', function() {
                 done(err);
             });
     });
-
 });

@@ -5,7 +5,7 @@ var LARService = require('../../services/LARService');
 module.exports = function(router) {
 
     /**
-     * @param {String} activityYear, {String} respondentID, {String} numLoans
+     * @param {String} activityYear, {String} respondentID, {String} numLoans, {String} numFannieLoans
      * @return {json}
      */
     router.get('/:activityYear/:respondentID/:numLoans/:numFannieLoans', function(req, res) {

@@ -1,12 +1,10 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidCensusCombination', function() {
-
     it('should return true if smallcounty=1 and tract==NA', function(done) {
         request(mock)
             .get('/isValidCensusCombination/2013/37/103/NA')
@@ -82,5 +80,4 @@ describe('/isValidCensusCombination', function() {
                 done(err);
             });
     });
-
 });

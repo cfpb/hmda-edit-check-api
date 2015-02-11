@@ -1,10 +1,10 @@
 /*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false*/
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose'),
 
-var queryUtil = require('../../lib/queryUtil');
+    queryUtil = require('../../lib/queryUtil');
 
 describe('queryUtil', function() {
     describe('count', function() {

@@ -1,13 +1,13 @@
 /*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false*/
 'use strict';
 
-var mockgoose = require('mockgoose');
-var mongoose = require('mongoose');
+var mockgoose = require('mockgoose'),
+    mongoose = require('mongoose'),
 
-var CensusService = require('../../services/CensusService');
+    CensusService = require('../../services/CensusService'),
 
-var rewire = require('rewire');
-var rewiredCensusService = rewire('../../services/CensusService');
+    rewire = require('rewire'),
+    rewiredCensusService = rewire('../../services/CensusService');
 
 describe('CensusService', function() {
     describe('isValidMSA', function() {
@@ -31,7 +31,6 @@ describe('CensusService', function() {
                 done();
             });
         });
-
     });
 
     describe('isValidCensusTractCombo', function() {
