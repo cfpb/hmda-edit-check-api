@@ -1,12 +1,10 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isChildFI', function() {
-
     it('should return a result if the request is valid', function(done) {
         request(mock)
             .get('/isChildFI/2013/0000000001')
@@ -31,5 +29,4 @@ describe('/isChildFI', function() {
                 done(err);
             });
     });
-
 });

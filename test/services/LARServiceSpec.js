@@ -1,4 +1,4 @@
-/*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false*/
+/*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false, async:false*/
 'use strict';
 
 var LARService = require('../../services/LARService');
@@ -6,31 +6,58 @@ var LARService = require('../../services/LARService');
 describe('LARService', function() {
     describe('isValidNumHomePurchaseLoans', function() {
         it('should return true for a valid number of home purchase loans', function(done) {
-            LARService.isValidNumHomePurchaseLoans('2013', 9, '0002590037', function(err, result) {
-                expect(result.result).to.be.true();
-            });
-            LARService.isValidNumHomePurchaseLoans('2013', 11, '0002590037', function(err, result) {
-                expect(result.result).to.be.true();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 9, '0002590037', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });        
+                },
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 11, '0002590037', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });        
+                }
+            ], function(err, results) {
                 done();
             });
         });
 
         it('should return false an invalid number of home purchase loans', function(done) {
-            LARService.isValidNumHomePurchaseLoans('2013', 3, '0002590037', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumHomePurchaseLoans('2013', 17, '0002590037', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 3, '0002590037', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 17, '0002590037', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
 
         it('should return false when the percentage is exactly +/- 20%', function(done) {
-            LARService.isValidNumHomePurchaseLoans('2013', 8, '0002590037', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumHomePurchaseLoans('2013', 12, '0002590037', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 8, '0002590037', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumHomePurchaseLoans('2013', 12, '0002590037', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
@@ -52,21 +79,39 @@ describe('LARService', function() {
 
     describe('isValidNumLoans', function() {
         it('should return true for a valid total number of loans', function(done) {
-            LARService.isValidNumLoans('2013', 921, '0201590731', function(err, result) {
-                expect(result.result).to.be.true();
-            });
-            LARService.isValidNumLoans('2013', 1147, '0201590731', function(err, result) {
-                expect(result.result).to.be.true();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 921, '0201590731', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 1147, '0201590731', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
 
         it('should return false for an invalid total number of loans', function(done) {
-            LARService.isValidNumLoans('2013', 751, '0201590731', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumLoans('2013', 1532, '0201590731', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 751, '0201590731', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 1532, '0201590731', function(err, result) {
+                        expect(result.result).to.be.false();
+                        done();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
@@ -86,11 +131,20 @@ describe('LARService', function() {
         });
 
         it('should return false when the percentage is exactly +/- 20%', function(done) {
-            LARService.isValidNumLoans('2013', 800, '0201590731', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumLoans('2013', 1200, '0201590731', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 800, '0201590731', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumLoans('2013', 1200, '0201590731', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
@@ -98,31 +152,58 @@ describe('LARService', function() {
 
     describe('isValidNumRefinanceLoans', function() {
         it('should return true when there are a valid number of refinance loans', function(done) {
-            LARService.isValidNumRefinanceLoans('2013', 9, '1035818356', function(err, result) {
-                expect(result.result).to.be.true();
-            });
-            LARService.isValidNumRefinanceLoans('2013', 11, '1035818356', function(err, result) {
-                expect(result.result).to.be.true();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 9, '1035818356', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 11, '1035818356', function(err, result) {
+                        expect(result.result).to.be.true();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
 
         it('should return false when there are an invalid number of refinance loans', function(done) {
-            LARService.isValidNumRefinanceLoans('2013', 7, '1035818356', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumRefinanceLoans('2013', 13, '1035818356', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 7, '1035818356', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 13, '1035818356', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });
 
         it('should return false when the percentage is exactly +/- 20%', function(done) {
-            LARService.isValidNumRefinanceLoans('2013', 8, '1035818356', function(err, result) {
-                expect(result.result).to.be.false();
-            });
-            LARService.isValidNumRefinanceLoans('2013', 12, '1035818356', function(err, result) {
-                expect(result.result).to.be.false();
+            async.series([
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 8, '1035818356', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                },
+                function(cb) {
+                    LARService.isValidNumRefinanceLoans('2013', 12, '1035818356', function(err, result) {
+                        expect(result.result).to.be.false();
+                        cb();
+                    });
+                }
+            ], function(err, results) {
                 done();
             });
         });

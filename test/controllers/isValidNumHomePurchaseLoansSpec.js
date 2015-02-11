@@ -1,49 +1,66 @@
-/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
+/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false, async:false*/
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidNumHomePurchaseLoans', function() {
     it('should return true for a valid number of home purchase loans', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590037/9')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":true/)
+        async.series([
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590037/9')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":true/)
 
-            .end(function (err, res) {});
+                    .end(function (err, res) {
+                        cb();
+                    });
+            },
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590037/11')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":true/)
 
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590037/11')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":true/)
-
-            .end(function (err, res) {
-                done(err);
-            });
+                    .end(function (err, res) {
+                        cb();
+                    });
+            }
+        ], function(err, results) {
+            done();
+        });
     });
 
     it('should return false for an invalid number of home purchase loans', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590037/3')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
+        async.series([
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590037/3')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-            .end(function (err, res) {});
+                    .end(function (err, res) {
+                        cb();
+                    });
+            },
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590037/17')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590037/17')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
+                    .end(function (err, res) {
+                        cb();
+                    });
+            }
+        ], function(err, results) {
+            done();
+        });
     });
 
     it('should return true when there are no home purchase loans for either year', function(done) {
@@ -59,23 +76,32 @@ describe('/isValidNumHomePurchaseLoans', function() {
     });
 
     it('should return false when the percent is exactly +/- 20%', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590058/8')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
+        async.series([
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590058/8')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-            .end(function (err, res) {});
+                    .end(function (err, res) {
+                        cb();
+                    });
+            },
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/homePurchase/2013/0002590058/12')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/0002590058/12')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
+                    .end(function (err, res) {
+                        cb();
+                    });
+            }
+        ], function(err, results) {
+            done();
+        });
     });
 
     it('should return false when the percentage increase is infinite (n / 0)', function(done) {

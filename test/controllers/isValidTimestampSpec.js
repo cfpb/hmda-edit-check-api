@@ -1,9 +1,8 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidTimestamp', function() {
     it('should return true for a valid timestamp more than one day after January 1, 2014', function(done) {
@@ -55,5 +54,4 @@ describe('/isValidTimestamp', function() {
                 done(err);
             });
     });
-
 });

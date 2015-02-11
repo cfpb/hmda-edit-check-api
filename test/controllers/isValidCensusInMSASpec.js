@@ -1,12 +1,10 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidCensusInMSA', function() {
-
     it('should return false for a regular county with a tract that doesnt exist', function(done) {
         request(mock)
             .get('/isValidCensusInMSA/2013/35100/37/049/9552.02')
@@ -32,16 +30,16 @@ describe('/isValidCensusInMSA', function() {
     });
 
     it('should return false if msa doesnt exist', function(done) {
-            request(mock)
-                .get('/isValidCensusInMSA/2013/35200/437/103/9502.02')
-                .expect(200)
-                .expect('Content-Type', /json/)
-                .expect(/"result":false/)
-                .expect(/"reason":"state or msa doesnt exist"/)
+        request(mock)
+            .get('/isValidCensusInMSA/2013/35200/437/103/9502.02')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+            .expect(/"reason":"state or msa doesnt exist"/)
 
-                .end(function (err, res) {
-                    done(err);
-                });
+            .end(function (err, res) {
+                done(err);
+            });
     });
 
 
@@ -70,5 +68,4 @@ describe('/isValidCensusInMSA', function() {
                 done(err);
             });
     });
-
 });

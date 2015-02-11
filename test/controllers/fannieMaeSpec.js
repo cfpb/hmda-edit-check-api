@@ -1,9 +1,8 @@
-/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
+/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false, async:false*/
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidNum/fannieMae', function() {
     it('should return true for a small number of current Fannie Loans with percentage within -10% of last year', function(done) {
@@ -55,19 +54,28 @@ describe('/isValidNum/fannieMae', function() {
     });
 
     it('should return 404 for an invalid number of current year loans', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/fannieMae/2013/0000413208/3')
-            .expect(404)
+        async.series([
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/fannieMae/2013/0000413208/3')
+                    .expect(404)
 
-            .end(function (err, res) {});
+                    .end(function (err, res) {
+                        cb();
+                    });
+            },
+            function(cb) {
+                request(mock)
+                    .get('/isValidNumLoans/fannieMae/2013')
+                    .expect(404)
 
-        request(mock)
-            .get('/isValidNumLoans/fannieMae/2013')
-            .expect(404)
-
-            .end(function (err, res) {
-                done(err);
-            });
+                    .end(function (err, res) {
+                        cb();
+                    });
+            }
+        ], function(err, results) {
+            done();
+        });
     });
 
     it('should return a 500 if there is a problem', function(done) {

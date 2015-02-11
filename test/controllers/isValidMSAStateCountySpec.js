@@ -1,9 +1,8 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidMSAStateCounty', function() {
     it('should return true for a valid msa/md, state, and county combination', function(done) {

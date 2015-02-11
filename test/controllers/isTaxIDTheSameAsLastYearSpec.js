@@ -1,9 +1,8 @@
-/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
+/*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false, async:false*/
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isTaxIDTheSameAsLastYear', function() {
     it('should return true when taxID is the same as last year', function(done) {
@@ -19,23 +18,32 @@ describe('/isTaxIDTheSameAsLastYear', function() {
     });
 
     it('should return false when taxID is not the same as last year', function(done) {
-        request(mock)
-            .get('/isTaxIDTheSameAsLastYear/2014/0000000001/23-0916595')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
+        async.series([
+            function(cb) {
+                request(mock)
+                    .get('/isTaxIDTheSameAsLastYear/2014/0000000001/23-0916595')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-            .end(function (err, res) {}); 
+                    .end(function (err, res) {
+                        cb();
+                    }); 
+            },
+            function(cb) {
+                request(mock)
+                    .get('/isTaxIDTheSameAsLastYear/2014/0000005001/23-0916895')
+                    .expect(200)
+                    .expect('Content-Type', /json/)
+                    .expect(/"result":false/)
 
-        request(mock)
-            .get('/isTaxIDTheSameAsLastYear/2014/0000005001/23-0916895')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
+                    .end(function (err, res) {
+                        cb();
+                    });
+            }
+        ], function(err, results) {
+            done();
+        });
     });
 
     it('should return a 500 if there is a problem', function(done) {
