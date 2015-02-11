@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isValidNum/fannieMae', function() {
+describe('/isValidNumLoans/fannieMae', function() {
     it('should return true for a small number of current Fannie Loans with percentage within -10% of last year', function(done) {
         request(mock)
             .get('/isValidNumLoans/fannieMae/2013/0000413208/6/1')

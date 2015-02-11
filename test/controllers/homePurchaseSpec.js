@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isValidNumHomePurchaseLoans', function() {
+describe('/isValidNumLoans/homePurchase', function() {
     it('should return true for a valid number of home purchase loans', function(done) {
         async.series([
             function(cb) {

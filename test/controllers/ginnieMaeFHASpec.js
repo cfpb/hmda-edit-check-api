@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isValidNum/ginnieMaeFHA', function() {
+describe('/isValidNumLoans/ginnieMaeFHA', function() {
     it('should return true for a small number of current Ginnie Loans with percentage within -10% of last year', function(done) {
         request(mock)
             .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/4/1')

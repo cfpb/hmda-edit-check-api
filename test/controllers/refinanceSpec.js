@@ -4,7 +4,7 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isValidNumRefinanceLoans', function() {
+describe('/isValidNumLoans/refinance', function() {
     it('should return true for a valid number of refinance loans', function(done) {
         async.series([
             function(cb) {
