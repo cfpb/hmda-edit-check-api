@@ -121,8 +121,8 @@ module.exports = {
                 'result': false
             };
 
-            // diff year to year can't be more than 10 percent, if over 10,000, 
-            // then currentPercentage should be greater than 20 percent
+            // diff year to year can't be more than -10%, if over 10,000, 
+            // then currentPercentage should be greater than 20%
             if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
                 ((currentLoans >= 10000 && currentPercent > 0.2) || currentLoans < 10000)) {
                 result.result = true;
@@ -171,8 +171,8 @@ module.exports = {
                 'result': false
             };
 
-            // diff year to year can't be more than 10 percent, if over 10,000, 
-            // then currentPercentage should be greater than 20 percent
+            // diff year to year can't be more than -10%, if over 2,500, 
+            // then currentPercentage should be greater than 30%
             if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
                 ((currentLoans >= 2500 && currentPercent > 0.3) || currentLoans < 2500)) {
                 result.result = true;
