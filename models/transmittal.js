@@ -8,5 +8,5 @@ var transmittalSchema = mongoose.Schema({
     'tax_id': String,
     'timestamp': Date
 });
-
+transmittalSchema.index({'activity_year': 1, 'respondent_id': 1, 'tax_id': 1});
 module.exports = mongoose.model('Transmittal', transmittalSchema, 'transmittal');

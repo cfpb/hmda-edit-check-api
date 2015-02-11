@@ -8,5 +8,5 @@ var craReportersSchema = mongoose.Schema({
     'agency_code': String,
     'respondent_name': String
 });
-
+craReportersSchema.index({'activity_year': 1, 'respondent_id': 1, 'agency_code': 1});
 module.exports = mongoose.model('CraReporters', craReportersSchema, 'cra_reporters');
