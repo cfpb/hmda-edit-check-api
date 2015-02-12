@@ -9,7 +9,7 @@ module.exports = function(router) {
      * @return {json}
      */
     router.get('/:activityYear/:respondentID/:numLoans/:numGinnieLoans', function(req, res) {
-        LARService.isValidNumGinnieMaeLoans(req.params.activityYear, req.params.respondentID, req.params.numLoans, req.params.numGinnieLoans, function(err, result) {
+        LARService.isValidNumGinnieMaeVALoans(req.params.activityYear, req.params.respondentID, req.params.numLoans, req.params.numGinnieLoans, function(err, result) {
             if (err) {
                 res.status(500).json(err);
             } else {

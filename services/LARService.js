@@ -45,8 +45,12 @@ var calculateYearOnYearLoans = function (currentLoans, currentPurchaserLoans,
             currentPercent = 0;
         }
         var result = {
-            'previousYearLoans': previousYearLoans,
-            'previousYearPurchaserLoans': previousYearPurchaserLoans,
+            'Previous Year Loans': previousYearLoans,
+            'Previous Year Purchaser Loans': previousYearPurchaserLoans,
+            'Previous Percentage' : previousYearPercent,
+            'Current Year Loans': currentLoans,
+            'Current Year Purchaser Loans': currentPurchaserLoans,
+            'Current Year Percentage' : currentPercent,
             'result': false
         };
 
@@ -168,7 +172,7 @@ module.exports = {
         return calculateYearOnYearLoans (currentLoans, currentGinnieLoans,
             totalQuery, ginnieQuery, loanParameters, callback);
     },
-    isValidNumGinnieMaeLoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
+    isValidNumGinnieMaeVALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
             'activity_year': activityYear, 
