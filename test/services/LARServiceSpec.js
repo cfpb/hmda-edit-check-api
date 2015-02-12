@@ -310,4 +310,55 @@ describe('LARService', function() {
             });
         });
     });
+
+    describe('isValidNumGinnieMaeLoans', function() {
+        it('should return true when percentage Ginnie loans is within -10 percent', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013', '0000413209', '100','16',function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return true when there are high number of eligible loans with good percent of ginnie mae', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413209','2000','700', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return false when there is a difference of more than -10%', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413209','100','14', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            }); 
+        });
+
+        it('should return true when the difference is more than 10%', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413209','100','48', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            }); 
+        });
+
+        it('should return false when there are high number of eligible loans with low percent of ginnie mae (within 10%)', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413209','2000','400', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false when there are zero current eligible loans', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413209','0','0', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return true when there are zero previous eligible loans', function(done) {
+            LARService.isValidNumGinnieMaeLoans('2013','0000413210','100','30', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+    });
 });

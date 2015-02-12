@@ -23,6 +23,47 @@ var comparePercentages = function (newPercentage, oldPercentage, threshold) {
     return true;
 };
 
+var calculateYearOnYearLoans = function (currentLoans, currentPurchaserLoans,
+            totalQuery, purchaserQuery, loanParameters, callback) {
+    var previousYearLoans,
+        previousYearPurchaserLoans;
+
+    LAR.count(totalQuery).exec()
+    .then(function (data) {
+        previousYearLoans = data;
+        return LAR.count(purchaserQuery).exec();
+    })
+    .then(function (data) {
+        previousYearPurchaserLoans = data;
+        var previousYearPercent = previousYearPurchaserLoans/previousYearLoans,
+            currentPercent = currentPurchaserLoans/currentLoans;
+
+        if (isNaN(previousYearPercent)) {
+            previousYearPercent = 0;
+        }
+        if (isNaN(currentPercent)) {
+            currentPercent = 0;
+        }
+        var result = {
+            'previousYearLoans': previousYearLoans,
+            'previousYearPurchaserLoans': previousYearPurchaserLoans,
+            'result': false
+        };
+
+        // diff year to year can't be more than threshold, if over largeNum, 
+        // then currentPercentage should be greater than minPercent
+        if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent) && 
+            ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
+            result.result = true;
+        } 
+        return callback(null, result);
+                
+    })
+    .then(null, function (err) {
+        return callback(err, null);
+    });
+};
+
 module.exports = {
     isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
         activityYear -= 1;
@@ -96,42 +137,14 @@ module.exports = {
         var fannieQuery = _.clone(totalQuery);
         fannieQuery.purchaser_type = {$in: ['1', '3']};
 
-        var previousYearLoans,
-            previousYearFannieLoans;
+        var loanParameters = {
+            diffPercent: -0.1,
+            threshold: 10000,
+            minPercent: 0.2
+        };
 
-        LAR.count(totalQuery).exec()
-        .then(function (data) {
-            previousYearLoans = data;
-            return LAR.count(fannieQuery).exec();
-        })
-        .then(function (data) {
-            previousYearFannieLoans = data;
-            var previousYearPercent = previousYearFannieLoans/previousYearLoans,
-                currentPercent = currentFannieLoans/currentLoans;
-
-            if (isNaN(previousYearPercent)) {
-                previousYearPercent = 0;
-            }
-            if (isNaN(currentPercent)) {
-                currentPercent = 0;
-            }
-            var result = {
-                'previousYearLoans': previousYearLoans,
-                'previousYearFannieLoans': previousYearFannieLoans,
-                'result': false
-            };
-
-            // diff year to year can't be more than -10%, if over 10,000, 
-            // then currentPercentage should be greater than 20%
-            if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
-                ((currentLoans >= 10000 && currentPercent > 0.2) || currentLoans < 10000)) {
-                result.result = true;
-            } 
-            return callback(null, result);
-        })
-        .then(null, function (err) {
-            return callback(err, null);
-        });
+        return calculateYearOnYearLoans (currentLoans, currentFannieLoans,
+            totalQuery, fannieQuery, loanParameters, callback);
     },
     isValidNumGinnieMaeFHALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
@@ -146,41 +159,35 @@ module.exports = {
         var ginnieQuery = _.clone(totalQuery);
         ginnieQuery.purchaser_type = '2';
 
-        var previousYearLoans,
-            previousYearGinnieLoans;
+        var loanParameters = {
+            diffPercent: -0.1,
+            threshold: 2500,
+            minPercent: 0.3
+        };
 
-        LAR.count(totalQuery).exec()
-        .then(function (data) {
-            previousYearLoans = data;
-            return LAR.count(ginnieQuery).exec();
-        })
-        .then(function (data) {
-            previousYearGinnieLoans = data;
-            var previousYearPercent = previousYearGinnieLoans/previousYearLoans,
-                currentPercent = currentGinnieLoans/currentLoans;
+        return calculateYearOnYearLoans (currentLoans, currentGinnieLoans,
+            totalQuery, ginnieQuery, loanParameters, callback);
+    },
+    isValidNumGinnieMaeLoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
+        activityYear -= 1;
+        var totalQuery = {
+            'activity_year': activityYear, 
+            'respondent_id': respondentID,
+            'loan_purpose': {$in: ['1', '3']},
+            'action_type': {$in: ['1', '6']},
+            'property_type': {$in: ['1', '2']},
+            'loan_type': '3'
+        };
+        var ginnieQuery = _.clone(totalQuery);
+        ginnieQuery.purchaser_type = '2';
 
-            if (isNaN(previousYearPercent)) {
-                previousYearPercent = 0;
-            }
-            if (isNaN(currentPercent)) {
-                currentPercent = 0;
-            }
-            var result = {
-                'previousYearLoans': previousYearLoans,
-                'previousYearGinnieLoans': previousYearGinnieLoans,
-                'result': false
-            };
+        var loanParameters = {
+            diffPercent: -0.1,
+            threshold: 2000,
+            minPercent: 0.3
+        };
 
-            // diff year to year can't be more than -10%, if over 2,500, 
-            // then currentPercentage should be greater than 30%
-            if (comparePercentages(currentPercent, previousYearPercent, -0.1) && 
-                ((currentLoans >= 2500 && currentPercent > 0.3) || currentLoans < 2500)) {
-                result.result = true;
-            } 
-            return callback(null, result);
-        })
-        .then(null, function (err) {
-            return callback(err, null);
-        });  
+        return calculateYearOnYearLoans (currentLoans, currentGinnieLoans,
+            totalQuery, ginnieQuery, loanParameters, callback);
     }
 };
