@@ -267,19 +267,6 @@ var TestData = {
               }
               lars.push(sampleLar);
 
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '0000413209';
-              sampleLar.loan_type = '3';
-              sampleLar2.respondent_id = '0000413209';
-              sampleLar2.loan_type = '3';
-              lars = [];
-
-              for (j = 0; j < 3; j++) {
-                lars.push(sampleLar2);
-              }
-              lars.push(sampleLar);
-
               mongoose.model('Lar').create(lars, function(err, item) {
                 cb();
               });
