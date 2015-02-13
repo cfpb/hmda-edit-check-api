@@ -23,10 +23,10 @@ var comparePercentages = function (newPercentage, oldPercentage, threshold) {
     return true;
 };
 
-var calculateYearOnYearLoans = function (currentLoans, currentPurchaserLoans,
+var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
             totalQuery, purchaserQuery, loanParameters, callback) {
     var previousYearLoans,
-        previousYearPurchaserLoans;
+        previousYearSoldLoans;
 
     LAR.count(totalQuery).exec()
     .then(function (data) {
@@ -34,9 +34,9 @@ var calculateYearOnYearLoans = function (currentLoans, currentPurchaserLoans,
         return LAR.count(purchaserQuery).exec();
     })
     .then(function (data) {
-        previousYearPurchaserLoans = data;
-        var previousYearPercent = previousYearPurchaserLoans/previousYearLoans,
-            currentPercent = currentPurchaserLoans/currentLoans;
+        previousYearSoldLoans = data;
+        var previousYearPercent = previousYearSoldLoans/previousYearLoans,
+            currentPercent = currentSoldLoans/currentLoans;
 
         if (isNaN(previousYearPercent)) {
             previousYearPercent = 0;
@@ -46,10 +46,10 @@ var calculateYearOnYearLoans = function (currentLoans, currentPurchaserLoans,
         }
         var result = {
             'Previous Year Loans': previousYearLoans,
-            'Previous Year Purchaser Loans': previousYearPurchaserLoans,
-            'Previous Percentage' : previousYearPercent,
+            'Previous Year Sold Loans': previousYearSoldLoans,
+            'Previous Year Percentage' : previousYearPercent,
             'Current Year Loans': currentLoans,
-            'Current Year Purchaser Loans': currentPurchaserLoans,
+            'Current Year Sold Loans': currentSoldLoans,
             'Current Year Percentage' : currentPercent,
             'result': false
         };
