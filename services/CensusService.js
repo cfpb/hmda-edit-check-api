@@ -5,101 +5,48 @@ var Census = require('../models/census');
 
 var count = require('../lib/queryUtil').count;
 
-var isValidCensusTractForCounty = function(activityYear, countyCode, tract, callback) {
-    var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'tract': tract };
-    count('Census', query, callback);
-};
-
-var isSmallCounty = function(activityYear, countyCode, callback) {
-    var query = { 'activity_year': activityYear, 'type': 'county', 'code': countyCode, 'small_county': '1' };
-    count('Census', query, callback);
-};
-
-var handleMSAStateCounty = function(censusparams, result, err, data) {
-    if (data.state.length === 1 && data.county.length === 1) {
-        result.result = true;
-    } 
-};
-
-var handleMSAStateCountyTract = function(censusparams, result, err, data) {
-    result.result = true;
-    if (censusparams.msa !== undefined) {
-        result.result = (data.state.length===1);
-    }
-    result.result = result.result && data.county.length === 1 && 
-        (censusparams.tract==='NA' || data.tract.length === 1);
+var handleCensusQuery = function (query, callback) {
+    Census.findOne(query, function(err, data) {
+        if (err) {
+            return callback(err, null);
+        }
+        if (data === null) {
+            return callback(null, {result: false});
+        }
+        return callback(null, {result: true});
+    });
 };
 
 module.exports = {
     isValidMSA: function(activityYear, msa, callback) {
-        Census.find({ 'activity_year': activityYear, 'code' : msa }, function(err, data) {
-            if (err) {
-                return callback(err, null);
-            }
-            var result = { result: false };
-            if (data.length>0) {
-                result.result = true;
-            }
-            return callback(null, result);
-        });
+        var query = { 'activity_year': activityYear, 'msa_code' : msa };
+        return handleCensusQuery (query, callback);
     },
 
     isValidStateCounty: function(activityYear, state, county, callback) {
-        var result = {result: false};
-        var query = {'activity_year': activityYear, 'type': 'state', 'code': state};
-        var projection = {county: {$elemMatch: {fips_code: county}}};
-
-        Census.findOne(query, projection, function(err, data) {
-            if (err) {
-                return callback(err, null);
-            }
-            if (data === null) {
-                result.reason = 'state does not exist';
-                return callback(null, result);
-            }
-            if (data.county.length === 1) {
-                result.result = true;
-            } else {
-                result.reason = 'county does not exist';
-            }
-            return callback(null, result);
-        });
+        var query = {'activity_year': activityYear, 'state_code': state, 'county_code': county};
+        return handleCensusQuery (query, callback);
     },
 
     isValidCensusCombination: function(activityYear, censusparams, callback) {
-        var result = {result: false};
-        var resultFunc = handleMSAStateCountyTract;
+        var query = {'activity_year': activityYear, 'state_code': censusparams.state, 'county_code':censusparams.county};
 
-        var query = {'activity_year': activityYear, 'type': 'state',
-                     'code' : censusparams.state};
-        var projection = {county: {$elemMatch: { fips_code: censusparams.county}},
-                          tract: {$elemMatch: { '$eq': censusparams.tract}}};
-
-        if (censusparams.msa !== undefined) {
-            query.type = 'msa';
-            query.code = censusparams.msa;
-            projection = {state: {$elemMatch: { fips_code: censusparams.state}},
-                          county: {$elemMatch: { fips_code: censusparams.county}}
-                         };
-
-            if (censusparams.tract !== undefined) {
-                projection.tract = {$elemMatch: {'$eq': censusparams.tract}};
-            } else {
-                resultFunc = handleMSAStateCounty;
-            }
+        if (censusparams.msa !== undefined && censusparams.msa!=='NA') {
+            query.msa_code = censusparams.msa;
+        }
+        if (censusparams.tract !== undefined && censusparams.tract!=='NA') {
+            query.tract = censusparams.tract;
         }
 
         // check that state, county exist
-        Census.findOne(query, projection, function(err, data) {
+        Census.findOne(query, function(err, data) {
             if (err) {
                 return callback(err, null);
             }
-            if (data === null) {
-                result.reason = 'state or msa doesnt exist';
-                return callback(null, result);
+            if (data === null || (censusparams.tract === 'NA' && data.small_county!=='1')) {
+                return callback(null, {result: false});
             }
-            resultFunc(censusparams, result, err, data);
-            return callback(null, result);
+            return callback(null, {result: true});
         });
     },
 
@@ -108,12 +55,14 @@ module.exports = {
             if (tract === 'NA') {
                 return callback(null, {result: true});
             }
-            isValidCensusTractForCounty(activityYear, state + county, tract, callback);
+            var query = { 'activity_year': activityYear,  'state_code': state, 'county_code': county, 'tract': tract };
+            return handleCensusQuery (query, callback);
         } else if (tract === 'NA') {
-            isSmallCounty(activityYear, state + county, callback);
+            var query2 = { 'activity_year': activityYear, 'state_code': state, 'county_code': county, 'small_county': '1' };
+            return handleCensusQuery (query2, callback);
         } else {
-            var query = { 'activity_year': activityYear, 'type': 'msa', 'code': metroArea, 'state.fips_code': state, 'county.fips_code': county, 'tract': tract };
-            count('Census', query, callback);
+            var query3 = { 'activity_year': activityYear, 'msa_code': metroArea, 'state_code': state, 'county_code': county, 'tract': tract };
+            count('Census', query3, callback);
         }
     }
 };

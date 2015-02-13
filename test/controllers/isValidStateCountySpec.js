@@ -23,7 +23,6 @@ describe('/isValidStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"county does not exist"/)
 
             .end(function (err, res) {
                 done(err);
@@ -36,7 +35,6 @@ describe('/isValidStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state does not exist"/)
 
             .end(function (err, res) {
                 done(err);

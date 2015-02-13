@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidMSAStateCounty', function() {
     it('should return true for a valid msa/md, state, and county combination', function(done) {
         request(mock)
-            .get('/isValidMSAStateCounty/2013/35100/37/103')
+            .get('/isValidMSAStateCounty/2013/35100/37/049')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -31,11 +31,10 @@ describe('/isValidMSAStateCounty', function() {
 
     it('should return false for an invalid msa/md', function(done) {
         request(mock)
-            .get('/isValidMSAStateCounty/2013/35200/37/103')
+            .get('/isValidMSAStateCounty/2013/35200/37/050')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state or msa doesnt exist"/)
 
             .end(function (err, res) {
                 done(err);
