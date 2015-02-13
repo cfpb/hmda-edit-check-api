@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidCensusInMSA', function() {
     it('should return false for a regular county with a tract that doesnt exist', function(done) {
         request(mock)
-            .get('/isValidCensusInMSA/2013/35100/37/049/9552.02')
+            .get('/isValidCensusInMSA/2013/35100/37/049/0000.00')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -19,7 +19,7 @@ describe('/isValidCensusInMSA', function() {
 
     it('should return false if state,county combo doesnt exist for a small county', function(done) {
         request(mock)
-            .get('/isValidCensusInMSA/2013/35100/37/103/9502.02')
+            .get('/isValidCensusInMSA/2013/35100/38/050/96.1100')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -31,11 +31,10 @@ describe('/isValidCensusInMSA', function() {
 
     it('should return false if msa doesnt exist', function(done) {
         request(mock)
-            .get('/isValidCensusInMSA/2013/35200/437/103/9502.02')
+            .get('/isValidCensusInMSA/2013/35200/37/050/96.1100')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state or msa doesnt exist"/)
 
             .end(function (err, res) {
                 done(err);
@@ -45,7 +44,7 @@ describe('/isValidCensusInMSA', function() {
 
     it('should return true if state,county combo exists, tract=NA, small county = 1', function(done) {
         request(mock)
-            .get('/isValidCensusInMSA/2013/35100/37/103/NA')
+            .get('/isValidCensusInMSA/2013/35100/37/050/NA')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)

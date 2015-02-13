@@ -42,78 +42,42 @@ describe('CensusService', function() {
         });
 
         it('should return true if the tract is \'NA\' and the county has the small_county flag', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '103', '35100', 'NA', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', '35100', 'NA', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
         });
 
         it('should return false if the tract is \'NA\' and the county does not have the small_county flag', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '109', '35100', 'NA', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '049', '35100', 'NA', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
         });
 
         it('should return true if the tract exists and the metroArea is \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '01', '035', 'NA', '9603.00', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', 'NA', '96.1100', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
         });
 
         it('should return false if the tract does not exist and the metroArea is \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '01', '035', 'NA', '0000.00', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', 'NA', '0000.00', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
         });
 
         it('should return true if the tract exists and the metroArea is not \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '103', '35100', '9502.01', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', '35100', '96.1100', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
         });
 
         it('should return false if the tract does not exist and the metroArea is not \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '103', '35100', '0000.00', function(err, result) {
-                expect(result.result).to.be.false();
-                done();
-            });
-        });
-    });
-
-    describe('isSmallCounty', function() {
-        var isSmallCounty = rewiredCensusService.__get__('isSmallCounty');
-
-        it('should return true if the given county has the small_county flag', function(done) {
-            isSmallCounty('2013', '01035', function(err, result) {
-                expect(result.result).to.be.true();
-                done();
-            });
-        });
-
-        it('should return false if the given county does not have the small_county flag', function(done) {
-            isSmallCounty('2013', '01039', function(err, result) {
-                expect(result.result).to.be.false();
-                done();
-            });
-        });
-    });
-
-    describe('isValidCensusTractForCounty', function() {
-        var isValidCensusTractForCounty = rewiredCensusService.__get__('isValidCensusTractForCounty');
-
-        it('should return true if the tract exists for the state+county', function(done) {
-            isValidCensusTractForCounty('2013', '01035', '9603.00', function(err, result) {
-                expect(result.result).to.be.true();
-                done();
-            });
-        });
-
-        it('should return false if the tract does not exist for the state+county', function(done) {
-            isValidCensusTractForCounty('2013', '01035', '0000.00', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', '35100', '0000.00', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
