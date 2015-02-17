@@ -6,13 +6,16 @@ var LAR = require('../models/lar'),
 
 var compareYearTotals = function(newLoans, oldLoans, percentage) {
     var diff = (newLoans - oldLoans) / oldLoans;
-    if (isNaN(diff)) {
-        return {'result': true};
+    var result = {
+        'Previous Year Total Loans': oldLoans,
+        'Current Year Total Loans': newLoans,
+        '% Difference': (diff*100).toFixed(2),
+        'result': false,
+    };
+    if (isNaN(diff) || (diff > -percentage && diff < percentage)) {
+        result.result = true;
     }
-    if (diff > -percentage && diff < percentage) {
-        return {'result': true};
-    }
-    return {'result': false};
+    return result;
 };
 
 var comparePercentages = function (newPercentage, oldPercentage, threshold) {
@@ -47,21 +50,22 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
         var result = {
             'Previous Year Loans': previousYearLoans,
             'Previous Year Sold Loans': previousYearSoldLoans,
-            'Previous Year Percentage' : previousYearPercent,
+            'Previous Year Percentage' : (previousYearPercent*100).toFixed(2),
             'Current Year Loans': currentLoans,
             'Current Year Sold Loans': currentSoldLoans,
-            'Current Year Percentage' : currentPercent,
+            'Current Year Percentage' : (currentPercent*100).toFixed(2),
+            'Percentage Difference': ((currentPercent - previousYearPercent)*100).toFixed(2),
             'result': false
         };
 
-        // diff year to year can't be more than threshold, if over largeNum, 
+        // diff year to year can't be more than threshold, if over largeNum,
         // then currentPercentage should be greater than minPercent
-        if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent) && 
+        if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent) &&
             ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
             result.result = true;
-        } 
+        }
         return callback(null, result);
-                
+
     })
     .then(null, function (err) {
         return callback(err, null);
@@ -72,7 +76,7 @@ module.exports = {
     isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
         activityYear -= 1;
         var query = {
-            'activity_year': activityYear, 
+            'activity_year': activityYear,
             'respondent_id': respondentID,
             'loan_purpose': '1',
             'action_type': {$in: ['1', '6']},
@@ -111,7 +115,7 @@ module.exports = {
     isValidNumRefinanceLoans: function(activityYear, newLoans, respondentID, callback) {
         activityYear -= 1;
         var query = {
-            'activity_year': activityYear, 
+            'activity_year': activityYear,
             'respondent_id': respondentID,
             'loan_purpose': '3',
             'action_type': {$in: ['1', '6']},
@@ -131,7 +135,7 @@ module.exports = {
     isValidNumFannieLoans: function(activityYear, respondentID, currentLoans, currentFannieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
-            'activity_year': activityYear, 
+            'activity_year': activityYear,
             'respondent_id': respondentID,
             'loan_type': '1',
             'loan_purpose': {$in: ['1', '3']},
@@ -153,9 +157,9 @@ module.exports = {
     isValidNumGinnieMaeFHALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
-            'activity_year': activityYear, 
+            'activity_year': activityYear,
             'respondent_id': respondentID,
-            'loan_type': '2',   
+            'loan_type': '2',
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']}
@@ -175,7 +179,7 @@ module.exports = {
     isValidNumGinnieMaeVALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
-            'activity_year': activityYear, 
+            'activity_year': activityYear,
             'respondent_id': respondentID,
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
