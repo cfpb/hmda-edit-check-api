@@ -68,6 +68,9 @@ echo "Moving new application to ${BASEDIR}"
 echo "Removing zipfile"
 /bin/rm "${NODEDIR}/${ZIPFILE}"
 
+echo "Removing codedeploy temp directory"
+/bin/rm -rf "${TMPDIR}"
+
 echo "Fix permissions"
 /bin/chown -R node:node ${BASEDIR}
 
