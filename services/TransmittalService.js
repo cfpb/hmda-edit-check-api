@@ -33,7 +33,8 @@ module.exports = {
                 return callback(err, null);
             }
             var result = {
-                'Current Year Tax ID': taxID,
+                'respondentID': respondentID,
+                'taxID': taxID,
                 'Previous Year Tax ID': '',
                 'result': false
             };
