@@ -35,7 +35,7 @@ describe('CensusService', function() {
 
     describe('isValidCensusTractCombo', function() {
         it('should return true if metroArea is \'NA\' and tract is \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '103', 'NA', 'NA', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', 'NA', 'NA', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
