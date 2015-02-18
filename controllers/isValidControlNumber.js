@@ -5,7 +5,7 @@ var PanelService = require('../services/PanelService');
 module.exports = function(router) {
 
     /**
-     * @param {String} activityYear, {String} agencyCode, {String} respondentId
+     * @param {String} activityYear, {String} agencyCode, {String} respondentId, {String} agencyCode
      * @return {json}
      */
     router.get('/:activityYear/:agencyCode/:respondentId', function(req, res) {

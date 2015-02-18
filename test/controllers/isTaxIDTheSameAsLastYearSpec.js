@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isTaxIDTheSameAsLastYear', function() {
     it('should return true when taxID is the same as last year', function(done) {
         request(mock)
-            .get('/isTaxIDTheSameAsLastYear/2014/0000000001/23-0916895')
+            .get('/isTaxIDTheSameAsLastYear/2014/1/0000000001/23-0916895')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -21,7 +21,7 @@ describe('/isTaxIDTheSameAsLastYear', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isTaxIDTheSameAsLastYear/2014/0000000001/23-0916595')
+                    .get('/isTaxIDTheSameAsLastYear/2014/1/0000000001/23-0916595')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -32,7 +32,7 @@ describe('/isTaxIDTheSameAsLastYear', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isTaxIDTheSameAsLastYear/2014/0000005001/23-0916895')
+                    .get('/isTaxIDTheSameAsLastYear/2014/1/0000005001/23-0916895')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -50,7 +50,7 @@ describe('/isTaxIDTheSameAsLastYear', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isTaxIDTheSameAsLastYear/2014/0000000001/23-0916895')
+            .get('/isTaxIDTheSameAsLastYear/2014/1/0000000001/23-0916895')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
