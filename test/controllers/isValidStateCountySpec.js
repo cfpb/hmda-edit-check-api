@@ -1,9 +1,8 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidStateCounty', function() {
     it('should return true for a valid state and county combination', function(done) {
@@ -24,7 +23,6 @@ describe('/isValidStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"county does not exist"/)
 
             .end(function (err, res) {
                 done(err);
@@ -37,7 +35,6 @@ describe('/isValidStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state does not exist"/)
 
             .end(function (err, res) {
                 done(err);

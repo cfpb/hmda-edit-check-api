@@ -3,21 +3,15 @@
 var mongoose = require('mongoose');
 
 var censusSchema = mongoose.Schema({
-    'type': String,
     'activity_year': String,
-    'code': String,
-    'name': String,
+    'msa_code': String,
+    'msa_name': String,
+    'state_code': String,
+    'county_code': String,
     'small_county': String,
-    'state': [{
-        'fips_code': String,
-        'name': String
-    }],
-    'county': [{
-        'fips_code': String,
-        'name': String,
-        'small_county': String
-    }],
-    'tract': [String]
+    'tract': String
 });
-
+censusSchema.index({'activity_year': 1, 'msa_code': 1, 'state_code': 1, 'county_code': 1, 'tract': 1});
+censusSchema.index({'activity_year': 1, 'state_code': 1, 'county_code': 1, 'tract': 1});
+censusSchema.index({'activity_year': 1, 'state_code': 1, 'county_code': 1, 'small_county': 1});
 module.exports = mongoose.model('Census', censusSchema, 'census');

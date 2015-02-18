@@ -27,6 +27,15 @@
             "module": {
                 "name": "engine-munger/lib/expressView"
             }
+        },
+
+        "fileNotFound": {
+            "enabled": true,
+            "priority": 130,
+            "module": {
+                "name":"path:./lib/404",
+                "method": "fileNotFound"
+            }
         }
 
 

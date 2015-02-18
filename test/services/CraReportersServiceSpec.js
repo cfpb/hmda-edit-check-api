@@ -1,10 +1,10 @@
 /*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false*/
 'use strict';
 
-var mockgoose = require('mockgoose');
-var mongoose = require('mongoose');
+var mockgoose = require('mockgoose'),
+    mongoose = require('mongoose'),
 
-var CraReportersService = require('../../services/CraReportersService');
+    CraReportersService = require('../../services/CraReportersService');
 
 describe('CraReportersService', function() {
     describe('isCraReporter', function() {

@@ -1,14 +1,13 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidMSAStateCounty', function() {
     it('should return true for a valid msa/md, state, and county combination', function(done) {
         request(mock)
-            .get('/isValidMSAStateCounty/2013/35100/37/103')
+            .get('/isValidMSAStateCounty/2013/35100/37/049')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -24,7 +23,6 @@ describe('/isValidMSAStateCounty', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(new RegExp('\"reason\":\"msa/md, state, county combination not found\"'))
 
             .end(function (err, res) {
                 done(err);
@@ -33,11 +31,10 @@ describe('/isValidMSAStateCounty', function() {
 
     it('should return false for an invalid msa/md', function(done) {
         request(mock)
-            .get('/isValidMSAStateCounty/2013/35200/37/103')
+            .get('/isValidMSAStateCounty/2013/35200/37/050')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state or msa doesnt exist"/)
 
             .end(function (err, res) {
                 done(err);

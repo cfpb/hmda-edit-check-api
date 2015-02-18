@@ -1,19 +1,16 @@
 /*global describe:false, it:false, beforeEach:false, afterEach:false, request:false, mock:false*/
-
 'use strict';
 
-var mongoose = require('mongoose');
-var mockgoose = require('mockgoose');
+var mongoose = require('mongoose'),
+    mockgoose = require('mockgoose');
 
 describe('/isValidCensusCombination', function() {
-
-    it('should return false if smallcounty=1 and doesnt have tract==NA', function(done) {
+    it('should return true if smallcounty=1 and tract==NA', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/37/103/9502.02')
+            .get('/isValidCensusCombination/2013/37/050/NA')
             .expect(200)
             .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-            .expect(/"reason":"tract should equal \'NA\'"/)
+            .expect(/"result":true/)
 
             .end(function (err, res) {
                 done(err);
@@ -22,24 +19,22 @@ describe('/isValidCensusCombination', function() {
 
     it('should return false for a regular county with a tract that doesnt exist', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/37/049/9552.02')
+            .get('/isValidCensusCombination/2013/37/049/0000.00')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state, county, tract combination not found"/)
 
             .end(function (err, res) {
                 done(err);
             });
     });
 
-    it('should return false if state,county combo doesnt exist for a small county', function(done) {
+    it('should return false if state,county combo dont exist', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/37/103/9502.02')
+            .get('/isValidCensusCombination/2013/37/049/0000.00')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"tract should equal \'NA\'"/)
 
             .end(function (err, res) {
                 done(err);
@@ -52,7 +47,6 @@ describe('/isValidCensusCombination', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
-            .expect(/"reason":"state or msa doesnt exist"/)
 
             .end(function (err, res) {
                 done(err);
@@ -62,7 +56,7 @@ describe('/isValidCensusCombination', function() {
 
     it('should return true if state,county combo exists, tract=NA, small county = 1', function(done) {
         request(mock)
-            .get('/isValidCensusCombination/2013/37/103/NA')
+            .get('/isValidCensusCombination/2013/37/050/NA')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -76,7 +70,7 @@ describe('/isValidCensusCombination', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidCensusCombination/2013/37/103/NA')
+            .get('/isValidCensusCombination/2013/37/50/NA')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
@@ -85,5 +79,4 @@ describe('/isValidCensusCombination', function() {
                 done(err);
             });
     });
-
 });

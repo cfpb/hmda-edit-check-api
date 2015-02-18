@@ -13,5 +13,5 @@ var larSchema = mongoose.Schema({
     'purchaser_type': String,
     'property_type': String
 });
-
+larSchema.index({'activity_year': 1, 'respondent_id': 1, 'loan_purpose': 1, 'action_type': 1, 'property_type': 1});
 module.exports = mongoose.model('Lar', larSchema, 'lar');
