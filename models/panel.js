@@ -14,4 +14,5 @@ var panelSchema = mongoose.Schema({
 });
 panelSchema.index({'activity_year': 1, 'respondent_id': 1, 'agency_code': 1});
 panelSchema.index({'activity_year': 1, 'respondent_id': 1, 'parent_name': 1, 'other_lender_code': 1});
+panelSchema.index({'activity_year': 1, 'respondent_id': 1, 'other_lender_code': 1});
 module.exports = mongoose.model('Panel', panelSchema, 'panel');
