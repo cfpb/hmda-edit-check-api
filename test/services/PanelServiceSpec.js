@@ -93,4 +93,27 @@ describe('PanelService', function() {
             });
         });
     });
+
+    describe('isNotIndependentMortgageCoOrMBS', function() {
+        it('should return a result of true if the respondent has an other lender code of 0', function(done) {
+            PanelService.isNotIndependentMortgageCoOrMBS('2013', '1', '0000000001', function(err, result) {
+                expect(result.result).to.be.true();
+                done();
+            });
+        });
+
+        it('should return a result of false if the respondent has an other lender code of 1', function(done) {
+            PanelService.isNotIndependentMortgageCoOrMBS('2013', '2', '0000000003', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return a result of false if the respondent is not on the panel', function(done) {
+            PanelService.isNotIndependentMortgageCoOrMBS('2013', '1', '0000000005', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
 });

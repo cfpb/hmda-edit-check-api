@@ -1,7 +1,5 @@
 'use strict';
 
-var Panel = require('../models/panel');
-
 var exists = require('../lib/queryUtil').exists;
 
 module.exports = {
@@ -17,6 +15,11 @@ module.exports = {
 
     isValidControlNumber: function(activityYear, agencyCode, respondentId, callback) {
         var query = { 'activity_year': activityYear, 'agency_code': agencyCode, 'respondent_id': respondentId };
+        exists('Panel', query, callback);
+    },
+
+    isNotIndependentMortgageCoOrMBS: function(activityYear, agencyCode, respondentId, callback) {
+        var query = { 'activity_year': activityYear, 'agency_code': agencyCode, 'respondent_id': respondentId, 'other_lender_code': { '$in': ['0', '5'] } };
         exists('Panel', query, callback);
     }
 };
