@@ -6,7 +6,8 @@ var msaBranchesSchema = mongoose.Schema({
     'activity_year': String,
     'respondent_id': String,
     'respondent_name': String,
-    'msa': [String]
+    'msa': [String],
+    'agency_code': String
 });
 msaBranchesSchema.index({'activity_year': 1, 'respondent_id': 1});
 module.exports = mongoose.model('MsaBranches', msaBranchesSchema, 'msa_branches');
