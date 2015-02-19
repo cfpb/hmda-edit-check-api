@@ -22,7 +22,7 @@ var TestData = {
             },
             function(cb) {
                 mongoose.model('Transmittal').create(
-                    {'activity_year': '2013', 'respondent_id': '0000000001', 'tax_id': '23-0916895', 
+                    {'activity_year': '2013', 'respondent_id': '0000000001', 'tax_id': '23-0916895',
                      'timestamp': '2014-01-01T05:00:00Z'},
                 function(err, item) {
                     cb();
@@ -180,7 +180,7 @@ var TestData = {
                   'purchaser_type': '2',
                   'property_type': '2'
                 }
-              ], 
+              ],
               function(err, item) {
                 cb();
               });
@@ -250,7 +250,7 @@ var TestData = {
               };
               var lars = [];
               for (var i = 0; i < 5; i++) {
-                lars.push(sampleLar);  
+                lars.push(sampleLar);
               }
               lars.push(sampleLar2);
 
@@ -283,6 +283,15 @@ var TestData = {
               mongoose.model('Lar').create(lars, function(err, item) {
                 cb();
               });
+            },
+            function(cb) {
+                mongoose.model('MsaBranches').create([
+                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000001', 'msa': ['00001']},
+                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000002', 'msa': ['00002']}
+                ],
+                function(err, item) {
+                    cb();
+                });
             }
         ], function() {
               console.log('..done inserting test data');
