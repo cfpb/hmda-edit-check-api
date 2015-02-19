@@ -10,9 +10,9 @@ module.exports = function(router) {
      */
     router.get('/:activityYear/:msa/:state/:county', function(req, res) {
         var censusparams = {};
-        censusparams.msa = req.params.msa;
-        censusparams.state = req.params.state;
-        censusparams.county = req.params.county;
+        censusparams.msa_code = req.params.msa;
+        censusparams.state_code = req.params.state;
+        censusparams.county_code = req.params.county;
 
         CensusService.isValidCensusCombination(req.params.activityYear, censusparams, function(err, result) {
             if (err) {
