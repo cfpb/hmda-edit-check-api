@@ -1,5 +1,7 @@
 'use strict';
 
+var Panel = require('../models/panel');
+
 var exists = require('../lib/queryUtil').exists;
 
 module.exports = {

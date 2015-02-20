@@ -1,5 +1,7 @@
 'use strict';
 
+var MsaBranches = require('../models/msaBranches');
+
 var exists = require('../lib/queryUtil').exists;
 
 module.exports = {
