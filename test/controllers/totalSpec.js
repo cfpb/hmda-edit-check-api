@@ -9,7 +9,7 @@ describe('/isValidNumLoans/total', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/total/2013/0201590731/879')
+                    .get('/isValidNumLoans/total/2013/9/0201590731/879')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":true/)
@@ -20,7 +20,7 @@ describe('/isValidNumLoans/total', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/total/2013/0201590731/1091')
+                    .get('/isValidNumLoans/total/2013/9/0201590731/1091')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":true/)
@@ -38,7 +38,7 @@ describe('/isValidNumLoans/total', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/total/2013/0201590731/134')
+                    .get('/isValidNumLoans/total/2013/9/0201590731/134')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -49,7 +49,7 @@ describe('/isValidNumLoans/total', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/total/2013/0201590731/1341')
+                    .get('/isValidNumLoans/total/2013/9/0201590731/1341')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -65,7 +65,7 @@ describe('/isValidNumLoans/total', function() {
 
     it('should return true when neither year has more than 500 loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/total/2013/1201547730/273')
+            .get('/isValidNumLoans/total/2013/9/1201547730/273')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -77,7 +77,7 @@ describe('/isValidNumLoans/total', function() {
 
     it('should return true for a valid percent when only one year has > 500 loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/total/2013/1201547730/510')
+            .get('/isValidNumLoans/total/2013/9/1201547730/510')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -91,7 +91,7 @@ describe('/isValidNumLoans/total', function() {
         async.series([
             function(cb) {
                 request(mock)
-                .get('/isValidNumLoans/total/2013/0201590731/800')
+                .get('/isValidNumLoans/total/2013/9/0201590731/800')
                 .expect(200)
                 .expect('Content-Type', /json/)
                 .expect(/"result":false/)
@@ -102,7 +102,7 @@ describe('/isValidNumLoans/total', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/total/2013/0201590731/1200')
+                    .get('/isValidNumLoans/total/2013/9/0201590731/1200')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -120,7 +120,7 @@ describe('/isValidNumLoans/total', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/total/2013/0201590731/1091')
+            .get('/isValidNumLoans/total/2013/9/0201590731/1091')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isRespondentMBS', function() {
     it('should return a result if the request is valid', function(done) {
         request(mock)
-            .get('/isRespondentMBS/2013/0000000001')
+            .get('/isRespondentMBS/2013/9/0000000001')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":/)
@@ -20,7 +20,7 @@ describe('/isRespondentMBS', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isRespondentMBS/2013/0000000001')
+            .get('/isRespondentMBS/2013/9/0000000001')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

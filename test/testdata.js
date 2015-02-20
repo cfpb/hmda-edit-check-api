@@ -22,7 +22,7 @@ var TestData = {
             },
             function(cb) {
                 mongoose.model('Transmittal').create(
-                    {'activity_year': '2013', 'respondent_id': '0000000001', 'tax_id': '23-0916895',
+                    {'activity_year': '2013', 'respondent_id': '0000000001', 'agency_code': '1', 'tax_id': '23-0916895',
                      'timestamp': '2014-01-01T05:00:00Z'},
                 function(err, item) {
                     cb();
