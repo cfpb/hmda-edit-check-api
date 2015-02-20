@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidTimestamp', function() {
     it('should return true for a valid timestamp more than one day after January 1, 2014', function(done) {
         request(mock)
-            .get('/isValidTimestamp/2014/0000000001/201401100000')
+            .get('/isValidTimestamp/2014/1/0000000001/201401100000')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -19,7 +19,7 @@ describe('/isValidTimestamp', function() {
 
     it('should return false for a timestamp it cant find', function(done) {
         request(mock)
-            .get('/isValidTimestamp/2014/002323423001/201401100000')
+            .get('/isValidTimestamp/2014/1/002323423001/201401100000')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -31,7 +31,7 @@ describe('/isValidTimestamp', function() {
 
     it('should return false for missing year', function(done) {
         request(mock)
-            .get('/isValidTimestamp/2010/0000000001/201401100000')
+            .get('/isValidTimestamp/2010/1/0000000001/201401100000')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -45,7 +45,7 @@ describe('/isValidTimestamp', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidTimestamp/2014/0000000001/201401100000')
+            .get('/isValidTimestamp/2014/1/0000000001/201401100000')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

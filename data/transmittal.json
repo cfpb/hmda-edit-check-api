@@ -14588,5 +14588,3 @@
 { "_id" : { "$oid" : "54e5dc754934b51ee51ea4b7" }, "activity_year" : "2013", "respondent_id" : "99-0026607", "agency_code" : "9", "tax_id" : "63-0920867", "timestamp" : { "$date" : "2015-01-01T00:00:00.000-0500" } }
 { "_id" : { "$oid" : "54e5dc754934b51ee51ea4b8" }, "activity_year" : "2013", "respondent_id" : "99-0704612", "agency_code" : "9", "tax_id" : "21-0550414", "timestamp" : { "$date" : "2015-01-01T00:00:00.000-0500" } }
 { "_id" : { "$oid" : "54e5dc754934b51ee51ea4b9" }, "activity_year" : "2013", "respondent_id" : "99-0718057", "agency_code" : "9", "tax_id" : "20-8831923", "timestamp" : { "$date" : "2015-01-01T00:00:00.000-0500" } }
-{ "_id" : { "$oid" : "54e5dc754934b51ee51ea4ba" } }
-{ "_id" : { "$oid" : "54e5dc754934b51ee51ea4bb" } }
