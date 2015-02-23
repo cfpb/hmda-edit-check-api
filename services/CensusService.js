@@ -13,7 +13,7 @@ var isValidCombination = function(activityYear, censusparams, callback) {
             query[param] = censusparams[param];
         }
     }
-        
+
     // check that state, county exist
     Census.findOne(query, function(err, data) {
         if (err) {
@@ -43,5 +43,20 @@ module.exports = {
     isValidCensusTractCombo: function(activityYear, state, county, metroArea, tract, callback) {
         return isValidCombination (activityYear, {'msa_code':metroArea, 'tract': tract,
             'state_code':state, 'county_code':county}, callback);
+    },
+
+    getMSAName: function(activityYear, msaCode, callback) {
+        var query = { 'activity_year': activityYear, 'msa_code': msaCode };
+        Census.findOne(query, function(err, data) {
+            if (err) {
+                return callback(err, null);
+            }
+
+            if (data) {
+                return callback(null, { msaName: data.msa_name });
+            }
+
+            return callback(null, { msaName: '' });
+        });
     }
 };
