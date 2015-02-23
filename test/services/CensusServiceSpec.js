@@ -83,4 +83,31 @@ describe('CensusService', function() {
             });
         });
     });
+
+    describe('getMSAName', function() {
+        it('should return the msa name if it exists for the given msa code', function(done) {
+            CensusService.getMSAName('2013', '35100', function(err, result) {
+                expect(result.msaName).to.be('New Bern, NC');
+                done();
+            });
+        });
+
+        it('should return blank if the msa does not exist for the given msa code', function(done) {
+            CensusService.getMSAName('2013', '00000', function(err, result) {
+                expect(result.msaName).to.be('');
+                done();
+            });
+        });
+
+        it('should return an error if there is one', function(done) {
+            mockgoose.setMockReadyState(mongoose.connection, 0);
+
+            CensusService.getMSAName('2013', '00000', function(err, result) {
+                expect(err).to.be.truthy();
+                expect(result).to.be.null();
+                mockgoose.setMockReadyState(mongoose.connection, 1);
+                done();
+            });
+        });
+    });
 });
