@@ -1,6 +1,7 @@
 'use strict';
 
-var Transmittal = require('../models/transmittal');
+var Transmittal = require('../models/transmittal'),
+        moment = require('moment');
 
 module.exports = {
     isValidTimestamp: function(activityYear, agencyCode, respondentID, timestamp, callback) {
@@ -11,13 +12,7 @@ module.exports = {
             var result = {result: false};
 
             if (data !== null) {
-                var year = timestamp.substring(0,4),
-                    month = timestamp.substring(4,6),
-                    day = timestamp.substring(6,8),
-                    hour = timestamp.substring(8,10),
-                    minute = timestamp.substring(10,12);
-
-                var timestampDate = new Date(year, month - 1, day - 1, hour, minute);
+                var timestampDate = moment(timestamp, 'YYYYMMDDHHmm', true).subtract(1, 'days').toDate();
 
                 if (timestampDate > data.timestamp) {
                     result.result = true;
