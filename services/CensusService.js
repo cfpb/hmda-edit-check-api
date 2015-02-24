@@ -22,7 +22,7 @@ var isValidCombination = function(activityYear, censusparams, callback) {
         if (data === null || (censusparams.tract === 'NA' && data.small_county!=='1')) {
             return callback(null, {result: false});
         }
-        return callback(null, {result: true});
+        return callback(null, {result: true, msa_code: data.msa_code});
     });
 };
 
