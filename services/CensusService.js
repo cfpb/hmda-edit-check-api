@@ -2,6 +2,7 @@
 'use strict';
 
 var Census = require('../models/census');
+var _ = require('underscore');
 
 var exists = require('../lib/queryUtil').exists;
 
@@ -57,6 +58,35 @@ module.exports = {
             }
 
             return callback(null, { msaName: '' });
+        });
+    },
+
+    getKeyValueData: function(activityYear, keyParams, value, callback) {
+        var group = { _id: {} };
+        var projection = { _id: 0 };
+        _.each(keyParams, function(param) {
+            group._id[param] = '$' + param;
+            projection[param] = 1;
+        });
+        group._id[value] = '$' + value;
+        projection[value] = 1;
+
+        Census.aggregate([
+            { $project: projection },
+            { $group: group }
+        ], function(err, data) {
+            if (err) {
+                return callback(err, null);
+            }
+            var result = _.map(data, function(row) {
+                var ob = { type: 'put', key: '/census', value: ''};
+                _.each(keyParams, function(param) {
+                    ob.key += '/' + param + '/' + row._id[param];
+                });
+                ob.value = row._id[value] ? row._id[value] : '0';
+                return ob;
+            });
+            return callback(null, result);
         });
     }
 };
