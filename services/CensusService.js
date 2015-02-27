@@ -2,8 +2,7 @@
 'use strict';
 
 var Census = require('../models/census'),
-    queryUtil = require('../lib/queryUtil'),
-    _ = require('underscore');
+    queryUtil = require('../lib/queryUtil');
 
 var isValidCombination = function(activityYear, censusparams, callback) {
     var query = {'activity_year': activityYear};
