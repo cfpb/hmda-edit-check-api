@@ -185,46 +185,6 @@ var TestData = {
                 cb();
               });
             },
-            function(cb) {
-              var lars = [],
-                  sampleLar = {
-                    'activity_year': '2012',
-                    'respondent_id': '0201590731',
-                    'agency_code': '9',
-                    'loan_type': '1',
-                    'loan_purpose': '1',
-                    'loan_amount': '00110',
-                    'action_type': '1',
-                    'purchaser_type': '2',
-                    'property_type': '2'
-                  };
-
-              for (var i = 0; i < 1000; i++) {
-                lars.push(sampleLar);
-              }
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '1201547730';
-              lars = [];
-
-              for (var j = 0; j < 499; j++) {
-                lars.push(sampleLar);
-              }
-
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '1035818356';
-              sampleLar.loan_purpose = '3';
-              lars = [];
-
-              for (var k = 0; k < 10; k++) {
-                lars.push(sampleLar);
-              }
-
-              mongoose.model('Lar').create(lars, function(err, item) {
-                cb();
-              });
-            },
             function (cb) {
               var sampleLar = {
                 'activity_year': '2012',
@@ -298,6 +258,54 @@ var TestData = {
               done();
            }
         );
+    },
+    addLargeSets: function(done) {
+        console.log('Inserting large test data...');
+        async.series([
+          function(cb) {
+              var lars = [],
+                  sampleLar = {
+                    'activity_year': '2012',
+                    'respondent_id': '0201590731',
+                    'agency_code': '9',
+                    'loan_type': '1',
+                    'loan_purpose': '1',
+                    'loan_amount': '00110',
+                    'action_type': '1',
+                    'purchaser_type': '2',
+                    'property_type': '2'
+                  };
+
+              for (var i = 0; i < 1000; i++) {
+                lars.push(sampleLar);
+              }
+              mongoose.model('Lar').create(lars, function(err, item) {});
+
+              sampleLar.respondent_id = '1201547730';
+              lars = [];
+
+              for (var j = 0; j < 499; j++) {
+                lars.push(sampleLar);
+              }
+
+              mongoose.model('Lar').create(lars, function(err, item) {});
+
+              sampleLar.respondent_id = '1035818356';
+              sampleLar.loan_purpose = '3';
+              lars = [];
+
+              for (var k = 0; k < 10; k++) {
+                lars.push(sampleLar);
+              }
+
+              mongoose.model('Lar').create(lars, function(err, item) {
+                cb();
+              });
+            }
+        ], function() {
+            console.log('Done inserting large test data');
+            done();
+        });
     }
 };
 
