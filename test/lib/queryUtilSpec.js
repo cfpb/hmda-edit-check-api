@@ -128,13 +128,6 @@ describe('queryUtil', function() {
                     }
                 },
                 {
-                    '$project': {
-                        '_id': 0,
-                        'msa_code': 1,
-                        'msa_name': 1
-                    }
-                },
-                {
                     '$group': {
                         '_id': {
                             'msa_code': '$msa_code',
@@ -155,16 +148,6 @@ describe('queryUtil', function() {
                 {
                     '$match': {
                         'activity_year': '2013'
-                    }
-                },
-                {
-                    '$project': {
-                        '_id': 0,
-                        'state_code': 1,
-                        'county_code': 1,
-                        'tract': 1,
-                        'msa_code': 1,
-                        'small_county': 1
                     }
                 },
                 {

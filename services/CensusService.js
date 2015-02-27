@@ -66,7 +66,7 @@ module.exports = {
             if (err) {
                 return callback(err, null);
             }
-            var result = queryUtil.convertToKeyValue('census', data, keyParams, value);
+            var result = queryUtil.convertToKeyValue('/census', data, keyParams, value);
             return callback(null, result);
         });
     }
