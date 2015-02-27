@@ -61,19 +61,8 @@ module.exports = {
     },
 
     getKeyValueData: function(activityYear, keyParams, value, callback) {
-        var group = { _id: {} };
-        var projection = { _id: 0 };
-        _.each(keyParams, function(param) {
-            group._id[param] = '$' + param;
-            projection[param] = 1;
-        });
-        group._id[value] = '$' + value;
-        projection[value] = 1;
-
-        Census.aggregate([
-            { $project: projection },
-            { $group: group }
-        ], function(err, data) {
+        var aggregateQuery = queryUtil.buildAggregateQuery(activityYear, keyParams, value);
+        Census.aggregate(aggregateQuery, function(err, data) {
             if (err) {
                 return callback(err, null);
             }

@@ -118,4 +118,72 @@ describe('queryUtil', function() {
             done();
         });
     });
+
+    describe('buildAggregateQuery', function() {
+        it('should build proper query for one keyParams', function(done) {
+            var expected = [
+                {
+                    '$match': {
+                        'activity_year': '2013'
+                    }
+                },
+                {
+                    '$project': {
+                        '_id': 0,
+                        'msa_code': 1,
+                        'msa_name': 1
+                    }
+                },
+                {
+                    '$group': {
+                        '_id': {
+                            'msa_code': '$msa_code',
+                            'msa_name': '$msa_name'
+                        }
+                    }
+                }
+            ];
+            var keyParams = ['msa_code'];
+            var value = 'msa_name';
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, value);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+
+        it('should build proper query for multiple keyParams', function(done) {
+            var expected = [
+                {
+                    '$match': {
+                        'activity_year': '2013'
+                    }
+                },
+                {
+                    '$project': {
+                        '_id': 0,
+                        'state_code': 1,
+                        'county_code': 1,
+                        'tract': 1,
+                        'msa_code': 1,
+                        'small_county': 1
+                    }
+                },
+                {
+                    '$group': {
+                        '_id': {
+                            'state_code': '$state_code',
+                            'county_code': '$county_code',
+                            'tract': '$tract',
+                            'msa_code': '$msa_code',
+                            'small_county': '$small_county'
+                        }
+                    }
+                }
+            ];
+            var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
+            var value = 'small_county';
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, value);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+    });
 });
