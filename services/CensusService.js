@@ -1,9 +1,8 @@
 /*jshint maxparams: 6 */
 'use strict';
 
-var Census = require('../models/census');
-
-var exists = require('../lib/queryUtil').exists;
+var Census = require('../models/census'),
+    queryUtil = require('../lib/queryUtil');
 
 var isValidCombination = function(activityYear, censusparams, callback) {
     var query = {'activity_year': activityYear};
@@ -29,7 +28,7 @@ var isValidCombination = function(activityYear, censusparams, callback) {
 module.exports = {
     isValidMSA: function(activityYear, msa, callback) {
         var query = { 'activity_year': activityYear, 'msa_code' : msa };
-        return exists ('Census', query, callback);
+        return queryUtil.exists ('Census', query, callback);
     },
 
     isValidStateCounty: function(activityYear, state, county, callback) {
@@ -57,6 +56,17 @@ module.exports = {
             }
 
             return callback(null, { msaName: '' });
+        });
+    },
+
+    getKeyValueData: function(activityYear, keyParams, value, callback) {
+        var aggregateQuery = queryUtil.buildAggregateQuery(activityYear, keyParams, value);
+        Census.aggregate(aggregateQuery, function(err, data) {
+            if (err) {
+                return callback(err, null);
+            }
+            var result = queryUtil.convertToKeyValue('/census', data, keyParams, value);
+            return callback(null, result);
         });
     }
 };
