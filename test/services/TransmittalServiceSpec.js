@@ -25,6 +25,20 @@ describe('TransmittalService', function() {
                 done();
             });
         });
+
+        it('should return false when this respondent does not have a previous filing', function(done) {
+            TransmittalService.isValidTimestamp('2014', '1', '0000005001', '201401100000', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false for a year that doesnt exist', function(done) {
+            TransmittalService.isValidTimestamp('2010', '1', '0000000001', '201311011800', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
     });
 
     describe('isTaxIDTheSameAsLastYear', function() {
@@ -36,10 +50,24 @@ describe('TransmittalService', function() {
         });
 
         it('should return false when taxID is not the same as last year', function(done) {
-           TransmittalService.isTaxIDTheSameAsLastYear('2014', '1', '0000000001', '22-0916895', function(err, result) {
+            TransmittalService.isTaxIDTheSameAsLastYear('2014', '1', '0000000001', '22-0916895', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
-            }); 
+            });
+        });
+
+        it('should return false when this respondent does not have a previous filing', function(done) {
+            TransmittalService.isTaxIDTheSameAsLastYear('2014', '1', '0000005001', '22-0916895', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
+        });
+
+        it('should return false for a year that doesnt exist', function(done) {
+            TransmittalService.isTaxIDTheSameAsLastYear('2010', '1', '0000000001', '22-0916895', function(err, result) {
+                expect(result.result).to.be.false();
+                done();
+            });
         });
     });
 });
