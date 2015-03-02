@@ -1,68 +1,72 @@
 /*jshint maxparams: 6 */
 'use strict';
 
-var Census = require('../models/census');
+var Census = require('../models/census'),
+    queryUtil = require('../lib/queryUtil');
 
-var count = require('../lib/queryUtil').count;
+var isValidCombination = function(activityYear, censusparams, callback) {
+    var query = {'activity_year': activityYear};
 
-var handleCensusQuery = function (query, callback) {
+    for (var param in censusparams) {
+        if (censusparams[param]!==undefined && censusparams[param]!=='NA') {
+            query[param] = censusparams[param];
+        }
+    }
+
+    // check that state, county exist
     Census.findOne(query, function(err, data) {
         if (err) {
             return callback(err, null);
         }
-        if (data === null) {
+        if (data === null || (censusparams.tract === 'NA' && data.small_county!=='1')) {
             return callback(null, {result: false});
         }
-        return callback(null, {result: true});
+        return callback(null, {result: true, msa_code: data.msa_code});
     });
 };
 
 module.exports = {
     isValidMSA: function(activityYear, msa, callback) {
         var query = { 'activity_year': activityYear, 'msa_code' : msa };
-        return handleCensusQuery (query, callback);
+        return queryUtil.exists ('Census', query, callback);
     },
 
     isValidStateCounty: function(activityYear, state, county, callback) {
-        var query = {'activity_year': activityYear, 'state_code': state, 'county_code': county};
-        return handleCensusQuery (query, callback);
+        return isValidCombination (activityYear, {'state_code':state, 'county_code':county}, callback);
     },
 
     isValidCensusCombination: function(activityYear, censusparams, callback) {
-        var query = {'activity_year': activityYear, 'state_code': censusparams.state, 'county_code':censusparams.county};
+       isValidCombination (activityYear, censusparams, callback);
+    },
 
-        if (censusparams.msa !== undefined && censusparams.msa!=='NA') {
-            query.msa_code = censusparams.msa;
-        }
-        if (censusparams.tract !== undefined && censusparams.tract!=='NA') {
-            query.tract = censusparams.tract;
-        }
+    isValidCensusTractCombo: function(activityYear, state, county, metroArea, tract, callback) {
+        return isValidCombination (activityYear, {'msa_code':metroArea, 'tract': tract,
+            'state_code':state, 'county_code':county}, callback);
+    },
 
-        // check that state, county exist
+    getMSAName: function(activityYear, msaCode, callback) {
+        var query = { 'activity_year': activityYear, 'msa_code': msaCode };
         Census.findOne(query, function(err, data) {
             if (err) {
                 return callback(err, null);
             }
-            if (data === null || (censusparams.tract === 'NA' && data.small_county!=='1')) {
-                return callback(null, {result: false});
+
+            if (data) {
+                return callback(null, { msaName: data.msa_name });
             }
-            return callback(null, {result: true});
+
+            return callback(null, { msaName: '' });
         });
     },
 
-    isValidCensusTractCombo: function(activityYear, state, county, metroArea, tract, callback) {
-        if (metroArea === 'NA') {
-            if (tract === 'NA') {
-                return callback(null, {result: true});
+    getKeyValueData: function(activityYear, keyParams, value, callback) {
+        var aggregateQuery = queryUtil.buildAggregateQuery(activityYear, keyParams, value);
+        Census.aggregate(aggregateQuery, function(err, data) {
+            if (err) {
+                return callback(err, null);
             }
-            var query = { 'activity_year': activityYear,  'state_code': state, 'county_code': county, 'tract': tract };
-            return handleCensusQuery (query, callback);
-        } else if (tract === 'NA') {
-            var query2 = { 'activity_year': activityYear, 'state_code': state, 'county_code': county, 'small_county': '1' };
-            return handleCensusQuery (query2, callback);
-        } else {
-            var query3 = { 'activity_year': activityYear, 'msa_code': metroArea, 'state_code': state, 'county_code': county, 'tract': tract };
-            count('Census', query3, callback);
-        }
+            var result = queryUtil.convertToKeyValue('/census', data, keyParams, value);
+            return callback(null, result);
+        });
     }
 };

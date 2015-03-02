@@ -4,13 +4,13 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isChildFI', function() {
-    it('should return a result if the request is valid', function(done) {
+describe('/getMSAName', function() {
+    it('should return a msaName if the request is valid', function(done) {
         request(mock)
-            .get('/isChildFI/2013/9/0000000001')
+            .get('/getMSAName/2013/35100')
             .expect(200)
             .expect('Content-Type', /json/)
-            .expect(/"result":/)
+            .expect(/"msaName":/)
             .end(function (err, res) {
                 done(err);
             });
@@ -20,7 +20,7 @@ describe('/isChildFI', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isChildFI/2013/9/0000000001')
+            .get('/getMSAName/2013/35100')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

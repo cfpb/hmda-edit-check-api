@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidNumLoans/ginnieMaeFHA', function() {
     it('should return true for a small number of current Ginnie Loans with percentage within -10% of last year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/4/1')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/4/1')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -19,7 +19,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
 
     it('should return true for a large number of current Ginnie Loans with high percentage(>30) within -10% of last year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/2500/834')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/2500/834')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -31,7 +31,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
 
     it('should return false for a large number of current Ginnie Loans within -10% of last year but with current percentage < 30%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/2500/416')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/2500/416')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -43,7 +43,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
 
     it('should return false for current Ginnie Loans with percentage not within -10%', function(done) {
         request(mock)
-            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/100/3')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/100/3')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -57,7 +57,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/3')
+                    .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/3')
                     .expect(404)
 
                     .end(function (err, res) {
@@ -82,7 +82,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/ginnieMaeFHA/2013/0050413703/1000/750')
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703/1000/750')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

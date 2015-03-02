@@ -10,8 +10,8 @@ module.exports = function(router) {
      */
     router.get('/:activityYear/:state/:county/:tract', function(req, res) {
         var censusparams = {};
-        censusparams.state = req.params.state;
-        censusparams.county = req.params.county;
+        censusparams.state_code = req.params.state;
+        censusparams.county_code = req.params.county;
         censusparams.tract = req.params.tract;
 
         CensusService.isValidCensusCombination(req.params.activityYear, censusparams, function(err, result) {

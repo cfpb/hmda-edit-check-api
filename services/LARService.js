@@ -73,11 +73,12 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
 };
 
 module.exports = {
-    isValidNumHomePurchaseLoans: function(activityYear, newLoans, respondentID, callback) {
+    isValidNumHomePurchaseLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
         activityYear -= 1;
         var query = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode,
             'loan_purpose': '1',
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']},
@@ -92,11 +93,12 @@ module.exports = {
             return callback(null, result);
         });
     },
-    isValidNumLoans: function(activityYear, newLoans, respondentID, callback) {
+    isValidNumLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
         activityYear -= 1;
         var query = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode
         };
 
         LAR.count(query, function(err, oldLoans) {
@@ -112,11 +114,12 @@ module.exports = {
             return callback(null, result);
         });
     },
-    isValidNumRefinanceLoans: function(activityYear, newLoans, respondentID, callback) {
+    isValidNumRefinanceLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
         activityYear -= 1;
         var query = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode,
             'loan_purpose': '3',
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']},
@@ -132,11 +135,12 @@ module.exports = {
             return callback(null, result);
         });
     },
-    isValidNumFannieLoans: function(activityYear, respondentID, currentLoans, currentFannieLoans, callback) {
+    isValidNumFannieLoans: function(activityYear, agencyCode, respondentID, currentLoans, currentFannieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode,
             'loan_type': '1',
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
@@ -154,11 +158,12 @@ module.exports = {
         return calculateYearOnYearLoans (currentLoans, currentFannieLoans,
             totalQuery, fannieQuery, loanParameters, callback);
     },
-    isValidNumGinnieMaeFHALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
+    isValidNumGinnieMaeFHALoans: function(activityYear, agencyCode, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode,
             'loan_type': '2',
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
@@ -176,11 +181,12 @@ module.exports = {
         return calculateYearOnYearLoans (currentLoans, currentGinnieLoans,
             totalQuery, ginnieQuery, loanParameters, callback);
     },
-    isValidNumGinnieMaeVALoans: function(activityYear, respondentID, currentLoans, currentGinnieLoans, callback) {
+    isValidNumGinnieMaeVALoans: function(activityYear, agencyCode, respondentID, currentLoans, currentGinnieLoans, callback) {
         activityYear -= 1;
         var totalQuery = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
+            'agency_code': agencyCode,
             'loan_purpose': {$in: ['1', '3']},
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']},

@@ -9,7 +9,7 @@ module.exports = function(router) {
      * @return {json}
      */
     router.get('/:activityYear/:agencyCode/:respondentId', function(req, res) {
-        PanelService.isRespondentMBS(req.params.activityYear, req.params.agencyCode, req.params.respondentId, function(err, result) {
+        PanelService.isNotIndependentMortgageCoOrMBS(req.params.activityYear, req.params.agencyCode, req.params.respondentId, function(err, result) {
             if (err) {
                 res.status(500).json(err);
             } else {

@@ -4,10 +4,10 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isChildFI', function() {
+describe('/isMetroAreaOnRespondentPanel', function() {
     it('should return a result if the request is valid', function(done) {
         request(mock)
-            .get('/isChildFI/2013/9/0000000001')
+            .get('/isMetroAreaOnRespondentPanel/2013/1/0000000001/00001')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":/)
@@ -20,7 +20,7 @@ describe('/isChildFI', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isChildFI/2013/9/0000000001')
+            .get('/isMetroAreaOnRespondentPanel/2013/1/0000000001/00001')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

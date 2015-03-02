@@ -35,7 +35,7 @@ describe('CensusService', function() {
 
     describe('isValidCensusTractCombo', function() {
         it('should return true if metroArea is \'NA\' and tract is \'NA\'', function(done) {
-            CensusService.isValidCensusTractCombo('2013', '37', '103', 'NA', 'NA', function(err, result) {
+            CensusService.isValidCensusTractCombo('2013', '37', '050', 'NA', 'NA', function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
@@ -79,6 +79,33 @@ describe('CensusService', function() {
         it('should return false if the tract does not exist and the metroArea is not \'NA\'', function(done) {
             CensusService.isValidCensusTractCombo('2013', '37', '050', '35100', '0000.00', function(err, result) {
                 expect(result.result).to.be.false();
+                done();
+            });
+        });
+    });
+
+    describe('getMSAName', function() {
+        it('should return the msa name if it exists for the given msa code', function(done) {
+            CensusService.getMSAName('2013', '35100', function(err, result) {
+                expect(result.msaName).to.be('New Bern, NC');
+                done();
+            });
+        });
+
+        it('should return blank if the msa does not exist for the given msa code', function(done) {
+            CensusService.getMSAName('2013', '00000', function(err, result) {
+                expect(result.msaName).to.be('');
+                done();
+            });
+        });
+
+        it('should return an error if there is one', function(done) {
+            mockgoose.setMockReadyState(mongoose.connection, 0);
+
+            CensusService.getMSAName('2013', '00000', function(err, result) {
+                expect(err).to.be.truthy();
+                expect(result).to.be.null();
+                mockgoose.setMockReadyState(mongoose.connection, 1);
                 done();
             });
         });
