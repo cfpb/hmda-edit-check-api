@@ -17,6 +17,18 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
             });
     });
 
+    it('should return false for an invalid URL', function(done) {
+        request(mock)
+            .get('/isValidNumLoans/ginnieMaeFHA/2013/9/0050413703')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
+
+            .end(function (err, res) {
+                done(err);
+            });
+    });
+
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
