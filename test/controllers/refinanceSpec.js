@@ -5,33 +5,16 @@ var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
 describe('/isValidNumLoans/refinance', function() {
-    it('should return true for a valid number of refinance loans', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/9')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
+    it('should return false for an invalid number of refinance loans', function(done) {
+        request(mock)
+            .get('/isValidNumLoans/refinance/2013/9/1035818356/9')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":false/)
 
-                    .end(function (err, res) {
-                        cb();
-                    });
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/11')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
+            .end(function (err, res) {
+                done(err);
+            });
     });
     
     it('should return a 500 if there is a problem', function(done) {

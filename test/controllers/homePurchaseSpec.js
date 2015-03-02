@@ -6,32 +6,15 @@ var mongoose = require('mongoose'),
 
 describe('/isValidNumLoans/homePurchase', function() {
     it('should return true for a valid number of home purchase loans', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/9')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
+        request(mock)
+            .get('/isValidNumLoans/homePurchase/2013/9/0002590037/9')
+            .expect(200)
+            .expect('Content-Type', /json/)
+            .expect(/"result":true/)
 
-                    .end(function (err, res) {
-                        cb();
-                    });
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/11')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
+            .end(function (err, res) {
+                done(err);
+            });
     });
 
     it('should return a 500 if there is a problem', function(done) {
