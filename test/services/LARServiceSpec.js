@@ -1,9 +1,21 @@
-/*global describe:false, expect:false, it:false, beforeEach:false, afterEach:false, async:false*/
+/*global describe:false, expect:false, it:false, before:false, after:false, beforeEach:false, afterEach:false, async:false*/
 'use strict';
 
 var LARService = require('../../services/LARService');
 
+var testdata = require('../testdata'),
+    mockgoose = require('mockgoose');
+
 describe('LARService', function() {
+    before(function(done) {
+        testdata.addLargeSets(done);
+    });
+
+    after(function(done) {
+        mockgoose.reset();
+        testdata.build(done);
+    });
+
     describe('isValidNumHomePurchaseLoans', function() {
         it('should return true for a valid number of home purchase loans', function(done) {
             async.series([

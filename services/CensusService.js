@@ -59,13 +59,13 @@ module.exports = {
         });
     },
 
-    getKeyValueData: function(activityYear, keyParams, value, callback) {
-        var aggregateQuery = queryUtil.buildAggregateQuery(activityYear, keyParams, value);
+    getKeyValueData: function(activityYear, keyParams, valueParams, callback) {
+        var aggregateQuery = queryUtil.buildAggregateQuery(activityYear, keyParams, valueParams);
         Census.aggregate(aggregateQuery, function(err, data) {
             if (err) {
                 return callback(err, null);
             }
-            var result = queryUtil.convertToKeyValue('/census', data, keyParams, value);
+            var result = queryUtil.convertToKeyValue('/census', data, keyParams, valueParams);
             return callback(null, result);
         });
     }

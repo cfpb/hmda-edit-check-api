@@ -28,7 +28,7 @@ Thumbs.db
 desktop.ini
 
 # mac garbage
-DS_Store
+*DS_Store
 
 # Compressed distribution directory
 dist

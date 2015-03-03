@@ -2,8 +2,8 @@
 
 var CensusService = require('../../../services/CensusService');
 
-var sendResponse = function(req, res, keyParams, value) {
-    CensusService.getKeyValueData(req.params.activityYear, keyParams, value, function(err, result) {
+var sendResponse = function(req, res, keyParams, valueParams) {
+    CensusService.getKeyValueData(req.params.activityYear, keyParams, valueParams, function(err, result) {
         if (err) {
             res.status(500).json(err);
         } else {
@@ -20,8 +20,8 @@ module.exports = function(router) {
      */
     router.get('/msaCodes/:activityYear', function(req, res) {
         var keyParams = ['msa_code'];
-        var value = 'msa_name';
-        sendResponse(req, res, keyParams, value);
+        var valueParams = ['msa_name'];
+        sendResponse(req, res, keyParams, valueParams);
     });
 
     /**
@@ -30,8 +30,8 @@ module.exports = function(router) {
      */
     router.get('/stateCounty/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code'];
-        var value = 'small_county';
-        sendResponse(req, res, keyParams, value);
+        var valueParams = ['small_county', 'msa_code'];
+        sendResponse(req, res, keyParams, valueParams);
     });
 
     /**
@@ -40,8 +40,8 @@ module.exports = function(router) {
      */
     router.get('/stateCountyMSA/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'msa_code'];
-        var value = 'small_county';
-        sendResponse(req, res, keyParams, value);
+        var valueParams = ['small_county'];
+        sendResponse(req, res, keyParams, valueParams);
     });
 
     /**
@@ -50,8 +50,8 @@ module.exports = function(router) {
      */
     router.get('/stateCountyTract/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'tract'];
-        var value = 'small_county';
-        sendResponse(req, res, keyParams, value);
+        var valueParams = ['small_county', 'msa_code'];
+        sendResponse(req, res, keyParams, valueParams);
     });
 
     /**
@@ -60,8 +60,8 @@ module.exports = function(router) {
      */
     router.get('/stateCountyTractMSA/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
-        var value = 'small_county';
-        sendResponse(req, res, keyParams, value);
+        var valueParams = ['small_county'];
+        sendResponse(req, res, keyParams, valueParams);
     });
 
 };

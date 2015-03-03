@@ -5,105 +5,18 @@ var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
 describe('/isValidNumLoans/refinance', function() {
-    it('should return true for a valid number of refinance loans', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/5')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/6')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":true/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
-    });
-
     it('should return false for an invalid number of refinance loans', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/8')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/2')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
-    });
-
-    it('should return true when there are no refinance loans for either year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/refinance/2013/9/000000000005/0/0')
+            .get('/isValidNumLoans/refinance/2013/9/1035818356/10/3')
             .expect(200)
             .expect('Content-Type', /json/)
-            .expect(/"result":true/)
+            .expect(/"result":false/)
 
             .end(function (err, res) {
                 done(err);
             });
     });
-
-    it('should return false when the percent is exactly +/- 20%', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/7')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isValidNumLoans/refinance/2013/9/1035818356/10/3')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
-    });
-
+    
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 

@@ -17,35 +17,6 @@ describe('/isTaxIDTheSameAsLastYear', function() {
             });
     });
 
-    it('should return false when taxID is not the same as last year', function(done) {
-        async.series([
-            function(cb) {
-                request(mock)
-                    .get('/isTaxIDTheSameAsLastYear/2014/1/0000000001/23-0916595')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    }); 
-            },
-            function(cb) {
-                request(mock)
-                    .get('/isTaxIDTheSameAsLastYear/2014/1/0000005001/23-0916895')
-                    .expect(200)
-                    .expect('Content-Type', /json/)
-                    .expect(/"result":false/)
-
-                    .end(function (err, res) {
-                        cb();
-                    });
-            }
-        ], function(err, results) {
-            done();
-        });
-    });
-
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 

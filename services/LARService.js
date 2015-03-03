@@ -18,18 +18,12 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
     return result;
 };
 
-var checkMaximumPercentageChange = function (newPercentage, oldPercentage, threshold) {
-    var diff = Math.abs((newPercentage - oldPercentage).toFixed(2));
-    if (diff < threshold) {
-        return true;
-    }
-    return false;
-};
-
 var comparePercentages = function (newPercentage, oldPercentage, threshold, range) {
     var diff = (newPercentage - oldPercentage).toFixed(2);
-
-    if (diff < threshold) {
+    var negative = ((newPercentage - oldPercentage).toFixed(2) < 0);
+    if (!range && diff < threshold) {
+        return false;
+    } else if (range && Math.abs(diff) >= threshold) {
         return false;
     }
     return true;
@@ -70,9 +64,9 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
         // diff year to year can't be more than threshold, if over largeNum,
         // then currentPercentage should be greater than minPercent
         if (loanParameters.threshold=== undefined && 
-                checkMaximumPercentageChange(currentPercent, previousYearPercent, loanParameters.diffPercent)) {
+                comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, true)) {
             result.result = true;
-        } else if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent) &&
+        } else if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, false) &&
             ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
             result.result = true; 
         }
