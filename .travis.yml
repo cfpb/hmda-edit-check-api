@@ -45,7 +45,7 @@ deploy:
   bucket: hmda-edit-check-api
   key: master/hmda-edit-check-api-codedeploy.zip
   application: hmda-edit-check-api
-  deployment_group: hmda-edit-check-api-dev
+  deployment_group: hmda-edit-check-api-prod
   on:
     branch: master
 notifications:
