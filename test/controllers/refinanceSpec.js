@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidNumLoans/refinance', function() {
     it('should return false for an invalid number of refinance loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/refinance/2013/9/1035818356/9')
+            .get('/isValidNumLoans/refinance/2013/9/1035818356/10/3')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
@@ -21,7 +21,7 @@ describe('/isValidNumLoans/refinance', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/refinance/2013/9/0002590037/5')
+            .get('/isValidNumLoans/refinance/2013/9/0002590037/10/5')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

@@ -18,9 +18,12 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
     return result;
 };
 
-var comparePercentages = function (newPercentage, oldPercentage, threshold) {
-    var diff = newPercentage - oldPercentage;
-    if (diff < threshold) {
+var comparePercentages = function (newPercentage, oldPercentage, threshold, range) {
+    var diff = (newPercentage - oldPercentage).toFixed(2);
+    var negative = ((newPercentage - oldPercentage).toFixed(2) < 0);
+    if (!range && diff < threshold) {
+        return false;
+    } else if (range && Math.abs(diff) >= threshold) {
         return false;
     }
     return true;
@@ -60,10 +63,14 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
 
         // diff year to year can't be more than threshold, if over largeNum,
         // then currentPercentage should be greater than minPercent
-        if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent) &&
-            ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
+        if (loanParameters.threshold=== undefined && 
+                comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, true)) {
             result.result = true;
+        } else if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, false) &&
+            ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
+            result.result = true; 
         }
+
         return callback(null, result);
 
     })
@@ -73,25 +80,25 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
 };
 
 module.exports = {
-    isValidNumHomePurchaseLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
+    isValidNumHomePurchaseLoans: function(activityYear, agencyCode, respondentID, currentLoans, currentSoldLoans, callback) {
         activityYear -= 1;
-        var query = {
+        var totalQuery = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
             'agency_code': agencyCode,
             'loan_purpose': '1',
             'action_type': {$in: ['1', '6']},
             'property_type': {$in: ['1', '2']},
-            'purchaser_type': {$ne: '0'}
+        };
+        var soldQuery = _.clone(totalQuery);
+        soldQuery.purchaser_type = {$ne: '0'};
+
+        var loanParameters = {
+            diffPercent: 0.2
         };
 
-        LAR.count(query, function(err, oldLoans) {
-            if (err) {
-                return callback(err, null);
-            }
-            var result = compareYearTotals(newLoans, oldLoans, 0.2);
-            return callback(null, result);
-        });
+        return calculateYearOnYearLoans (currentLoans, currentSoldLoans,
+            totalQuery, soldQuery, loanParameters, callback);
     },
     isValidNumLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
         activityYear -= 1;
@@ -100,6 +107,7 @@ module.exports = {
             'respondent_id': respondentID,
             'agency_code': agencyCode
         };
+
 
         LAR.count(query, function(err, oldLoans) {
             if (err) {
@@ -114,26 +122,25 @@ module.exports = {
             return callback(null, result);
         });
     },
-    isValidNumRefinanceLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
+    isValidNumRefinanceLoans: function(activityYear, agencyCode, respondentID, currentLoans, currentSoldLoans, callback) {
         activityYear -= 1;
-        var query = {
+        var totalQuery = {
             'activity_year': activityYear,
             'respondent_id': respondentID,
             'agency_code': agencyCode,
             'loan_purpose': '3',
             'action_type': {$in: ['1', '6']},
-            'property_type': {$in: ['1', '2']},
-            'purchaser_type': {$ne: '0'}
+            'property_type': {$in: ['1', '2']}
+        };
+        var soldQuery = _.clone(totalQuery);
+        soldQuery.purchaser_type = {$ne: '0'};
+
+        var loanParameters = {
+            diffPercent: 0.2
         };
 
-        LAR.count(query, function(err, oldLoans) {
-            if (err) {
-                return callback(err, null);
-            }
-
-            var result = compareYearTotals(newLoans, oldLoans, 0.2);
-            return callback(null, result);
-        });
+        return calculateYearOnYearLoans (currentLoans, currentSoldLoans,
+            totalQuery, soldQuery, loanParameters, callback);
     },
     isValidNumFannieLoans: function(activityYear, agencyCode, respondentID, currentLoans, currentFannieLoans, callback) {
         activityYear -= 1;
