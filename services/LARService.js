@@ -20,7 +20,7 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
 
 var comparePercentages = function (newPercentage, oldPercentage, threshold, range) {
     var diff = (newPercentage - oldPercentage).toFixed(2);
-    var negative = ((newPercentage - oldPercentage).toFixed(2) < 0);
+    
     if (!range && diff < threshold) {
         return false;
     } else if (range && Math.abs(diff) >= threshold) {
