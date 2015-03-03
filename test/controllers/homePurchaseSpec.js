@@ -9,7 +9,7 @@ describe('/isValidNumLoans/homePurchase', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/9')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/10/5')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":true/)
@@ -20,7 +20,7 @@ describe('/isValidNumLoans/homePurchase', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/11')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/10/7')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":true/)
@@ -38,7 +38,7 @@ describe('/isValidNumLoans/homePurchase', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/3')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/10/10')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -49,7 +49,7 @@ describe('/isValidNumLoans/homePurchase', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/17')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590037/10/3')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -65,7 +65,7 @@ describe('/isValidNumLoans/homePurchase', function() {
 
     it('should return true when there are no home purchase loans for either year', function(done) {
         request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/9/0002590058/0')
+            .get('/isValidNumLoans/homePurchase/2013/9/0002590058/0/0')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
@@ -79,7 +79,7 @@ describe('/isValidNumLoans/homePurchase', function() {
         async.series([
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590058/8')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590058/10/4')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -90,7 +90,7 @@ describe('/isValidNumLoans/homePurchase', function() {
             },
             function(cb) {
                 request(mock)
-                    .get('/isValidNumLoans/homePurchase/2013/9/0002590058/12')
+                    .get('/isValidNumLoans/homePurchase/2013/9/0002590058/10/8')
                     .expect(200)
                     .expect('Content-Type', /json/)
                     .expect(/"result":false/)
@@ -103,24 +103,13 @@ describe('/isValidNumLoans/homePurchase', function() {
             done();
         });
     });
-
-    it('should return false when the percentage increase is infinite (n / 0)', function(done) {
-        request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/9/0002590058/7')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
+    
 
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isValidNumLoans/homePurchase/2013/9/0002590037/5')
+            .get('/isValidNumLoans/homePurchase/2013/9/0002590037/10/5')
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)

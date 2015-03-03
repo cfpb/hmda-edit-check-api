@@ -19,15 +19,15 @@ describe('PanelService', function() {
             });
         });
 
-        it('should return a result of false if the respondent has an other lender code of 1 and a non-blank parent name', function(done) {
-            PanelService.isChildFI('2013', '2', '0000000003', function(err, result) {
+        it('should return a result of false if the respondent has an other lender code of 5 and a non-blank parent name', function(done) {
+            PanelService.isChildFI('2013', '2', '0000000005', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
         });
 
-        it('should return a result of false if the respondent has an other lender code of 1 and a blank parent name', function(done) {
-            PanelService.isChildFI('2013', '2', '0000000004', function(err, result) {
+        it('should return a result of false if the respondent has an other lender code of 5 and a blank parent name', function(done) {
+            PanelService.isChildFI('2013', '2', '0000000006', function(err, result) {
                 expect(result.result).to.be.false();
                 done();
             });
