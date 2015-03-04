@@ -198,7 +198,8 @@ describe('queryUtil', function() {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'msa_code': { '$ne': '' }
                     }
                 },
                 {
@@ -221,7 +222,11 @@ describe('queryUtil', function() {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' },
+                        'msa_code': { '$ne': '' }
                     }
                 },
                 {
@@ -247,7 +252,10 @@ describe('queryUtil', function() {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' }
                     }
                 },
                 {
@@ -268,11 +276,15 @@ describe('queryUtil', function() {
             expect(_.isEqual(result, expected)).to.be(true);
             done();
         });
-        it('should build proper query for multiple keyParams and single valueParams, with overlapping key/value params', function(done) {
+        it('should build proper query for multiple keyParams and multiple valueParams, with overlapping key/value params', function(done) {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' },
+                        'msa_code': { '$ne': '' }
                     }
                 },
                 {
