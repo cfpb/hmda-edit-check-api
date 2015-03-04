@@ -6,7 +6,7 @@ var exists = require('../lib/queryUtil').exists;
 
 module.exports = {
     isChildFI: function(activityYear, agencyCode, respondentId, callback) {
-        var query = {'activity_year': activityYear, 'respondent_id': respondentId, 'agency_code': agencyCode, 'parent_name': {'$ne': ''}, 'other_lender_code': '0'};
+        var query = {'activity_year': activityYear, 'respondent_id': respondentId, 'agency_code': agencyCode, 'parent_name': {'$ne': ''}, 'other_lender_code': {'$ne': '5'}};
         exists('Panel', query, callback);
     },
 

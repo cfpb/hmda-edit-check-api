@@ -66,30 +66,8 @@ var TestData = {
                   'loan_type': '1',
                   'loan_purpose': '1',
                   'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '5',
-                  'property_type': '1'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
                   'action_type': '6',
-                  'purchaser_type': '4',
-                  'property_type': '1'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '7',
+                  'purchaser_type': '0',
                   'property_type': '1'
                 },
                 {
@@ -111,7 +89,18 @@ var TestData = {
                   'loan_purpose': '1',
                   'loan_amount': '00110',
                   'action_type': '6',
-                  'purchaser_type': '9',
+                  'purchaser_type': '0',
+                  'property_type': '1'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '0002590037',
+                  'agency_code': '9',
+                  'loan_type': '1',
+                  'loan_purpose': '1',
+                  'loan_amount': '00110',
+                  'action_type': '6',
+                  'purchaser_type': '0',
                   'property_type': '1'
                 },
                 {
@@ -274,6 +263,17 @@ var TestData = {
                     'action_type': '1',
                     'purchaser_type': '2',
                     'property_type': '2'
+                  },
+                  sampleLar2 = {
+                    'activity_year': '2012',
+                    'respondent_id': '0201590731',
+                    'agency_code': '9',
+                    'loan_type': '1',
+                    'loan_purpose': '1',
+                    'loan_amount': '00110',
+                    'action_type': '1',
+                    'purchaser_type': '0',
+                    'property_type': '2'
                   };
 
               for (var i = 0; i < 1000; i++) {
@@ -292,10 +292,13 @@ var TestData = {
 
               sampleLar.respondent_id = '1035818356';
               sampleLar.loan_purpose = '3';
+              sampleLar2.respondent_id = '1035818356';
+              sampleLar2.loan_purpose = '3';
               lars = [];
 
-              for (var k = 0; k < 10; k++) {
+              for (var k = 0; k < 5; k++) {
                 lars.push(sampleLar);
+                lars.push(sampleLar2);
               }
 
               mongoose.model('Lar').create(lars, function(err, item) {
