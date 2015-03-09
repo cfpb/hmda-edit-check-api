@@ -3,6 +3,7 @@
 var express = require('express');
 var kraken = require('kraken-js');
 var env = process.env.NODE_ENV;
+var compression = require('compression');
 
 var app = module.exports = express();
 var options = require('./lib/options')(app);
@@ -10,7 +11,7 @@ var options = require('./lib/options')(app);
 if (env === 'sandbox') {
     // Configure the response headers so that the API can be used locally
     app.all('*', function(req, res, next) {
-        res.header('Access-Control-Allow-Origin', 'http://localhost:9000');
+        res.header('Access-Control-Allow-Origin', req.get('Origin'));
         res.header('Access-Control-Allow-Credentials', true);
         res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
@@ -26,6 +27,7 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+app.use(compression({threshold:'512kb'}));
 app.use(kraken(options));
 app.on('start', function () {
     console.log('Application ready to serve requests.');
