@@ -38,22 +38,8 @@ describe('queryUtil', function() {
                     }
                 }
             ];
-            var expected = [
-                {
-                    type: 'put',
-                    key: 'census/msa_code/36060',
-                    value: {
-                        msa_name: 'Oak Hill, WV'
-                    }
-                },
-                {
-                    type: 'put',
-                    key: 'census/msa_code/43220',
-                    value: {
-                        msa_name: 'Shelton, WA'
-                    }
-                }
-            ];
+            var expected = [ [ '{"type":"put","key":"census/msa_code/36060","value":{"msa_name":"Oak Hill, WV"}}',
+    '{"type":"put","key":"census/msa_code/43220","value":{"msa_name":"Shelton, WA"}}' ] ];
             var keyParams = ['msa_code'];
             var valueParams = ['msa_name'];
             var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
@@ -77,24 +63,8 @@ describe('queryUtil', function() {
                     }
                 }
             ];
-            var expected = [
-                {
-                    type: 'put',
-                    key: 'census/msa_code/36060',
-                    value: {
-                        msa_name: 'Oak Hill, WV',
-                        small_county: '1'
-                    }
-                },
-                {
-                    type: 'put',
-                    key: 'census/msa_code/43220',
-                    value: {
-                        msa_name: 'Shelton, WA',
-                        small_county: '0'
-                    }
-                }
-            ];
+            var expected = [ [ '{"type":"put","key":"census/msa_code/36060","value":{"msa_name":"Oak Hill, WV","small_county":"1"}}',
+    '{"type":"put","key":"census/msa_code/43220","value":{"msa_name":"Shelton, WA","small_county":"0"}}' ] ];
             var keyParams = ['msa_code'];
             var valueParams = ['msa_name', 'small_county'];
             var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
@@ -122,22 +92,8 @@ describe('queryUtil', function() {
                     }
                 }
             ];
-            var expected = [
-                {
-                    type: 'put',
-                    key: 'census/state_code/01/county_code/02/tract/03/msa_code/36060',
-                    value:  {
-                        msa_name: 'Oak Hill, WV'
-                    }
-                },
-                {
-                    type: 'put',
-                    key: 'census/state_code/03/county_code/02/tract/01/msa_code/43220',
-                    value: {
-                        msa_name: 'Shelton, WA'
-                    }
-                }
-            ];
+            var expected = [ [ '{"type":"put","key":"census/state_code/01/county_code/02/tract/03/msa_code/36060","value":{"msa_name":"Oak Hill, WV"}}',
+    '{"type":"put","key":"census/state_code/03/county_code/02/tract/01/msa_code/43220","value":{"msa_name":"Shelton, WA"}}' ] ];
             var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
             var valueParams = ['msa_name'];
             var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
@@ -167,24 +123,8 @@ describe('queryUtil', function() {
                     }
                 }
             ];
-            var expected = [
-                {
-                    type: 'put',
-                    key: 'census/state_code/01/county_code/02/tract/03/msa_code/36060',
-                    value:  {
-                        msa_name: 'Oak Hill, WV',
-                        small_county: '1'
-                    }
-                },
-                {
-                    type: 'put',
-                    key: 'census/state_code/03/county_code/02/tract/01/msa_code/43220',
-                    value: {
-                        msa_name: 'Shelton, WA',
-                        small_county: '0'
-                    }
-                }
-            ];
+            var expected = [ [ '{"type":"put","key":"census/state_code/01/county_code/02/tract/03/msa_code/36060","value":{"msa_name":"Oak Hill, WV","small_county":"1"}}',
+    '{"type":"put","key":"census/state_code/03/county_code/02/tract/01/msa_code/43220","value":{"msa_name":"Shelton, WA","small_county":"0"}}' ] ];
             var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
             var valueParams = ['msa_name', 'small_county'];
             var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);

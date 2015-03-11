@@ -7,7 +7,16 @@ var sendResponse = function(req, res, keyParams, valueParams) {
         if (err) {
             res.status(500).json(err);
         } else {
-            res.json(result);
+            res.setHeader('Content-Type', 'application/json; charset=UTF-8');
+            res.setHeader('Transfer-Encoding', 'chunked');
+            res.write('[');
+            for (var i=0; i < result.length; i++) {
+                res.write(result[i].join(','));
+                if (i < result.length-1) {
+                    res.write(',');
+                }
+            }
+            res.end(']');
         }
     });
 };
