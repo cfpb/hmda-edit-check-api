@@ -17,43 +17,6 @@ describe('/isValidCensusInMSA', function() {
             });
     });
 
-    it('should return false if state,county combo doesnt exist for a small county', function(done) {
-        request(mock)
-            .get('/isValidCensusInMSA/2013/35100/38/050/96.1100')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
-    it('should return false if msa doesnt exist', function(done) {
-        request(mock)
-            .get('/isValidCensusInMSA/2013/35200/37/050/96.1100')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
-
-    it('should return true if state,county combo exists, tract=NA, small county = 1', function(done) {
-        request(mock)
-            .get('/isValidCensusInMSA/2013/35100/37/050/NA')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":true/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 

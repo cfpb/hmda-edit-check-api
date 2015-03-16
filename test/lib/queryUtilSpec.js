@@ -22,30 +22,8 @@ describe('queryUtil', function() {
     });
 
     describe('convertToKeyValue', function() {
-        it('should use 0 for value when value is empty, since values are required in local db', function(done) {
-            var data = [
-                {
-                    _id: {
-                        msa_code: '36060',
-                        msa_name: ''
-                    }
-                }
-            ];
-            var expected = [
-                {
-                    type: 'put',
-                    key: 'census/msa_code/36060',
-                    value: '0'
-                }
-            ];
-            var keyParams = ['msa_code'];
-            var value = 'msa_name';
-            var result = queryUtil.convertToKeyValue('census', data, keyParams, value);
-            expect(_.isEqual(result, expected)).to.be(true);
-            done();
-        });
 
-        it('should convert for one keyParams and value', function(done) {
+        it('should convert for single keyParams and single valueParams', function(done) {
             var data = [
                 {
                     _id: {
@@ -64,21 +42,66 @@ describe('queryUtil', function() {
                 {
                     type: 'put',
                     key: 'census/msa_code/36060',
-                    value: 'Oak Hill, WV'
+                    value: {
+                        msa_name: 'Oak Hill, WV'
+                    }
                 },
                 {
                     type: 'put',
                     key: 'census/msa_code/43220',
-                    value: 'Shelton, WA'
+                    value: {
+                        msa_name: 'Shelton, WA'
+                    }
                 }
             ];
             var keyParams = ['msa_code'];
-            var value = 'msa_name';
-            var result = queryUtil.convertToKeyValue('census', data, keyParams, value);
+            var valueParams = ['msa_name'];
+            var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
             expect(_.isEqual(result, expected)).to.be(true);
             done();
         });
-        it('should convert for multiple keyParams and value', function(done) {
+        it('should convert for single keyParams and multiple valueParams', function(done) {
+            var data = [
+                {
+                    _id: {
+                        msa_code: '36060',
+                        msa_name: 'Oak Hill, WV',
+                        small_county: '1'
+                    }
+                },
+                {
+                    _id: {
+                        msa_code: '43220',
+                        msa_name: 'Shelton, WA',
+                        small_county: '0'
+                    }
+                }
+            ];
+            var expected = [
+                {
+                    type: 'put',
+                    key: 'census/msa_code/36060',
+                    value: {
+                        msa_name: 'Oak Hill, WV',
+                        small_county: '1'
+                    }
+                },
+                {
+                    type: 'put',
+                    key: 'census/msa_code/43220',
+                    value: {
+                        msa_name: 'Shelton, WA',
+                        small_county: '0'
+                    }
+                }
+            ];
+            var keyParams = ['msa_code'];
+            var valueParams = ['msa_name', 'small_county'];
+            var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+        it('should convert for multiple keyParams and single valueParams', function(done) {
             var data = [
                 {
                     _id: {
@@ -103,28 +126,80 @@ describe('queryUtil', function() {
                 {
                     type: 'put',
                     key: 'census/state_code/01/county_code/02/tract/03/msa_code/36060',
-                    value: 'Oak Hill, WV'
+                    value:  {
+                        msa_name: 'Oak Hill, WV'
+                    }
                 },
                 {
                     type: 'put',
                     key: 'census/state_code/03/county_code/02/tract/01/msa_code/43220',
-                    value: 'Shelton, WA'
+                    value: {
+                        msa_name: 'Shelton, WA'
+                    }
                 }
             ];
             var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
-            var value = 'msa_name';
-            var result = queryUtil.convertToKeyValue('census', data, keyParams, value);
+            var valueParams = ['msa_name'];
+            var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+        it('should convert for multiple keyParams and multiple values', function(done) {
+            var data = [
+                {
+                    _id: {
+                        state_code: '01',
+                        county_code: '02',
+                        tract: '03',
+                        msa_code: '36060',
+                        msa_name: 'Oak Hill, WV',
+                        small_county: '1'
+                    }
+                },
+                {
+                    _id: {
+                        state_code: '03',
+                        county_code: '02',
+                        tract: '01',
+                        msa_code: '43220',
+                        msa_name: 'Shelton, WA',
+                        small_county: '0'
+                    }
+                }
+            ];
+            var expected = [
+                {
+                    type: 'put',
+                    key: 'census/state_code/01/county_code/02/tract/03/msa_code/36060',
+                    value:  {
+                        msa_name: 'Oak Hill, WV',
+                        small_county: '1'
+                    }
+                },
+                {
+                    type: 'put',
+                    key: 'census/state_code/03/county_code/02/tract/01/msa_code/43220',
+                    value: {
+                        msa_name: 'Shelton, WA',
+                        small_county: '0'
+                    }
+                }
+            ];
+            var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
+            var valueParams = ['msa_name', 'small_county'];
+            var result = queryUtil.convertToKeyValue('census', data, keyParams, valueParams);
             expect(_.isEqual(result, expected)).to.be(true);
             done();
         });
     });
 
     describe('buildAggregateQuery', function() {
-        it('should build proper query for one keyParams', function(done) {
+        it('should build proper query for single keyParams and single valueParams', function(done) {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'msa_code': { '$ne': '' }
                     }
                 },
                 {
@@ -137,17 +212,21 @@ describe('queryUtil', function() {
                 }
             ];
             var keyParams = ['msa_code'];
-            var value = 'msa_name';
-            var result = queryUtil.buildAggregateQuery('2013', keyParams, value);
+            var valueParams = ['msa_name'];
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, valueParams);
             expect(_.isEqual(result, expected)).to.be(true);
             done();
         });
 
-        it('should build proper query for multiple keyParams', function(done) {
+        it('should build proper query for multiple keyParams and single valueParams', function(done) {
             var expected = [
                 {
                     '$match': {
-                        'activity_year': '2013'
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' },
+                        'msa_code': { '$ne': '' }
                     }
                 },
                 {
@@ -163,8 +242,66 @@ describe('queryUtil', function() {
                 }
             ];
             var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
-            var value = 'small_county';
-            var result = queryUtil.buildAggregateQuery('2013', keyParams, value);
+            var valueParams = ['small_county'];
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, valueParams);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+
+        it('should build proper query for multiple keyParams and multiple valueParams', function(done) {
+            var expected = [
+                {
+                    '$match': {
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' }
+                    }
+                },
+                {
+                    '$group': {
+                        '_id': {
+                            'state_code': '$state_code',
+                            'county_code': '$county_code',
+                            'tract': '$tract',
+                            'msa_code': '$msa_code',
+                            'small_county': '$small_county'
+                        }
+                    }
+                }
+            ];
+            var keyParams = ['state_code', 'county_code', 'tract'];
+            var valueParams = ['msa_code', 'small_county'];
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, valueParams);
+            expect(_.isEqual(result, expected)).to.be(true);
+            done();
+        });
+        it('should build proper query for multiple keyParams and multiple valueParams, with overlapping key/value params', function(done) {
+            var expected = [
+                {
+                    '$match': {
+                        'activity_year': '2013',
+                        'state_code': { '$ne': '' },
+                        'county_code': { '$ne': '' },
+                        'tract': { '$ne': '' },
+                        'msa_code': { '$ne': '' }
+                    }
+                },
+                {
+                    '$group': {
+                        '_id': {
+                            'state_code': '$state_code',
+                            'county_code': '$county_code',
+                            'tract': '$tract',
+                            'msa_code': '$msa_code',
+                            'small_county': '$small_county'
+                        }
+                    }
+                }
+            ];
+            var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
+            var valueParams = ['msa_code', 'small_county'];
+            var result = queryUtil.buildAggregateQuery('2013', keyParams, valueParams);
             expect(_.isEqual(result, expected)).to.be(true);
             done();
         });

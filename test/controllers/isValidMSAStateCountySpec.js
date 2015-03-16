@@ -17,30 +17,6 @@ describe('/isValidMSAStateCounty', function() {
             });
     });
 
-    it('should return false for an invalid county', function(done) {
-        request(mock)
-            .get('/isValidMSAStateCounty/2013/35100/37/100')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
-    it('should return false for an invalid msa/md', function(done) {
-        request(mock)
-            .get('/isValidMSAStateCounty/2013/35200/37/050')
-            .expect(200)
-            .expect('Content-Type', /json/)
-            .expect(/"result":false/)
-
-            .end(function (err, res) {
-                done(err);
-            });
-    });
-
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
