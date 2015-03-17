@@ -10,6 +10,7 @@ module.exports = function mocha_istanbul(grunt) {
             src: 'test', // the folder name for the tests
             options: {
                 recursive: true,
+                coverage: true, // emit the coverage event
                 //quiet: true,
                 excludes: [
                     'lib/database.js',
