@@ -8,6 +8,16 @@ module.exports = function (grunt) {
         configDir: require('path').resolve('tasks')
     });
 
+    // handle coverage event by sending data to coveralls
+    grunt.event.on('coverage', function(lcov, done){
+        require('coveralls').handleInput(lcov, function(err){
+            if (err) {
+                return done(err);
+            }
+            done();
+        });
+    });
+
     /*
      * Register group tasks
      */

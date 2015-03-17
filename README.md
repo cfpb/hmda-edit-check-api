@@ -3,7 +3,8 @@
 ## This project is a work in progress
 Nothing presented in the issues or in this repo is a final product unless it is marked as such.
 
-
+[![Build Status](https://travis-ci.org/cfpb/hmda-edit-check-api.svg)](https://travis-ci.org/cfpb/hmda-edit-check-api)
+[![Coverage Status](https://coveralls.io/repos/cfpb/hmda-edit-check-api/badge.svg)](https://coveralls.io/r/cfpb/hmda-edit-check-api)
 
 ## Requirements
 
