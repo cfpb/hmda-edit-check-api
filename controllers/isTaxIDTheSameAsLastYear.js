@@ -6,7 +6,7 @@ module.exports = function(router) {
 
     /**
      * @api {get} /isTaxIDTheSameAsLastYear/:activityYear/:agencyCode/:respondentId/:taxID isTaxIDTheSameAsLastYear
-     * @apiDescription checks whether or not the respondent’s reported tax ID is the same they used for last year’s submittal
+     * @apiDescription checks whether or not the respondent's reported tax ID is the same they used for last year's submittal
      * @apiGroup Transmittal
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
      * @apiParam {String} agencyCode Code to identify the supervisory/regulatory agency of the HMDA reporting institution
