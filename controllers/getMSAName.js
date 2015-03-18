@@ -5,8 +5,7 @@ var CensusService = require('../services/CensusService');
 module.exports = function(router) {
 
     /**
-     * @param {String} activityYear, {String} msa
-     * @return {json}
+     * @api {get} /getMSAName/:activityYear/:msaCode request Metropolitan Statistical Authority (MSA) name
      */
     router.get('/:activityYear/:msaCode', function(req, res) {
         CensusService.getMSAName(req.params.activityYear, req.params.msaCode, function(err, result) {
