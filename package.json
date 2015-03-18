@@ -2,12 +2,6 @@
   "name": "hmda-edit-check-api",
   "version": "0.1.0",
   "description": "API for HMDA Pilot",
-  "apidoc": {
-    "name": "hmda-edit-check-api",
-    "version": "0.1.0",
-    "description": "API for HMDA Pilot","title": "Custom apiDoc browser title",
-    "url" : "https://api.github.com/v1"
-  },
   "author": "Consumer Financial Protection Bureau",
   "license": "Public Domain",
   "repository": {
