@@ -15,8 +15,10 @@ var sendResponse = function(req, res, keyParams, valueParams) {
 module.exports = function(router) {
 
     /**
-     * @param {String} activityYear
-     * @return {json}
+     * @api {get} /msaCodes/:activityYear msaCodes
+     * @apiDescription returns msa code/name key-value pairs for use in localDB
+     * @apiGroup Local DB
+     * @apiParam {String} activityYear The year for which the HMDA data is being collected
      */
     router.get('/msaCodes/:activityYear', function(req, res) {
         var keyParams = ['msa_code'];
@@ -25,8 +27,10 @@ module.exports = function(router) {
     });
 
     /**
-     * @param {String} activityYear
-     * @return {json}
+     * @api {get} /stateCounty/:activityYear stateCounty
+     * @apiDescription returns state/county smallCounty key-value pairs for use in localDB
+     * @apiGroup Local DB
+     * @apiParam {String} activityYear The year for which the HMDA data is being collected
      */
     router.get('/stateCounty/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code'];
@@ -35,8 +39,10 @@ module.exports = function(router) {
     });
 
     /**
-     * @param {String} activityYear
-     * @return {json}
+     * @api {get} /stateCountyMSA/:activityYear stateCountyMSA
+     * @apiDescription returns state/county/msa smallCounty key-value pairs for use in localDB
+     * @apiGroup Local DB
+     * @apiParam {String} activityYear The year for which the HMDA data is being collected
      */
     router.get('/stateCountyMSA/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'msa_code'];
@@ -45,8 +51,10 @@ module.exports = function(router) {
     });
 
     /**
-     * @param {String} activityYear
-     * @return {json}
+     * @api {get} /stateCountyTract/:activityYear stateCountyTract
+     * @apiDescription returns state/county/census tract smallCounty key-value pairs for use in localDB
+     * @apiGroup Local DB
+     * @apiParam {String} activityYear The year for which the HMDA data is being collected
      */
     router.get('/stateCountyTract/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'tract'];
@@ -55,8 +63,10 @@ module.exports = function(router) {
     });
 
     /**
-     * @param {String} activityYear
-     * @return {json}
+     * @api {get} /stateCountyTractMSA/:activityYear stateCountyTractMSA
+     * @apiDescription returns state/county/census tract/msa smallCounty key-value pairs for use in localDB
+     * @apiGroup Local DB
+     * @apiParam {String} activityYear The year for which the HMDA data is being collected
      */
     router.get('/stateCountyTractMSA/:activityYear', function(req, res) {
         var keyParams = ['state_code', 'county_code', 'tract', 'msa_code'];
