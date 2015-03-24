@@ -26,4 +26,21 @@ describe('MsaBranchesService', function() {
             });
         });
     });
+
+    describe('getMetroAreasOnRespondentPanel', function() {
+        it('should return a list of msa codes if the respondent has a list of msa branches', function(done) {
+            MsaBranchesService.getMetroAreasOnRespondentPanel('2013', '1', '0000000001', function(err, result) {
+                expect(result.msa.length).to.be(5);
+                expect(result.msa[1]).to.be('00003');
+                done();
+            });
+        });
+
+        it('should return an empty list if the respondent does not exist in the msa branch data', function(done) {
+            MsaBranchesService.getMetroAreasOnRespondentPanel('2013', '1', '0000000003', function(err, result) {
+                expect(result.msa.length).to.be(0);
+                done();
+            });
+        });
+    });
 });
