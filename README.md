@@ -3,7 +3,8 @@
 ## This project is a work in progress
 Nothing presented in the issues or in this repo is a final product unless it is marked as such.
 
-
+[![Build Status](https://travis-ci.org/cfpb/hmda-edit-check-api.svg)](https://travis-ci.org/cfpb/hmda-edit-check-api)
+[![Coverage Status](https://coveralls.io/repos/cfpb/hmda-edit-check-api/badge.svg)](https://coveralls.io/r/cfpb/hmda-edit-check-api)
 
 ## Requirements
 
@@ -72,6 +73,17 @@ $ grunt dist
 ```
 
 This task produces `dist/hmda-edit-check-api.zip`, which can then be deployed by your continuous integration platform, or manually deployed into your server environment.
+
+## API Documentation
+
+Documentation of the REST API is maintained within the source code using [apiDoc](http://apidocjs.com/) endpoint method comments.
+
+To generate the API documentation, run the grunt task:
+```shell
+$ grunt generate-docs
+```
+
+You can then open './docs/index.html' in your browser to view the API documentation.
 
 ## Getting involved
 

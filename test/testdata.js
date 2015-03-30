@@ -235,8 +235,8 @@ var TestData = {
             },
             function(cb) {
                 mongoose.model('MsaBranches').create([
-                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000001', 'msa': ['00001']},
-                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000002', 'msa': ['00002']}
+                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000001', 'msa': ['00001','00003','00005','00007','00009']},
+                    {'activity_year': '2013', 'agency_code': '1',  'respondent_id': '0000000002', 'msa': ['00002','00004','00006','00008','00010']}
                 ],
                 function(err, item) {
                     cb();
