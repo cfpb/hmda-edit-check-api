@@ -57,7 +57,7 @@ var calculateYearOnYearLoans = function (currentLoans, currentSoldLoans,
             'Current Year Loans': currentLoans,
             'Current Year Sold Loans': currentSoldLoans,
             'Current Year Percentage' : (currentPercent*100).toFixed(2),
-            'Percentage Difference': ((currentPercent - previousYearPercent)*100).toFixed(2),
+            '% Difference': ((currentPercent - previousYearPercent)*100).toFixed(2),
             'result': false
         };
 
