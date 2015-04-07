@@ -26,7 +26,9 @@
     "localizr": "^0.1.0",
     "moment": "^2.9.0",
     "mongoose": "^3.8.20",
-    "underscore": "^1.7.0"
+    "underscore": "^1.7.0",
+    "superagent": "^1.0.0",
+    "bluebird": "^2.9.12"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
