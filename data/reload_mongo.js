@@ -3,9 +3,8 @@
 var mongoose = require('mongoose');
 var fs = require('fs');
 var _ = require('lodash');
-var async = require('async');
-var larAggregates = require('./laraggregates.js'),
-    Promise = require('bluebird');
+var Promise = require('bluebird');
+var larAggregates = require('./laraggregates.js');
 
 var config;
 
@@ -66,9 +65,6 @@ mongoose.connection.once('open', function(callback) {
             fs.readdirSync(models_path).forEach(function (file) {
                 require(models_path + '/' + file);
             });
-
-            // Create array for storing our loading anon functions
-            var asyncFunctions = [];
 
             // Now loop through the loaded models
             Promise.map(_.keys(mongoose.connections[0].base.modelSchemas), function(key) {
