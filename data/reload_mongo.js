@@ -97,7 +97,7 @@ mongoose.connection.once('open', function(callback) {
                     });
                     return insertData(key, docs);
                 }
-            }, { concurrency: 2 })
+            }, { concurrency: 10 })
             .then(function(result) {
                 console.log('Done...');
                 process.exit();

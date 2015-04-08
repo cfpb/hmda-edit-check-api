@@ -61,175 +61,118 @@ var TestData = {
               mongoose.model('Lar').create([
                 {
                   'activity_year': '2012',
-                  'respondent_id': '0002590037',
+                  'respondent_id': '0201590731',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '0',
-                  'property_type': '1'
+                  'totalLoans' : '1000',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
+                },
+                {
+                  'activity_year': '2012',
+                  'respondent_id': '1201547730',
+                  'agency_code': '9',
+                  'totalLoans' : '499',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
                 },
                 {
                   'activity_year': '2012',
                   'respondent_id': '0002590037',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '0',
-                  'property_type': '1'
+                  'totalLoans' : '10',
+                  'totalHomePurchaseLoans' : '10',
+                  'soldHomePurchaseLoans' : '6',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
                 },
                 {
                   'activity_year': '2012',
-                  'respondent_id': '0002590037',
+                  'respondent_id': '1035818356',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '0',
-                  'property_type': '1'
+                  'totalLoans' : '10',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '10',
+                  'soldRefinanceLoans' : '5',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
                 },
                 {
                   'activity_year': '2012',
-                  'respondent_id': '0002590037',
+                  'respondent_id': '0000413208',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '0',
-                  'property_type': '1'
+                  'totalLoans' : '10',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '10', 
+                  'compareQ70' : '2', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
                 },
                 {
                   'activity_year': '2012',
-                  'respondent_id': '0002590037',
+                  'respondent_id': '0050413703',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '6',
-                  'purchaser_type': '1',
-                  'property_type': '1'
+                  'totalLoans' : '4',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '4', 
+                  'compareQ71' : '1',
+                  'totalQ72' : '0', 
+                  'compareQ72' : '0'
                 },
                 {
                   'activity_year': '2012',
-                  'respondent_id': '0002590037',
+                  'respondent_id': '0000413209',
                   'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '2',
-                  'property_type': '2'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '2',
-                  'property_type': '2'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '2',
-                  'property_type': '2'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '2',
-                  'property_type': '2'
-                },
-                {
-                  'activity_year': '2012',
-                  'respondent_id': '0002590037',
-                  'agency_code': '9',
-                  'loan_type': '1',
-                  'loan_purpose': '1',
-                  'loan_amount': '00110',
-                  'action_type': '1',
-                  'purchaser_type': '2',
-                  'property_type': '2'
+                  'totalLoans' : '4',
+                  'totalHomePurchaseLoans' : '0',
+                  'soldHomePurchaseLoans' : '0',
+                  'totalRefinanceLoans' : '0',
+                  'soldRefinanceLoans' : '0',
+                  'totalQ70' : '0', 
+                  'compareQ70' : '0', 
+                  'totalQ71' : '0', 
+                  'compareQ71' : '0',
+                  'totalQ72' : '4', 
+                  'compareQ72' : '1'
                 }
               ],
               function(err, item) {
-                cb();
-              });
-            },
-            function (cb) {
-              var sampleLar = {
-                'activity_year': '2012',
-                'respondent_id': '0000413208',
-                'agency_code': '9',
-                'loan_type': '1',
-                'loan_purpose': '3',
-                'loan_amount': '00110',
-                'action_type': '1',
-                'purchaser_type': '2',
-                'property_type': '2'
-              };
-              var sampleLar2 = {
-                'activity_year': '2012',
-                'respondent_id': '0000413208',
-                'agency_code': '9',
-                'loan_type': '1',
-                'loan_purpose': '3',
-                'loan_amount': '00110',
-                'action_type': '1',
-                'purchaser_type': '3',
-                'property_type': '2'
-              };
-              var lars = [];
-              for (var i = 0; i < 5; i++) {
-                lars.push(sampleLar);
-              }
-              lars.push(sampleLar2);
-
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '0050413703';
-              sampleLar.loan_type = '2';
-              sampleLar2.respondent_id = '0050413703';
-              sampleLar2.loan_type = '2';
-              lars = [];
-
-              for (var j = 0; j < 3; j++) {
-                lars.push(sampleLar2);
-              }
-              lars.push(sampleLar);
-
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '0000413209';
-              sampleLar.loan_type = '3';
-              sampleLar2.respondent_id = '0000413209';
-              sampleLar2.loan_type = '3';
-              lars = [];
-
-              for (j = 0; j < 3; j++) {
-                lars.push(sampleLar2);
-              }
-              lars.push(sampleLar);
-
-              mongoose.model('Lar').create(lars, function(err, item) {
                 cb();
               });
             },
@@ -247,68 +190,6 @@ var TestData = {
               done();
            }
         );
-    },
-    addLargeSets: function(done) {
-        console.log('Inserting large test data...');
-        async.series([
-          function(cb) {
-              var lars = [],
-                  sampleLar = {
-                    'activity_year': '2012',
-                    'respondent_id': '0201590731',
-                    'agency_code': '9',
-                    'loan_type': '1',
-                    'loan_purpose': '1',
-                    'loan_amount': '00110',
-                    'action_type': '1',
-                    'purchaser_type': '2',
-                    'property_type': '2'
-                  },
-                  sampleLar2 = {
-                    'activity_year': '2012',
-                    'respondent_id': '0201590731',
-                    'agency_code': '9',
-                    'loan_type': '1',
-                    'loan_purpose': '1',
-                    'loan_amount': '00110',
-                    'action_type': '1',
-                    'purchaser_type': '0',
-                    'property_type': '2'
-                  };
-
-              for (var i = 0; i < 1000; i++) {
-                lars.push(sampleLar);
-              }
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '1201547730';
-              lars = [];
-
-              for (var j = 0; j < 499; j++) {
-                lars.push(sampleLar);
-              }
-
-              mongoose.model('Lar').create(lars, function(err, item) {});
-
-              sampleLar.respondent_id = '1035818356';
-              sampleLar.loan_purpose = '3';
-              sampleLar2.respondent_id = '1035818356';
-              sampleLar2.loan_purpose = '3';
-              lars = [];
-
-              for (var k = 0; k < 5; k++) {
-                lars.push(sampleLar);
-                lars.push(sampleLar2);
-              }
-
-              mongoose.model('Lar').create(lars, function(err, item) {
-                cb();
-              });
-            }
-        ], function() {
-            console.log('Done inserting large test data');
-            done();
-        });
     }
 };
 

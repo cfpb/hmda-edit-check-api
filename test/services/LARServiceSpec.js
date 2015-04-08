@@ -7,10 +7,6 @@ var testdata = require('../testdata'),
     mockgoose = require('mockgoose');
 
 describe('LARService', function() {
-    before(function(done) {
-        testdata.addLargeSets(done);
-    });
-
     after(function(done) {
         mockgoose.reset();
         testdata.build(done);
