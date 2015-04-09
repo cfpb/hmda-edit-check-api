@@ -81,11 +81,11 @@ var larAggregates = [
     {dbLabel: 'totalRefinanceLoans', queryParams: {property_type:['1','2'], loan_purpose: '3', action_taken: ['1','6']}},
     {dbLabel: 'soldRefinanceLoans', queryParams: {purchaser_type:{type: '>', value:'0'}, property_type:['1','2'], loan_purpose: '3', action_taken: ['1','6']}},
     {dbLabel: 'totalQ70', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '1', action_taken: ['1','6']}},
-    {dbLabel: 'fannieQ70', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '1', action_taken: ['1','6'], purchaser_type: ['1','3']}},
+    {dbLabel: 'compareQ70', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '1', action_taken: ['1','6'], purchaser_type: ['1','3']}},
     {dbLabel: 'totalQ71', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '2', action_taken: ['1','6']}},
-    {dbLabel: 'ginnieQ71', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '2', action_taken: ['1','6'], purchaser_type: '2'}},
+    {dbLabel: 'compareQ71', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '2', action_taken: ['1','6'], purchaser_type: '2'}},
     {dbLabel: 'totalQ72', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '3', action_taken: ['1','6']}},
-    {dbLabel: 'ginnieQ72', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '3', action_taken: ['1','6'], purchaser_type: '2'}}
+    {dbLabel: 'compareQ72', queryParams: {property_type:['1','2'], loan_purpose: ['1','3'], loan_type: '3', action_taken: ['1','6'], purchaser_type: '2'}}
 ];
 
 
