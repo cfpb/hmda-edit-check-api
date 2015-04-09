@@ -2,8 +2,9 @@
 
 var mongoose = require('mongoose');
 var fs = require('fs');
-var _ = require('underscore');
-var async = require('async');
+var _ = require('lodash');
+var Promise = require('bluebird');
+var larAggregates = require('./laraggregates.js');
 
 var config;
 
@@ -17,6 +18,22 @@ if (env == 'test') {
 } else {
     config = require('../config/config.json');
 }
+
+var insertData = function(key, docs) {
+    var deferred = Promise.defer();
+    // Batch insert
+    mongoose.model(key).collection.insert(docs, function(err, result) {
+        if (err) {
+            console.log('ERROR: could not insert data for ' + key);
+            console.log(err);
+            deferred.reject(err);
+        } else {
+            console.log('inserted '+result.length +' records for ' + key);
+            deferred.resolve();
+        }
+    });
+    return deferred.promise;
+};
 
 var uri = 'mongodb://' + config.mongoConfig.host + ':' + config.mongoConfig.port + '/' + (config.mongoConfig.database ? config.mongoConfig.database : 'hmda');
 var opts = {};
@@ -49,17 +66,18 @@ mongoose.connection.once('open', function(callback) {
                 require(models_path + '/' + file);
             });
 
-            // Create array for storing our loading anon functions
-            var asyncFunctions = [];
-
             // Now loop through the loaded models
-            _.each(mongoose.connections[0].base.modelSchemas, function(schema, key) {
-                // add an anon function to our array
-                asyncFunctions.push(function (next) {
-                    // Get the data from the json files for each collection
+            Promise.map(_.keys(mongoose.connections[0].base.modelSchemas), function(key) {
+                var docs;
+                if (key.toLowerCase() === 'lar') {
+                    return larAggregates.retrieveData()
+                    .then(function(data) {
+                        return insertData(key, data);
+                    });
+                } else {
                     var filename = key.toLowerCase()+'.json';
                     var lines = fs.readFileSync(__dirname + '/'+filename,'utf8').split('\n');
-                    var docs = lines.map(function(line) {
+                    var docs =  lines.map(function(line) {
                         if (line) {
                             var data = JSON.parse(line);
                             delete data['_id'];
@@ -73,22 +91,10 @@ mongoose.connection.once('open', function(callback) {
                             return {};
                         }
                     });
-                    // Batch insert
-                    mongoose.model(key).collection.insert(docs, function(err, result) {
-                        if (err) {
-                            console.log('ERROR: could not insert data for ' + key);
-                            console.log(err);
-                        } else {
-                            console.log('inserted '+result.length +' records for ' + key);
-                        }
-                        return next();
-                    });
-
-                });
-            });
-
-            // Finally, call our array of loading functions in parallel, and exit when done
-            async.parallel(asyncFunctions, function(err) {
+                    return insertData(key, docs);
+                }
+            }, { concurrency: 10 })
+            .then(function(result) {
                 console.log('Done...');
                 process.exit();
             });

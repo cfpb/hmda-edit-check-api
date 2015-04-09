@@ -7,7 +7,7 @@ var mongoose = require('mongoose'),
 describe('/isValidNumLoans/total', function() {
     it('should return false for an invalid total number of loans', function(done) {
         request(mock)
-            .get('/isValidNumLoans/total/2013/9/0201590731/879')
+            .get('/isValidNumLoans/total/2013/9/0201590731/751')
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
