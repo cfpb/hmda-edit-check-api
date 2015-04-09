@@ -29,7 +29,6 @@ var comparePercentages = function (newPercentage, oldPercentage, threshold, rang
 };
 
 var checkValue = function (data, label) {
-    console.log(label);
     if (data) {
         return data[label];
     } else {
@@ -48,7 +47,6 @@ var calculateYearOnYearLoans = function (respondentInfo, currentLoans, currentSo
         previousYearSoldLoans = checkValue(data, labels.compare);
         var previousYearPercent = previousYearSoldLoans/previousYearLoans,
             currentPercent = currentSoldLoans/currentLoans;
-        console.log(previousYearPercent + '-' + currentPercent);
         if (isNaN(previousYearPercent)) {
             previousYearPercent = 0;
         }
