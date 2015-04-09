@@ -46,7 +46,6 @@ var calculateYearOnYearLoans = function (respondentInfo, currentLoans, currentSo
     .then(function (data) {
         previousYearLoans = checkValue(data, labels.total);
         previousYearSoldLoans = checkValue(data, labels.compare);
-        console.log(previousYearLoans + ',' + previousYearSoldLoans);
         var previousYearPercent = previousYearSoldLoans/previousYearLoans,
             currentPercent = currentSoldLoans/currentLoans;
 
