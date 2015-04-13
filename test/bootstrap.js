@@ -9,7 +9,7 @@
 global.expect = require('must');
 global.request = require('supertest');
 global.async = require('async');
-global._ = require('underscore');
+global._ = require('lodash');
 
 var kraken = require('kraken-js'),
     express = require('express'),
