@@ -132,15 +132,15 @@ describe('LARService', function() {
         });
 
         it('should return true when previous year does not exist and this year has < 500 loans', function(done) {
-            LARService.isValidNumLoans('2013', '9', '1201547730', 359, function(err, result) {
+            LARService.isValidNumLoans('2013', '9', '1201347730', 359, function(err, result) {
                 expect(result.result).to.be.true();
                 done();
             });
         });
 
-        it('should return false when previous year does not exist and this year has > 500 loans', function(done) {
-            LARService.isValidNumLoans('2013', '9', '1201547730', 750, function(err, result) {
-                expect(result.result).to.be.false();
+        it('should return true when previous year does not exist and this year has > 500 loans', function(done) {
+            LARService.isValidNumLoans('2013', '9', '12012347730', 750, function(err, result) {
+                expect(result.result).to.be.true();
                 done();
             });
         });
