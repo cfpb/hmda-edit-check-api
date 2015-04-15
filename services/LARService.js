@@ -111,6 +111,10 @@ module.exports = {
             if (err) {
                 return callback(err, null);
             }
+            if (!previousYearTotals) {
+                previousYearTotals = 0;
+            }
+
             // Return a passing result if neither year has >= 500 loans
             if (previousYearTotals.totalLoans < 500 && newLoans < 500) {
                 return callback(null, {'result': true});
