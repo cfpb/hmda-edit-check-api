@@ -12,7 +12,11 @@ module.exports = function(router) {
      */
     router.post('/:activityYear', function(req, res) {
         EngineService.runLar(req.params.activityYear, req.body, function(err, result) {
-            res.json(result);
+            if (err) {
+                res.status(500).json(err);
+            } else {
+                res.json(result);
+            }
         });
     });
 };

@@ -13,7 +13,11 @@ module.exports = function(router) {
      */
     router.post('/:activityYear/:editType', function(req, res) {
         EngineService.runLarType(req.params.activityYear, req.params.editType, req.body, function(err, result) {
-            res.json(result);
+            if (err) {
+                res.status(500).json(err);
+            } else {
+                res.json(result);
+            }
         });
     });
 };

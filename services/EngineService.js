@@ -10,16 +10,16 @@ module.exports = {
             callback(null, result);
         })
         .catch(function(err) {
-            callback(err, null);
+            callback(err.message, null);
         });
     },
-    runLarType: function(activityYear, lar, editType, callback) {
-        engine.runLar(activityYear, editType, lar)
+    runLarType: function(activityYear, editType, lar, callback) {
+        engine.runLarType(activityYear, editType, lar)
         .then(function(result) {
             callback(null, result);
         })
         .catch(function(err) {
-            callback(err, null);
+            callback(err.message, null);
         });
     }
 };
