@@ -3,11 +3,15 @@
 var engine = require('hmda-rule-engine');
 var EngineCustomDataLookupConditions = require('../lib/engine/engineCustomDataLookupConditions');
 engine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
-EngineCustomDataLookupConditions.call(engine);
+// EngineCustomDataLookupConditions.call(engine);
 
 module.exports = {
     runLar: function(activityYear, lar, callback) {
-        engine.runLar(activityYear, lar)
+        var currEngine = new engine.constructor();
+        currEngine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
+        EngineCustomDataLookupConditions.call(currEngine);
+
+        currEngine.runLar(activityYear, lar)
         .then(function(result) {
             callback(null, result);
         })
@@ -16,7 +20,9 @@ module.exports = {
         });
     },
     runLarType: function(activityYear, editType, lar, callback) {
-        engine.runLarType(activityYear, editType, lar)
+        var currEngine = new engine.constructor();
+        currEngine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
+        currEngine.runLarType(activityYear, editType, lar)
         .then(function(result) {
             callback(null, result);
         })
