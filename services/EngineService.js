@@ -1,7 +1,9 @@
 'use strict';
 
 var engine = require('hmda-rule-engine');
+var EngineCustomDataLookupConditions = require('../lib/engine/engineCustomDataLookupConditions');
 engine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
+EngineCustomDataLookupConditions.call(engine);
 
 module.exports = {
     runLar: function(activityYear, lar, callback) {

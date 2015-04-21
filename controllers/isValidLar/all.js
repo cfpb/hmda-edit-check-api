@@ -11,7 +11,9 @@ module.exports = function(router) {
      * @apiParam {String} activityYear  The year for which the HMDA data is being collected
      */
     router.post('/:activityYear', function(req, res) {
+        console.time('runLar');
         EngineService.runLar(req.params.activityYear, req.body, function(err, result) {
+            console.timeEnd('runLar');
             if (err) {
                 res.status(500).json(err);
             } else {
