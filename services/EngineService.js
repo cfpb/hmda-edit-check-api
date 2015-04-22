@@ -6,7 +6,6 @@ var EngineCustomDataLookupConditions = require('../lib/engine/engineCustomDataLo
 module.exports = {
     runLar: function(activityYear, lar, callback) {
         var currEngine = new engine.constructor();
-        currEngine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
         EngineCustomDataLookupConditions.call(currEngine);
 
         currEngine.runLar(activityYear, lar)
@@ -19,7 +18,6 @@ module.exports = {
     },
     runLarType: function(activityYear, editType, lar, callback) {
         var currEngine = new engine.constructor();
-        currEngine.setAPIURL('http://localhost:' + (process.env.PORT || '8000'));
         EngineCustomDataLookupConditions.call(currEngine);
 
         currEngine.runLarType(activityYear, editType, lar)
