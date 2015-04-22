@@ -28,7 +28,6 @@ describe('/isValidLar/all', function() {
             .send(lar)
             .expect(500)
             .expect('Content-Type', /json/)
-            .expect(/"Server responded with status code 500/)
             .end(function (err, res) {
                 mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
