@@ -12,6 +12,7 @@ global.async = require('async');
 global._ = require('lodash');
 
 var kraken = require('kraken-js'),
+    bodyParser = require('body-parser'),
     express = require('express'),
     testdata = require('./testdata'),
     options = require('../lib/options'),
@@ -37,6 +38,7 @@ before(function(done) {
         _setupTestData(done);
     });
 
+    app.use(bodyParser.text());
 });
 
 
