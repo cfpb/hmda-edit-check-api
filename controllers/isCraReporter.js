@@ -6,7 +6,7 @@ module.exports = function(router) {
 
     /**
      * @api {get} /isCraReporter/:activityYear/:agencyCode/:respondentId isCraReporter
-     * @apiDescription checks whether or not the respondent is on the list of organizations required to file Community Reinvestment Act (CRA) information 
+     * @apiDescription checks whether or not the respondent is on the list of organizations required to file Community Reinvestment Act (CRA) information
      * @apiGroup CRA Reporters
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
      * @apiParam {String} agencyCode Code to identify the supervisory/regulatory agency of the HMDA reporting institution

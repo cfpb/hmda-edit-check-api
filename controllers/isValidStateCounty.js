@@ -13,7 +13,6 @@ module.exports = function(router) {
      * @apiParam {String} county 3-digit FIPS code that identifies the county
      */
     router.get('/:activityYear/:state/:county', function(req, res) {
-        
         CensusService.isValidStateCounty(req.params.activityYear, req.params.state, req.params.county, function(err, result) {
             if (err) {
                 res.status(500).json(err);

@@ -5,7 +5,7 @@ var Transmittal = require('../models/transmittal'),
 
 module.exports = {
     isValidTimestamp: function(activityYear, agencyCode, respondentID, timestamp, callback) {
-        Transmittal.findOne({'activity_year': activityYear - 1, 'agency_code': agencyCode, 'respondent_id': respondentID}, function(err, data) {
+        Transmittal.findOne({activity_year: activityYear - 1, agency_code: agencyCode, respondent_id: respondentID}, function(err, data) {
             if (err) {
                 return callback(err, null);
             }
@@ -23,16 +23,16 @@ module.exports = {
         });
     },
     isTaxIDTheSameAsLastYear: function(activityYear, agencyCode, respondentID, taxID, callback) {
-        Transmittal.findOne({'activity_year': activityYear - 1, 'agency_code': agencyCode, 'respondent_id': respondentID}, function(err, data) {
+        Transmittal.findOne({activity_year: activityYear - 1, agency_code: agencyCode, respondent_id: respondentID}, function(err, data) {
             if (err) {
                 return callback(err, null);
             }
             var result = {
-                'agencyCode': agencyCode,
-                'respondentID': respondentID,
-                'taxID': taxID,
+                agencyCode: agencyCode,
+                respondentID: respondentID,
+                taxID: taxID,
                 'Previous Year Tax ID': '',
-                'result': false
+                result: false
             };
             if (data !== null) {
                 result['Previous Year Tax ID'] = data.tax_id;

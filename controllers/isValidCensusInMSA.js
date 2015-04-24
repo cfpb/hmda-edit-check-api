@@ -20,7 +20,7 @@ module.exports = function(router) {
         censusparams.state_code = req.params.state;
         censusparams.county_code = req.params.county;
         censusparams.tract = req.params.tract;
-        
+
         CensusService.isValidCensusCombination(req.params.activityYear, censusparams, function(err, result) {
             if (err) {
                 res.status(500).json(err);

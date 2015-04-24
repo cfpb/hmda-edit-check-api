@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function jscs(grunt) {
     grunt.loadNpmTasks('grunt-jscs');
 
@@ -12,7 +11,9 @@ module.exports = function jscs(grunt) {
         },
         all: {
             src: [
-                'engine.js',
+                'controllers/{,*/}*.js',
+                'models/{,*/}*.js',
+                'services/{,*/}*.js',
                 'lib/{,*/}*.js',
                 'test/{,*/}*Spec.js'
             ]
