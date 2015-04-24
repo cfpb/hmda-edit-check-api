@@ -9,11 +9,11 @@ describe('EngineService', function() {
 
         it('should return empty errors for a passing lar check', function(done) {
             var emptyErrors = {
-                'syntactical': {},
-                'validity': {},
-                'quality': {},
-                'macro': {},
-                'special': {}
+                syntactical: {},
+                validity: {},
+                quality: {},
+                macro: {},
+                special: {}
             };
 
             EngineService.runLarType('2013', 'syntactical', lar, function(err, result) {
@@ -35,14 +35,14 @@ describe('EngineService', function() {
 
     describe('runLar', function(done) {
         var lar = '20001000052945144446706399300000000002013011711310003931201301193510037050NA     225    5    1200220   01.5421                                                                                                                                                                                                                                                                              ';
-        
+
         it('should return empty errors for a passing lar check', function(done) {
             var emptyErrors = {
-                'syntactical': {},
-                'validity': {},
-                'quality': {},
-                'macro': {},
-                'special': {}
+                syntactical: {},
+                validity: {},
+                quality: {},
+                macro: {},
+                special: {}
             };
 
             EngineService.runLar('2013', lar, function(err, result) {

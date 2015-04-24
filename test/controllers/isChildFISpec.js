@@ -11,7 +11,7 @@ describe('/isChildFI', function() {
             .expect(200)
             .expect('Content-Type', /json/)
             .expect(/"result":/)
-            .end(function (err, res) {
+            .end(function(err, res) {
                 done(err);
             });
     });
@@ -24,7 +24,7 @@ describe('/isChildFI', function() {
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
-            .end(function (err, res) {
+            .end(function(err, res) {
                 mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });

@@ -12,11 +12,11 @@ describe('/isValidNumLoans/refinance', function() {
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
 
-            .end(function (err, res) {
+            .end(function(err, res) {
                 done(err);
             });
     });
-    
+
     it('should return a 500 if there is a problem', function(done) {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
@@ -25,7 +25,7 @@ describe('/isValidNumLoans/refinance', function() {
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
-            .end(function (err, res) {
+            .end(function(err, res) {
                 mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });
