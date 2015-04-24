@@ -1,17 +1,16 @@
 'use strict';
 
-
-module.exports = function mocha_istanbul(grunt) {
+module.exports = function mochaIstanbul(grunt) {
     // Load task
     grunt.loadNpmTasks('grunt-mocha-istanbul');
 
     return {
         coverage: {
-            src: 'test', // the folder name for the tests
+            src: 'test', /* the folder name for the tests */
             options: {
                 recursive: true,
-                coverage: true, // emit the coverage event
-                //quiet: true,
+                coverage: true, /* emit the coverage event */
+                /* quiet: true, */
                 excludes: [
                     'lib/database.js',
                     'lib/options.js'

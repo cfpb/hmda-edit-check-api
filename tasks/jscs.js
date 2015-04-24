@@ -14,6 +14,7 @@ module.exports = function jscs(grunt) {
                 'controllers/{,*/}*.js',
                 'models/{,*/}*.js',
                 'services/{,*/}*.js',
+                'tasks/{,*/}*.js',
                 'lib/{,*/}*.js',
                 'test/{,*/}*Spec.js'
             ]
