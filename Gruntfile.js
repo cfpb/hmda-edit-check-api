@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('clean_all', [ 'clean:node_modules', 'clean:coverage', 'npm_install' ]);
-    grunt.registerTask('test', ['env:test', 'clean:coverage', 'jshint', 'mocha_istanbul']);
+    grunt.registerTask('test', ['env:test', 'clean:coverage', 'jscs:all', 'jshint', 'mocha_istanbul']);
     grunt.registerTask('coverage', ['test', 'open_coverage']);
     grunt.registerTask('generate-docs', ['apidoc']);
     grunt.registerTask('dist', ['compress:hmda-edit-check-api']);
