@@ -13,7 +13,7 @@ module.exports = function(router) {
      * @apiParam {String} respondentId Ten-digit number used to identify a HMDA reporting institution
      */
     router.get('/:activityYear/:agencyCode/:respondentId', function(req, res) {
-        MsaBranchesService.getMetroAreasOnRespondentPanel(req.params.activityYear, req.params.agencyCode, 
+        MsaBranchesService.getMetroAreasOnRespondentPanel(req.params.activityYear, req.params.agencyCode,
             req.params.respondentId, function(err, result) {
             if (err) {
                 res.status(500).json(err);

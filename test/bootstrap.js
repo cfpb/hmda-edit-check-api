@@ -41,7 +41,6 @@ before(function(done) {
     app.use(bodyParser.text());
 });
 
-
-after(function(done){
+after(function(done) {
     mock.close(done);
 });

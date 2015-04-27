@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function clean(grunt) {
     // Load task
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -9,10 +8,10 @@ module.exports = function clean(grunt) {
     return {
         tmp: 'tmp',
         build: '.build/templates',
-        options:{
+        options: {
 //               force: true
         },
-        node_modules:["node_modules/*","!node_modules/grunt*"],
-        coverage:["coverage/*"]
+        node_modules:['node_modules/*', '!node_modules/grunt*'],
+        coverage:['coverage/*']
     };
 };

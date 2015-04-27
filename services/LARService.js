@@ -8,8 +8,8 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
     var result = {
         'Previous Year Total Loans': oldLoans,
         'Current Year Total Loans': newLoans,
-        '% Difference': (diff*100).toFixed(2),
-        'result': false,
+        '% Difference': (diff * 100).toFixed(2),
+        result: false
     };
     if (isNaN(diff) || (diff > -percentage && diff < percentage)) {
         result.result = true;
@@ -17,9 +17,9 @@ var compareYearTotals = function(newLoans, oldLoans, percentage) {
     return result;
 };
 
-var comparePercentages = function (newPercentage, oldPercentage, threshold, range) {
+var comparePercentages = function(newPercentage, oldPercentage, threshold, range) {
     var diff = (newPercentage - oldPercentage).toFixed(2);
-    
+
     if (!range && diff < threshold) {
         return false;
     } else if (range && Math.abs(diff) >= threshold) {
@@ -28,7 +28,7 @@ var comparePercentages = function (newPercentage, oldPercentage, threshold, rang
     return true;
 };
 
-var checkValue = function (data, label) {
+var checkValue = function(data, label) {
     if (data) {
         return data[label];
     } else {
@@ -36,17 +36,17 @@ var checkValue = function (data, label) {
     }
 };
 
-var calculateYearOnYearLoans = function (respondentInfo, currentLoans, currentSoldLoans,
+var calculateYearOnYearLoans = function(respondentInfo, currentLoans, currentSoldLoans,
             labels, loanParameters, callback) {
     var previousYearLoans,
         previousYearSoldLoans;
 
     LAR.findOne(respondentInfo).exec()
-    .then(function (data) {
+    .then(function(data) {
         previousYearLoans = checkValue(data, labels.total);
         previousYearSoldLoans = checkValue(data, labels.compare);
-        var previousYearPercent = previousYearSoldLoans/previousYearLoans,
-            currentPercent = currentSoldLoans/currentLoans;
+        var previousYearPercent = previousYearSoldLoans / previousYearLoans,
+            currentPercent = currentSoldLoans / currentLoans;
         if (isNaN(previousYearPercent)) {
             previousYearPercent = 0;
         }
@@ -56,28 +56,28 @@ var calculateYearOnYearLoans = function (respondentInfo, currentLoans, currentSo
         var result = {
             'Previous Year Loans': previousYearLoans,
             'Previous Year Sold Loans': previousYearSoldLoans,
-            'Previous Year Percentage' : (previousYearPercent*100).toFixed(2),
+            'Previous Year Percentage': (previousYearPercent * 100).toFixed(2),
             'Current Year Loans': currentLoans,
             'Current Year Sold Loans': currentSoldLoans,
-            'Current Year Percentage' : (currentPercent*100).toFixed(2),
-            '% Difference': ((currentPercent - previousYearPercent)*100).toFixed(2),
-            'result': false
+            'Current Year Percentage': (currentPercent * 100).toFixed(2),
+            '% Difference': ((currentPercent - previousYearPercent) * 100).toFixed(2),
+            result: false
         };
 
         // diff year to year can't be more than threshold, if over largeNum,
         // then currentPercentage should be greater than minPercent
-        if (loanParameters.threshold=== undefined && 
+        if (loanParameters.threshold === undefined &&
                 comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, true)) {
             result.result = true;
         } else if (comparePercentages(currentPercent, previousYearPercent, loanParameters.diffPercent, false) &&
-            ((currentLoans>=loanParameters.threshold && currentPercent> loanParameters.minPercent) || currentLoans<loanParameters.threshold)) {
-            result.result = true; 
+            ((currentLoans >= loanParameters.threshold && currentPercent > loanParameters.minPercent) || currentLoans < loanParameters.threshold)) {
+            result.result = true;
         }
 
         return callback(null, result);
 
     })
-    .then(null, function (err) {
+    .then(null, function(err) {
         return callback(err, null);
     });
 };
@@ -91,9 +91,9 @@ module.exports = {
             diffPercent: 0.2
         };
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         return calculateYearOnYearLoans (respondentInfo, currentLoans, currentSoldLoans,
@@ -102,9 +102,9 @@ module.exports = {
     isValidNumLoans: function(activityYear, agencyCode, respondentID, newLoans, callback) {
         activityYear -= 1;
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         LAR.findOne(respondentInfo, function(err, previousYearTotals) {
@@ -117,7 +117,7 @@ module.exports = {
 
             // Return a passing result if neither year has >= 500 loans
             if (previousYearTotals.totalLoans < 500 && newLoans < 500) {
-                return callback(null, {'result': true});
+                return callback(null, {result: true});
             }
             var result = compareYearTotals(newLoans, previousYearTotals.totalLoans, 0.2);
             return callback(null, result);
@@ -131,9 +131,9 @@ module.exports = {
             diffPercent: 0.2
         };
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         return calculateYearOnYearLoans (respondentInfo, currentLoans, currentSoldLoans,
@@ -149,9 +149,9 @@ module.exports = {
             minPercent: 0.2
         };
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         return calculateYearOnYearLoans (respondentInfo, currentLoans, currentFannieLoans,
@@ -167,9 +167,9 @@ module.exports = {
             minPercent: 0.3
         };
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         return calculateYearOnYearLoans (respondentInfo, currentLoans, currentGinnieLoans,
@@ -185,9 +185,9 @@ module.exports = {
             minPercent: 0.3
         };
         var respondentInfo = {
-            'activity_year': activityYear,
-            'respondent_id': respondentID,
-            'agency_code': agencyCode
+            activity_year: activityYear,
+            respondent_id: respondentID,
+            agency_code: agencyCode
         };
 
         return calculateYearOnYearLoans (respondentInfo, currentLoans, currentGinnieLoans,

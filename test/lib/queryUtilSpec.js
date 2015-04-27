@@ -197,16 +197,16 @@ describe('queryUtil', function() {
         it('should build proper query for single keyParams and single valueParams', function(done) {
             var expected = [
                 {
-                    '$match': {
-                        'activity_year': '2013',
-                        'msa_code': { '$ne': '' }
+                    $match: {
+                        activity_year: '2013',
+                        msa_code: {$ne: ''}
                     }
                 },
                 {
-                    '$group': {
-                        '_id': {
-                            'msa_code': '$msa_code',
-                            'msa_name': '$msa_name'
+                    $group: {
+                        _id: {
+                            msa_code: '$msa_code',
+                            msa_name: '$msa_name'
                         }
                     }
                 }
@@ -221,22 +221,22 @@ describe('queryUtil', function() {
         it('should build proper query for multiple keyParams and single valueParams', function(done) {
             var expected = [
                 {
-                    '$match': {
-                        'activity_year': '2013',
-                        'state_code': { '$ne': '' },
-                        'county_code': { '$ne': '' },
-                        'tract': { '$ne': '' },
-                        'msa_code': { '$ne': '' }
+                    $match: {
+                        activity_year: '2013',
+                        state_code: {$ne: ''},
+                        county_code: {$ne: ''},
+                        tract: {$ne: ''},
+                        msa_code: {$ne: ''}
                     }
                 },
                 {
-                    '$group': {
-                        '_id': {
-                            'state_code': '$state_code',
-                            'county_code': '$county_code',
-                            'tract': '$tract',
-                            'msa_code': '$msa_code',
-                            'small_county': '$small_county'
+                    $group: {
+                        _id: {
+                            state_code: '$state_code',
+                            county_code: '$county_code',
+                            tract: '$tract',
+                            msa_code: '$msa_code',
+                            small_county: '$small_county'
                         }
                     }
                 }
@@ -251,21 +251,21 @@ describe('queryUtil', function() {
         it('should build proper query for multiple keyParams and multiple valueParams', function(done) {
             var expected = [
                 {
-                    '$match': {
-                        'activity_year': '2013',
-                        'state_code': { '$ne': '' },
-                        'county_code': { '$ne': '' },
-                        'tract': { '$ne': '' }
+                    $match: {
+                        activity_year: '2013',
+                        state_code: {$ne: ''},
+                        county_code: {$ne: ''},
+                        tract: {$ne: ''}
                     }
                 },
                 {
-                    '$group': {
-                        '_id': {
-                            'state_code': '$state_code',
-                            'county_code': '$county_code',
-                            'tract': '$tract',
-                            'msa_code': '$msa_code',
-                            'small_county': '$small_county'
+                    $group: {
+                        _id: {
+                            state_code: '$state_code',
+                            county_code: '$county_code',
+                            tract: '$tract',
+                            msa_code: '$msa_code',
+                            small_county: '$small_county'
                         }
                     }
                 }
@@ -279,22 +279,22 @@ describe('queryUtil', function() {
         it('should build proper query for multiple keyParams and multiple valueParams, with overlapping key/value params', function(done) {
             var expected = [
                 {
-                    '$match': {
-                        'activity_year': '2013',
-                        'state_code': { '$ne': '' },
-                        'county_code': { '$ne': '' },
-                        'tract': { '$ne': '' },
-                        'msa_code': { '$ne': '' }
+                    $match: {
+                        activity_year: '2013',
+                        state_code: {$ne: ''},
+                        county_code: {$ne: ''},
+                        tract: {$ne: ''},
+                        msa_code: {$ne: ''}
                     }
                 },
                 {
-                    '$group': {
-                        '_id': {
-                            'state_code': '$state_code',
-                            'county_code': '$county_code',
-                            'tract': '$tract',
-                            'msa_code': '$msa_code',
-                            'small_county': '$small_county'
+                    $group: {
+                        _id: {
+                            state_code: '$state_code',
+                            county_code: '$county_code',
+                            tract: '$tract',
+                            msa_code: '$msa_code',
+                            small_county: '$small_county'
                         }
                     }
                 }

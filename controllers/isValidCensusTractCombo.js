@@ -11,7 +11,7 @@ module.exports = function(router) {
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
      * @apiParam {String} state 2-digit FIPS code that identifies the state
      * @apiParam {String} county 3-digit FIPS code that identifies the county
-     * @apiParam {String} metroArea 5-digit code to identify the Metropolitan Statistical Authority/Metropolitan Division     
+     * @apiParam {String} metroArea 5-digit code to identify the Metropolitan Statistical Authority/Metropolitan Division
      * @apiParam {String} tract 6-digit census tract number
      */
     router.get('/:activityYear/:state/:county/:metroArea/:tract', function(req, res) {
