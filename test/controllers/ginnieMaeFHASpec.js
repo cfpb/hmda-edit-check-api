@@ -12,7 +12,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
             .expect('Content-Type', /json/)
             .expect(/"result":true/)
 
-            .end(function (err, res) {
+            .end(function(err, res) {
                 done(err);
             });
     });
@@ -24,7 +24,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
             .expect('Content-Type', /json/)
             .expect(/"result":false/)
 
-            .end(function (err, res) {
+            .end(function(err, res) {
                 done(err);
             });
     });
@@ -37,7 +37,7 @@ describe('/isValidNumLoans/ginnieMaeFHA', function() {
             .expect(500)
             .expect('Content-Type', /json/)
             .expect(/"code":/)
-            .end(function (err, res) {
+            .end(function(err, res) {
                 mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });

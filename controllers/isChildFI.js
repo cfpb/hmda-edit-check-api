@@ -6,7 +6,7 @@ module.exports = function(router) {
 
     /**
      * @api {get} /isChildFI/:activityYear/:agencyCode/:respondentId isChildFI
-     * @apiDescription checks whether or not the respondent has a valid parent organization 
+     * @apiDescription checks whether or not the respondent has a valid parent organization
      * @apiGroup Panel
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
      * @apiParam {String} agencyCode Code to identify the supervisory/regulatory agency of the HMDA reporting institution

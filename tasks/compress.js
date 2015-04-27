@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function compress(grunt) {
     // Load task
     grunt.loadNpmTasks('grunt-contrib-compress');
@@ -9,7 +8,7 @@ module.exports = function compress(grunt) {
         'hmda-edit-check-api': {
             options: {
                 archive: './dist/hmda-edit-check-api.zip',
-                mode: 'zip',  //zip | gzip | deflate | tgz
+                mode: 'zip',  /* zip | gzip | deflate | tgz */
                 pretty: true
             },
             files: [
@@ -18,7 +17,7 @@ module.exports = function compress(grunt) {
                     cwd: './',
 
                     //zip all files except coverage, test dirs and the grunt/test modules
-                    src: [ '**',
+                    src: ['**',
                         '!coverage/**',
                         '!test/**',
                         '!node_modules/**'
@@ -26,22 +25,22 @@ module.exports = function compress(grunt) {
                 }
             ]
         },
-        'codedeploy': {
-          options: {
-            archive: './dist/hmda-edit-check-api-codedeploy.zip',
-            mode: 'zip',  //zip | gzip | deflate | tgz
-            pretty: true
-          },
-          files: [
-            {
-              expand: true,
-              dot: true,
-              cwd: './',
+        codedeploy: {
+            options: {
+                archive: './dist/hmda-edit-check-api-codedeploy.zip',
+                mode: 'zip',  /* zip | gzip | deflate | tgz */
+                pretty: true
+            },
+            files: [
+                {
+                    expand: true,
+                    dot: true,
+                    cwd: './',
 
-              //zip dist directory
-              src: ['dist/hmda-edit-check-api.zip', 'scripts/*', 'appspec.yml']
-            }
-          ]
+                    //zip dist directory
+                    src: ['dist/hmda-edit-check-api.zip', 'scripts/*', 'appspec.yml']
+                }
+            ]
         }
     };
 };

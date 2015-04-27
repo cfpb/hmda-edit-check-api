@@ -4,14 +4,17 @@
 var mongoose = require('mongoose'),
     mockgoose = require('mockgoose');
 
-describe('/isNotIndependentMortgageCoOrMBS', function() {
+describe('/isValidLar/all', function() {
+    var lar = '284-15426429304320874623954000000000020130117111100256212013012019740080590098.40255    8    2500508   NA   21                                                                                                                                                                                                                                                                              ';
+
     it('should return a result if the request is valid', function(done) {
         request(mock)
-            .get('/isNotIndependentMortgageCoOrMBS/2013/1/0000000001')
+            .post('/isValidLar/all/2013')
+            .set('Content-Type', 'text/plain')
+            .send(lar)
             .expect(200)
             .expect('Content-Type', /json/)
-            .expect(/"result":/)
-            .end(function(err, res) {
+            .end(function (err, res) {
                 done(err);
             });
     });
@@ -20,11 +23,12 @@ describe('/isNotIndependentMortgageCoOrMBS', function() {
         mockgoose.setMockReadyState(mongoose.connection, 0);
 
         request(mock)
-            .get('/isNotIndependentMortgageCoOrMBS/2013/1/0000000001')
+            .post('/isValidLar/all/2013')
+            .set('Content-Type', 'text/plain')
+            .send(lar)
             .expect(500)
             .expect('Content-Type', /json/)
-            .expect(/"code":/)
-            .end(function(err, res) {
+            .end(function (err, res) {
                 mockgoose.setMockReadyState(mongoose.connection, 1);
                 done(err);
             });

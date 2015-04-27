@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function env(grunt) {
     // Load task
     grunt.loadNpmTasks('grunt-env');

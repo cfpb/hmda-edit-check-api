@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = function jshint(grunt) {
     // Load task
     grunt.loadNpmTasks('grunt-contrib-jshint');
