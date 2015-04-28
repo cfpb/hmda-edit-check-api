@@ -5,7 +5,7 @@ var EngineService = require('../../services/EngineService');
 module.exports = function(router) {
 
     /**
-     * @api {post} /isValidLar/all/:activityYear isValidLar
+     * @api {post} /isValidLar/all/:activityYear all
      * @apiDescription runs all applicable checks against the supplied lar.
      * @apiGroup Engine
      * @apiParam {String} activityYear  The year for which the HMDA data is being collected
