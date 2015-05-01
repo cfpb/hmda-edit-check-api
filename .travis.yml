@@ -19,6 +19,7 @@ deploy:
   upload-dir: develop
   on:
     all_branches: true
+    node: '0.10'
 - provider: codedeploy
   access_key_id: AKIAIMTOX4BXGVFOB56Q
   secret_access_key:
@@ -29,6 +30,7 @@ deploy:
   deployment_group: hmda-edit-check-api-dev
   on:
     all_branches: true
+    node: '0.10'
 - provider: s3
   access_key_id: AKIAIMTOX4BXGVFOB56Q
   secret_access_key:
@@ -39,6 +41,7 @@ deploy:
   upload-dir: master
   on:
     branch: master
+    node: '0.10'
 - provider: codedeploy
   access_key_id: AKIAIMTOX4BXGVFOB56Q
   secret_access_key:
@@ -49,6 +52,7 @@ deploy:
   deployment_group: hmda-edit-check-api-prod
   on:
     branch: master
+    node: '0.10'
 notifications:
   hipchat:
     rooms:
