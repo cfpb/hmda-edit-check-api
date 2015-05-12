@@ -22,7 +22,7 @@
     "compression": "^1.4.3",
     "engine-munger": "^0.2.6",
     "express": "^4.12.3",
-    "hmda-rule-engine": "cfpb/hmda-rule-engine#milestone11",
+    "hmda-rule-engine": "cfpb/hmda-rule-engine#master",
     "kraken-devtools": "^1.2.2",
     "kraken-js": "^1.0.5",
     "localizr": "^1.0.5",
