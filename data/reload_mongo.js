@@ -8,12 +8,12 @@ var larAggregates = require('./laraggregates.js');
 
 var config;
 
-var env = process.env.NODE_ENV
-if (env == 'test') {
-    config = require('../config/test.json')
-} else if (env == 'sandbox') {
+var env = process.env.NODE_ENV;
+if (env === 'test') {
+    config = require('../config/test.json');
+} else if (env === 'sandbox') {
     config = require('../config/sandbox.json');
-} else if (env == 'dev' || env == 'development') {
+} else if (env === 'dev' || env === 'development') {
     config = require('../config/development.json');
 } else {
     config = require('../config/config.json');
@@ -21,14 +21,20 @@ if (env == 'test') {
 
 var insertData = function(key, docs) {
     var deferred = Promise.defer();
+
+    var batch = mongoose.model(key).collection.initializeOrderedBulkOp();
+    _.each(docs, function(doc) {
+        batch.insert(doc);
+    });
+
     // Batch insert
-    mongoose.model(key).collection.insert(docs, function(err, result) {
+    batch.execute(function(err, result) {
         if (err) {
             console.log('ERROR: could not insert data for ' + key);
             console.log(err);
             deferred.reject(err);
         } else {
-            console.log('inserted '+result.length +' records for ' + key);
+            console.log('inserted ' + result.nInserted + ' records for ' + key);
             deferred.resolve();
         }
     });
@@ -47,11 +53,12 @@ mongoose.connect(uri, opts);
 mongoose.connection.on('error', console.error.bind(console, 'mongodb connection error:'));
 mongoose.connection.once('open', function(callback) {
     console.log('dropping database..');
-    mongoose.connection.db.executeDbCommand( {dropDatabase:1}, function(err, result) {
+    mongoose.connection.db.command( {dropDatabase:1}, function(err, result) {
         if (err) {
             console.log(err);
             process.exit(-1);
         }
+
         // Kill the current connection, then re-establish it after we've dropped the db
         // so it will recreate it on connect
         mongoose.connection.close();
@@ -61,9 +68,9 @@ mongoose.connection.once('open', function(callback) {
             console.log('adding data..');
 
             // Load the mongoose models so they get created
-            var models_path = __dirname + '/../models';
-            fs.readdirSync(models_path).forEach(function (file) {
-                require(models_path + '/' + file);
+            var modelsPath = __dirname + '/../models';
+            fs.readdirSync(modelsPath).forEach(function (file) {
+                require(modelsPath + '/' + file);
             });
 
             // Now loop through the loaded models
@@ -75,15 +82,15 @@ mongoose.connection.once('open', function(callback) {
                         return insertData(key, data);
                     });
                 } else {
-                    var filename = key.toLowerCase()+'.json';
-                    var lines = fs.readFileSync(__dirname + '/'+filename,'utf8').split('\n');
-                    var docs =  lines.map(function(line) {
+                    var filename = key.toLowerCase() + '.json';
+                    var lines = fs.readFileSync(__dirname + '/' + filename, 'utf8').split('\n');
+                    docs = lines.map(function(line) {
                         if (line) {
                             var data = JSON.parse(line);
-                            delete data['_id'];
+                            delete data._id;
                             for (var prop in data) {
-                                if (typeof data[prop] === 'object' && data[prop]['$date']!==undefined) {
-                                    data[prop] = data[prop]['$date'];
+                                if (typeof data[prop] === 'object' && data[prop].$date !== undefined) {
+                                    data[prop] = data[prop].$date;
                                 }
                             }
                             return data;

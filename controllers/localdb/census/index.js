@@ -15,7 +15,7 @@ var sendResponse = function(req, res, keyParams, valueParams) {
 module.exports = function(router) {
 
     /**
-     * @api {get} /msaCodes/:activityYear msaCodes
+     * @api {get} /localdb/census/msaCodes/:activityYear msaCodes
      * @apiDescription returns msa code/name key-value pairs for use in localDB
      * @apiGroup Local DB
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
@@ -27,7 +27,7 @@ module.exports = function(router) {
     });
 
     /**
-     * @api {get} /stateCounty/:activityYear stateCounty
+     * @api {get} /localdb/census/stateCounty/:activityYear stateCounty
      * @apiDescription returns state/county smallCounty key-value pairs for use in localDB
      * @apiGroup Local DB
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
@@ -39,7 +39,7 @@ module.exports = function(router) {
     });
 
     /**
-     * @api {get} /stateCountyMSA/:activityYear stateCountyMSA
+     * @api {get} /localdb/census/stateCountyMSA/:activityYear stateCountyMSA
      * @apiDescription returns state/county/msa smallCounty key-value pairs for use in localDB
      * @apiGroup Local DB
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
@@ -51,7 +51,7 @@ module.exports = function(router) {
     });
 
     /**
-     * @api {get} /stateCountyTract/:activityYear stateCountyTract
+     * @api {get} /localdb/census/stateCountyTract/:activityYear stateCountyTract
      * @apiDescription returns state/county/census tract smallCounty key-value pairs for use in localDB
      * @apiGroup Local DB
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
@@ -63,7 +63,7 @@ module.exports = function(router) {
     });
 
     /**
-     * @api {get} /stateCountyTractMSA/:activityYear stateCountyTractMSA
+     * @api {get} /localdb/census/stateCountyTractMSA/:activityYear stateCountyTractMSA
      * @apiDescription returns state/county/census tract/msa smallCounty key-value pairs for use in localDB
      * @apiGroup Local DB
      * @apiParam {String} activityYear The year for which the HMDA data is being collected
