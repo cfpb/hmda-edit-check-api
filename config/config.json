@@ -30,10 +30,6 @@
                 "method": "fileNotFound"
             }
         },
-
-        /**
-         * Override the default lusca configuration to disable CSRF handling.
-         */
         "appsec": {
             "module": {
                 "arguments": [
@@ -45,12 +41,6 @@
                 ]
             }
         },
-
-        /**
-         * Enable *ONLY* CSRF filtered by route.
-         * Note: The route "regex" needs the double parens
-         * because of how express parses route strings.
-         */
         "csrf": {
             "enabled": true,
             "priority": 111,
