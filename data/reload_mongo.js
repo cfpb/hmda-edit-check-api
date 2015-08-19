@@ -41,7 +41,10 @@ var insertData = function(key, docs) {
     return deferred.promise;
 };
 
-var uri = 'mongodb://' + config.mongoConfig.host + ':' + config.mongoConfig.port + '/' + (config.mongoConfig.database ? config.mongoConfig.database : 'hmda');
+var HOST = process.env.HMDA_PILOT_MONGODB_PORT_27017_TCP_ADDR || config.mongoConfig.host || '127.0.0.1';
+var PORT = process.env.HMDA_PILOT_MONGODB_PORT_27017_TCP_PORT || config.mongoConfig.port || '21717';
+var DB = config.mongoConfig.database || 'hmda';
+var uri = 'mongodb://' + HOST + ':' + PORT + '/' + DB;
 var opts = {};
 if (config.mongoConfig.username) {
     opts.user = config.mongoConfig.username;
