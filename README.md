@@ -81,16 +81,16 @@ This project has defined two Docker containers for your convenience. One for the
 For ease of use, there are two scripts provided to build and run the containers respectively. You can build both Docker images using `./build-docker-containers.sh` and run them with `./run-docker-containers.sh`
 
 The project Docker container expects that you'll tag the MongoDB Docker image as `hmda-pilot-mongodb` and use `--link hmda-pilot-mongodb` when you run it, otherwise, you have to set the following environment variables manually during run:
- - `HMDA_PILOT_MONGODB_PORT_27017_TCP_ADDR`
- - `HMDA_PILOT_MONGODB_PORT_27017_TCP_PORT`
+ - `HMDA_PILOT_MONGODB_HOST`
+ - `HMDA_PILOT_MONGODB_PORT`
 
 If you chose to not use the scripts, you will also have to load the MongoDB instance with data. This is done with a script provided in the API project.
 
 Here is an example of both using the environment variables and running the data loading script:
 
 ```
-docker run -d -e "HMDA_PILOT_MONGODB_PORT_27017_TCP_ADDR=my.mongo.server" -e "HMDA_PILOT_MONGODB_PORT_27017_TCP_PORT=27000" --name hmda-pilot-api -p 8000:8000 hmda-pilot-api
-docker exec -it hmda-pilot-api gosu nodejs node /usr/local/node/hmda-edit-check-api/data/reload_mongo.js
+docker run -d -e "HMDA_PILOT_MONGODB_HOST=my.mongo.server" -e "HMDA_PILOT_MONGODB_PORT=27000" --name hmda-pilot-api -p 8000:8000 hmda-pilot-api
+docker exec -it hmda-pilot-api node /usr/local/node/hmda-edit-check-api/data/reload_mongo.js
 ```
 
 ## API Documentation
