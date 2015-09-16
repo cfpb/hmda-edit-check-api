@@ -5,6 +5,8 @@ var fs = require('fs');
 var _ = require('lodash');
 var Promise = require('bluebird');
 var larAggregates = require('./laraggregates.js');
+var ENV_HOST = process.env.HMDA_PILOT_MONGODB_HOST || process.env.HMDA_PILOT_MONGODB_PORT_27017_TCP_ADDR;
+var ENV_PORT = process.env.HMDA_PILOT_MONGODB_PORT || process.env.HMDA_PILOT_MONGODB_PORT_27017_TCP_PORT;
 
 var config;
 
@@ -41,7 +43,10 @@ var insertData = function(key, docs) {
     return deferred.promise;
 };
 
-var uri = 'mongodb://' + config.mongoConfig.host + ':' + config.mongoConfig.port + '/' + (config.mongoConfig.database ? config.mongoConfig.database : 'hmda');
+var HOST = ENV_HOST || config.mongoConfig.host || '127.0.0.1';
+var PORT = ENV_PORT || config.mongoConfig.port || '21717';
+var DB = config.mongoConfig.database || 'hmda';
+var uri = 'mongodb://' + HOST + ':' + PORT + '/' + DB;
 var opts = {};
 if (config.mongoConfig.username) {
     opts.user = config.mongoConfig.username;

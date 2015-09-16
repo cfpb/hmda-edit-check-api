@@ -74,6 +74,25 @@ $ grunt dist
 
 This task produces `dist/hmda-edit-check-api.zip`, which can then be deployed by your continuous integration platform, or manually deployed into your server environment.
 
+### Using Docker for deployment
+
+This project has defined two Docker containers for your convenience. One for the MongoDB instance, and one for this nodejs project. The MongoDB container is defined in the `mongo-docker` directory, while the project container is defined in the `Dockerfile` in the project root.
+
+For ease of use, there are two scripts provided to build and run the containers respectively. You can build both Docker images using `./build-docker-containers.sh` and run them with `./run-docker-containers.sh`
+
+The project Docker container expects that you'll tag the MongoDB Docker image as `hmda-pilot-mongodb` and use `--link hmda-pilot-mongodb` when you run it, otherwise, you have to set the following environment variables manually during run:
+ - `HMDA_PILOT_MONGODB_HOST`
+ - `HMDA_PILOT_MONGODB_PORT`
+
+If you chose to not use the scripts, you will also have to load the MongoDB instance with data. This is done with a script provided in the API project.
+
+Here is an example of both using the environment variables and running the data loading script:
+
+```
+docker run -d -e "HMDA_PILOT_MONGODB_HOST=my.mongo.server" -e "HMDA_PILOT_MONGODB_PORT=27000" --name hmda-pilot-api -p 8000:8000 hmda-pilot-api
+docker exec -it hmda-pilot-api node /usr/local/node/hmda-edit-check-api/data/reload_mongo.js
+```
+
 ## API Documentation
 
 Documentation of the REST API is maintained within the source code using [apiDoc](http://apidocjs.com/) endpoint method comments.
