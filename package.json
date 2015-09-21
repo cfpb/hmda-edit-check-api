@@ -27,7 +27,7 @@
     "kraken-js": "^1.0.5",
     "localizr": "^1.0.5",
     "moment": "^2.10.2",
-    "mongoose": "^4.0.2",
+    "mongoose": "4.0.2",
     "lodash": "^3.7.0",
     "superagent": "^1.2.0",
     "bluebird": "^2.9.25"
@@ -51,7 +51,7 @@
     "istanbul": "^0.3.13",
     "jscs-stylish": "^0.3.1",
     "mocha": "^2.2.4",
-    "mockgoose": "^2.0.1",
+    "mockgoose": "~2.0.1",
     "must": "^0.12.0",
     "rewire": "^2.3.3",
     "spec-xunit-file": "0.0.1-3",
