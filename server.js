@@ -10,8 +10,8 @@ var server,
  * Create and start HTTP server.
  */
 
-ip = process.env.NODE_LISTEN_IP || '0.0.0.0';
-port = process.env.PORT || 8000;
+ip = process.env.NODE_PILOT_IP || '0.0.0.0';
+port = process.env.PILOT_PORT || 8000;
 server = http.createServer(app);
 server.listen(port, ip);
 server.on('listening', function () {
