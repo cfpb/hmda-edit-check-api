@@ -34,8 +34,6 @@ node_modules
 
 docs
 
-# ingore mongo-docker
-mongo-docker
 
 build-docker-containers.sh
 run-docker-containers.sh
