@@ -7,7 +7,7 @@ WORKDIR /usr/local/node/hmda-edit-check-api
 # Set the environment
 ENV NODE_ENV=production PORT=8000 NODE_TLS_REJECT_UNAUTHORIZED=0
 
-#
+# Install deps and app files
 RUN ./docker-scripts/run.sh
 
 # Ensure proper build
