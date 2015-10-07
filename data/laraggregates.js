@@ -70,7 +70,7 @@ var getData = function (activityYear) {
     });
 }
 
-var dataURI = 'https://api.consumerfinance.gov/data/hmda/slice/hmda_lar.json?&$where=as_of_year=';
+var dataURI = 'http://api.consumerfinance.gov/data/hmda/slice/hmda_lar.json?&$where=as_of_year=';
 var roughLARData = {};
 var finalLARCollection;
 var activityYears = ['2012', '2013'];
