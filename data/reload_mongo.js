@@ -42,7 +42,6 @@ var insertData = function(key, docs) {
     });
     return deferred.promise;
 };
-
 var HOST = ENV_HOST || config.mongoConfig.host || '127.0.0.1';
 var PORT = ENV_PORT || config.mongoConfig.port || '21717';
 var DB = config.mongoConfig.database || 'hmda';

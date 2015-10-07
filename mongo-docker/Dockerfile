@@ -5,14 +5,14 @@ ENV NODE_ENV=production
 COPY mongo-docker /tmp
 
 # Build
-RUN /tmp/run.sh && rm /tmp/run.sh
+RUN /tmp/run.sh
 
 # Tests
-RUN /tmp/tests.sh && rm /tmp/tests.sh
+RUN /tmp/tests.sh
 
 # Install app
 COPY . /usr/local/app
-RUN /tmp/install-app.sh && rm /tmp/install-app.sh
+RUN /tmp/install-app.sh
 
 ENTRYPOINT ["/tmp/entrypoint.sh"]
 
