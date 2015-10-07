@@ -14,5 +14,7 @@ RUN /tmp/tests.sh && rm /tmp/tests.sh
 COPY . /usr/local/app
 RUN /tmp/install-app.sh && rm /tmp/install-app.sh
 
+ENTRYPOINT ["/tmp/entrypoint.sh"]
+
 EXPOSE 27017
-CMD ["/tmp/start.sh"]
+CMD ["mongod"]
