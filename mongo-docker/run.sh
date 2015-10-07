@@ -37,6 +37,9 @@ chown -R root:root /tmp/mongodb-linux-x86_64-$MONGO_VERSION
 mv /tmp/mongodb-linux-x86_64-$MONGO_VERSION/bin/* /usr/local/bin
 echo "done"
 
+##### create app area for data loading
+mkdir -p /usr/local/app
+
 ##### Clean up after ourselves
 # We don't need wget any longer
 apk del wget

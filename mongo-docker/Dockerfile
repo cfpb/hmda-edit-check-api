@@ -1,18 +1,20 @@
-# Based roughly around official MongoDB docker image
-# https://github.com/docker-library/mongo/blob/master/2.6/Dockerfile
-FROM alpine:3.2
+FROM mhart/alpine-node:0.10
 
-# Use a custom build script instead of messy chained together RUN
-# or multiple RUN statements that add bloat to the image
-ADD run.sh /tmp/run.sh
+ENV NODE_ENV=production
+
+COPY mongo-docker /tmp
+
+# Build
 RUN /tmp/run.sh && rm /tmp/run.sh
 
-# Tests. Yes, Virginia, you can test Docker builds
-ADD tests.sh /tmp/tests.sh
+# Tests
 RUN /tmp/tests.sh && rm /tmp/tests.sh
 
-VOLUME /data/db
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+# Install app
+COPY . /usr/local/app
+RUN /tmp/install-app.sh && rm /tmp/install-app.sh
+
+ENTRYPOINT ["/tmp/entrypoint.sh"]
+
 EXPOSE 27017
 CMD ["mongod"]
